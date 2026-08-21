@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 governed_by:
   - architecture-architecture
 depends_on:
@@ -60,6 +60,21 @@ flowchart LR
 
 The diagram is conceptual. [SYSTEM.md](SYSTEM.md) remains authoritative for responsibilities and implementation evidence determines current availability.
 
+## Implemented lock-validation slice
+
+```text
+schemas/pace-lock-v1.schema.json  # closed desired-state contract
+examples/pace.lock.json           # six-kind conformance example
+scripts/validate_lock.py          # offline independent validator
+tests/test_validate_lock.py       # adversarial contract evidence
+.github/workflows/validate.yml    # least-privilege validation gate
+```
+
+The validator is deliberately independent from future source resolvers and
+updaters. It reads one lock, validates immutable provenance, ownership,
+compatibility, rollback, and exception time bounds, and emits evidence without
+network or write capabilities.
+
 ## Dependency rules
 
 - Sibling domain capabilities integrate through versioned public contracts, not direct access to internals.
@@ -83,7 +98,10 @@ The architecture favors independently usable local and self-hosted operation. Op
 
 ## Evidence and uncertainty
 
-- **Observed:** The repository README establishes the intended boundary as the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; significant implementation remains incomplete.
+- **Observed:** Pace owns a versioned dependency-lock schema, six-kind example,
+  standalone offline validator, adversarial test suite, and least-privilege CI
+  gate. Update resolution, drift detection, planning, and application remain
+  unimplemented.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?

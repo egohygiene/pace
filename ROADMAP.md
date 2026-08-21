@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -31,6 +31,9 @@ supersedes: []
 This roadmap describes capability evolution, not promised dates or an issue queue. Sequence follows architecture dependencies and may change when evidence or risk changes.
 
 ## Phase 1: Define desired and observed state schemas
+
+**Status:** Desired dependency lock v1 is implemented and independently
+validated. Observed-state and drift schemas remain planned for Phase 2.
 
 **Outcome:** A bounded capability advances from documented intent to validated, independently usable behavior.
 
@@ -104,7 +107,9 @@ Optional managed services, enterprise controls, marketplaces, and the conversati
 
 ## Evidence and uncertainty
 
-- **Observed:** The repository README establishes the intended boundary as the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; significant implementation remains incomplete.
+- **Observed:** Pace owns `egohygiene.pace.lock/v1`, an offline validator,
+  adversarial exception and provenance tests, a six-kind example, and a CI gate.
+  No updater or repository mutation path exists.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?

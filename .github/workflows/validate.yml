@@ -1,0 +1,63 @@
+---
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Validate Pace lock contract
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pace-validation-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate schema, example, implementation, and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Harden runner
+        # step-security/harden-runner v2.21.0
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        with:
+          egress-policy: audit
+
+      - name: Checkout Pace
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Validate the complete example lock
+        run: >-
+          python3 scripts/validate_lock.py
+          examples/pace.lock.json
+          --as-of "2026-08-22T00:00:00Z"
+
+      - name: Run adversarial validator tests
+        run: >-
+          python3 -m unittest discover
+          --start-directory tests
+          --pattern "test_*.py"
+          --verbose
+
+      - name: Compile Python sources
+        run: python3 -m compileall -q scripts tests
+
+      - name: Parse checked-in JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r document; do
+            python3 -m json.tool "${document}" >/dev/null
+          done < <(find examples schemas -type f -name "*.json" -print | sort)
