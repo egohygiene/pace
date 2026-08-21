@@ -1,0 +1,181 @@
+{
+  "$schema": "../schemas/pace-lock-v1.schema.json",
+  "schema": "egohygiene.pace.lock/v1",
+  "repository": "example/consumer",
+  "policy": {
+    "unknown_contract": "fail-closed",
+    "update_mode": "reviewed-pull-request",
+    "max_exception_days": 30,
+    "rollback": "restore-previous-lock-and-owned-targets"
+  },
+  "locks": [
+    {
+      "id": "aether-agent-bundle",
+      "kind": "aether",
+      "source": {
+        "owner": "example/aether",
+        "locator": "https://example.invalid/aether",
+        "version": "v1.0.0",
+        "reference_type": "git-commit",
+        "reference": "1111111111111111111111111111111111111111",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      },
+      "target": {
+        "path": "AGENTS.md",
+        "management": "generated",
+        "owner": "example/consumer",
+        "generator": "example/holon"
+      },
+      "compatibility": {
+        "contract": "example.aether.agent-bundle/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-and-generated-targets"
+      },
+      "exception": null
+    },
+    {
+      "id": "container-development",
+      "kind": "container",
+      "source": {
+        "owner": "example/realm",
+        "locator": "oci://ghcr.io/example/realm/development",
+        "version": "v1.0.0",
+        "reference_type": "oci-digest",
+        "reference": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "2222222222222222222222222222222222222222222222222222222222222222"
+        }
+      },
+      "target": {
+        "path": ".devcontainer/devcontainer.json",
+        "management": "consumer-owned",
+        "owner": "example/consumer",
+        "generator": null
+      },
+      "compatibility": {
+        "contract": "example.realm.development/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-only"
+      },
+      "exception": null
+    },
+    {
+      "id": "foundation-repository",
+      "kind": "foundation",
+      "source": {
+        "owner": "example/hygiene",
+        "locator": "https://example.invalid/hygiene",
+        "version": "v1.0.0",
+        "reference_type": "git-commit",
+        "reference": "3333333333333333333333333333333333333333",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "3333333333333333333333333333333333333333333333333333333333333333"
+        }
+      },
+      "target": {
+        "path": ".github/foundation.json",
+        "management": "generated",
+        "owner": "example/consumer",
+        "generator": "example/holon"
+      },
+      "compatibility": {
+        "contract": "example.hygiene.foundation/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-and-generated-targets"
+      },
+      "exception": null
+    },
+    {
+      "id": "schema-repository-report",
+      "kind": "schema",
+      "source": {
+        "owner": "example/relay",
+        "locator": "https://example.invalid/relay/schema.json",
+        "version": "v1.0.0",
+        "reference_type": "content-digest",
+        "reference": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "4444444444444444444444444444444444444444444444444444444444444444"
+        }
+      },
+      "target": {
+        "path": "schemas/repository-report.schema.json",
+        "management": "consumer-owned",
+        "owner": "example/consumer",
+        "generator": null
+      },
+      "compatibility": {
+        "contract": "example.relay.repository-report/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-only"
+      },
+      "exception": null
+    },
+    {
+      "id": "site-documentation",
+      "kind": "site",
+      "source": {
+        "owner": "example/foundation",
+        "locator": "https://example.invalid/foundation",
+        "version": "v1.0.0",
+        "reference_type": "git-commit",
+        "reference": "5555555555555555555555555555555555555555",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "5555555555555555555555555555555555555555555555555555555555555555"
+        }
+      },
+      "target": {
+        "path": "site.config.json",
+        "management": "generated",
+        "owner": "example/consumer",
+        "generator": "example/holon"
+      },
+      "compatibility": {
+        "contract": "example.foundation.site/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-and-generated-targets"
+      },
+      "exception": null
+    },
+    {
+      "id": "workflow-repository-intelligence",
+      "kind": "workflow",
+      "source": {
+        "owner": "example/relay",
+        "locator": "https://example.invalid/relay",
+        "version": "v1.0.0",
+        "reference_type": "git-commit",
+        "reference": "6666666666666666666666666666666666666666",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "6666666666666666666666666666666666666666666666666666666666666666"
+        }
+      },
+      "target": {
+        "path": ".github/workflows/repository-intelligence.yml",
+        "management": "generated",
+        "owner": "example/consumer",
+        "generator": "example/holon"
+      },
+      "compatibility": {
+        "contract": "example.relay.repository-intelligence/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-and-generated-targets"
+      },
+      "exception": null
+    }
+  ]
+}

@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 governed_by:
   - architecture-decisions
 depends_on:
@@ -40,6 +40,7 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - ADR-001: Separate detection, planning, and application
 - ADR-002: Preserve repository-local overrides as first-class records
 - ADR-003: Require reviewable changes for synchronization
+- ADR-004: Make desired-state locks independently verifiable
 
 ## ADR-001: Separate detection, planning, and application
 
@@ -68,9 +69,18 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - **Consequences:** The choice improves ownership and predictability while requiring maintained contracts, validation, and migration discipline.
 - **Reconsider when:** New evidence shows that the boundary prevents standalone usefulness, safety, portability, or maintainability.
 
+## ADR-004: Make desired-state locks independently verifiable
+
+- **Status:** Accepted for the v1 lock contract
+- **Date:** 2026-08-21
+- **Context:** A synchronization tool cannot be the sole authority asserting that its own update output is safe. Repositories need a portable record of source identity, content integrity, generated ownership, compatibility, rollback, and temporary exceptions before any updater receives write authority.
+- **Decision:** Define a closed JSON lock contract covering foundation, Aether, workflow, container, site, and schema dependencies. Require immutable references and SHA-256 digests. Validate the lock with a standard-library-only tool that has no network, updater, or write capability. Treat exceptions as approved records with bounded expiry, never as integrity bypasses.
+- **Consequences:** Desired state is reviewable and independently testable before drift or apply exists. The lock duplicates some upstream metadata, and later resolvers must prove that fetched bytes match it. Contract-breaking changes require a new lock schema major and migration.
+- **Reconsider when:** A portable signed manifest standard can express the same repository ownership, compatibility, rollback, and exception semantics without weakening offline validation.
+
 ## Open decisions
 
-- Release and compatibility policy for the first stable version.
+- Signing and transparency policy for future resolved locks and update plans.
 - Exact self-hosted, managed, and organization-integrated deployment boundaries.
 - Which target systems must exist before the architecture status may become active.
 

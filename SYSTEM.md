@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 governed_by:
   - architecture-system
 depends_on:
@@ -32,6 +32,8 @@ This document identifies Pace's logical systems and responsibilities. It answers
 
 | System | State | Responsibility |
 | --- | --- | --- |
+| Desired-state lock contract | Active | Records immutable source identity, content digest, target ownership, compatibility, rollback, and bounded exceptions for six dependency kinds. |
+| Independent lock validator | Active | Validates lock structure and semantics offline without trusting an updater or receiving write authority. |
 | Repository inventory reader | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
 | Desired-state resolver | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
 | Drift engine | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
@@ -61,7 +63,9 @@ Systems fail closed at destructive, publication, privacy, and security boundarie
 
 ## Evidence and uncertainty
 
-- **Observed:** The repository README establishes the intended boundary as the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; significant implementation remains incomplete.
+- **Observed:** Desired-state lock validation is active. Repository inventory,
+  drift, planning, application, override storage, and reporting remain target
+  systems.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
