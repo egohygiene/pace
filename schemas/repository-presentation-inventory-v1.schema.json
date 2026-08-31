@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/repository-presentation/inventory/v1/schema.json",
+  "title": "Pace repository-presentation inventory v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema",
+    "organization",
+    "observedAt",
+    "collection",
+    "contracts",
+    "policy",
+    "canaryWave",
+    "repositories"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema": {
+      "const": "egohygiene.pace.repository-presentation-inventory/v1"
+    },
+    "organization": {
+      "const": "egohygiene"
+    },
+    "observedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "collection": {
+      "type": "object"
+    },
+    "contracts": {
+      "type": "object"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "canaryWave": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "repository",
+          "role"
+        ]
+      }
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/repository"
+      }
+    }
+  },
+  "$defs": {
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "visibility",
+        "archived",
+        "defaultBranch",
+        "profile",
+        "lifecycle",
+        "customization",
+        "adoptionState",
+        "reasons",
+        "canaryRole",
+        "observed",
+        "exception"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^egohygiene/[A-Za-z0-9_.-]+$"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "private",
+            "internal"
+          ]
+        },
+        "archived": {
+          "type": "boolean"
+        },
+        "defaultBranch": {
+          "type": "string"
+        },
+        "profile": {
+          "enum": [
+            "minimal",
+            "library",
+            "cli",
+            "application",
+            "publication",
+            "private",
+            "archived",
+            "incubating"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "active",
+            "incubating",
+            "archived"
+          ]
+        },
+        "customization": {
+          "enum": [
+            "small",
+            "rich",
+            "redacted"
+          ]
+        },
+        "adoptionState": {
+          "enum": [
+            "eligible",
+            "deferred",
+            "exempt",
+            "blocked",
+            "not_applicable"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "canaryRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed": {
+          "type": "object"
+        },
+        "exception": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

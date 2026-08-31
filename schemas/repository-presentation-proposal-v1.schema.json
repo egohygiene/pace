@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/repository-presentation/proposal/v1/schema.json",
+  "title": "Pace credential-free repository proposal v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "proposalId",
+    "planDigest",
+    "repository",
+    "representedCommit",
+    "profile",
+    "contracts",
+    "preconditions",
+    "rollback",
+    "proposalDigest"
+  ],
+  "properties": {
+    "schema": {
+      "const": "egohygiene.pace.repository-presentation-proposal/v1"
+    },
+    "proposalId": {
+      "type": "string"
+    },
+    "planDigest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "representedCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "contracts": {
+      "type": "object"
+    },
+    "preconditions": {
+      "type": "object"
+    },
+    "rollback": {
+      "type": "object"
+    },
+    "proposalDigest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

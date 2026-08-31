@@ -3,6 +3,10 @@
 | Contract | Schema identity | File |
 | --- | --- | --- |
 | Repository dependency lock | `egohygiene.pace.lock/v1` | [`pace-lock-v1.schema.json`](pace-lock-v1.schema.json) |
+| Presentation fleet inventory | `egohygiene.pace.repository-presentation-inventory/v1` | [`repository-presentation-inventory-v1.schema.json`](repository-presentation-inventory-v1.schema.json) |
+| Presentation dry-run plan | `egohygiene.pace.repository-presentation-plan/v1` | [`repository-presentation-plan-v1.schema.json`](repository-presentation-plan-v1.schema.json) |
+| Reviewed-plan authorization | `egohygiene.pace.repository-presentation-review/v1` | [`repository-presentation-review-v1.schema.json`](repository-presentation-review-v1.schema.json) |
+| Credential-free proposal | `egohygiene.pace.repository-presentation-proposal/v1` | [`repository-presentation-proposal-v1.schema.json`](repository-presentation-proposal-v1.schema.json) |
 
 Pace-owned contracts use the stable namespace:
 

@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-21
+updated: 2026-08-31
 governed_by:
   - architecture-architecture
 depends_on:
@@ -75,6 +75,23 @@ updaters. It reads one lock, validates immutable provenance, ownership,
 compatibility, rollback, and exception time bounds, and emits evidence without
 network or write capabilities.
 
+## Implemented repository-presentation planning slice
+
+```text
+examples/repository-presentation.inventory.json  # privacy-safe observed fleet snapshot
+schemas/repository-presentation-*-v1.schema.json  # inventory, plan, review, proposal contracts
+scripts/plan_repository_presentation.py           # deterministic no-write planner and review gate
+tests/test_repository_presentation_rollout.py     # privacy, integrity, and authority evidence
+docs/repository-presentation-rollout.md           # operator workflow and rollback boundary
+```
+
+The planner is a pure adapter over checked observed state. It has no GitHub
+client, credential input, consumer filesystem access, or pull-request write
+port. Its proposal output binds one repository, represented commit, README blob,
+Egolint report, reviewed plan, immutable contract set, and rollback snapshot.
+An external authorized operator may consume that artifact only after the review
+boundary; application remains outside this slice.
+
 ## Dependency rules
 
 - Sibling domain capabilities integrate through versioned public contracts, not direct access to internals.
@@ -98,10 +115,11 @@ The architecture favors independently usable local and self-hosted operation. Op
 
 ## Evidence and uncertainty
 
-- **Observed:** Pace owns a versioned dependency-lock schema, six-kind example,
-  standalone offline validator, adversarial test suite, and least-privilege CI
-  gate. Update resolution, drift detection, planning, and application remain
-  unimplemented.
+- **Observed:** Pace owns a versioned dependency-lock validator plus a bounded
+  repository-presentation inventory, deterministic drift/plan projection,
+  exact review authorization, credential-free single-repository proposal,
+  adversarial tests, and least-privilege CI gate. General update resolution and
+  every consumer write/application path remain unimplemented.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
