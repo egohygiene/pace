@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/repository-presentation/plan/v1/schema.json",
+  "title": "Pace repository-presentation dry-run plan v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "inventoryDigest",
+    "contracts",
+    "review",
+    "summary",
+    "waves",
+    "repositories",
+    "observatory",
+    "planDigest"
+  ],
+  "properties": {
+    "schema": {
+      "const": "egohygiene.pace.repository-presentation-plan/v1"
+    },
+    "inventoryDigest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "contracts": {
+      "type": "object"
+    },
+    "review": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "waves": {
+      "type": "array"
+    },
+    "repositories": {
+      "type": "array"
+    },
+    "observatory": {
+      "type": "object"
+    },
+    "planDigest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

@@ -1,0 +1,1151 @@
+{
+  "$schema": "../schemas/repository-presentation-inventory-v1.schema.json",
+  "schema": "egohygiene.pace.repository-presentation-inventory/v1",
+  "organization": "egohygiene",
+  "observedAt": "2026-08-31T15:30:00Z",
+  "collection": {
+    "mode": "read-only",
+    "networkRequired": true,
+    "credentialsEmbedded": false,
+    "privateDetailsPublished": false
+  },
+  "contracts": {
+    "hygiene": {
+      "version": "1.0.0-alpha.1",
+      "status": "proposed",
+      "revision": "cb2ed63425d29abada2d2bbb43a3b3e59d11aeb8",
+      "digest": "44e0881519350e6747723995939c79c6fb4659e38a74b2c32e409866e7a186ba"
+    },
+    "identity": {
+      "version": "1.0.0",
+      "revision": "3c2fd3141371b355628e81f66f63159f19d63338"
+    },
+    "holon": {
+      "version": "1.0.0",
+      "revision": "4d436b631ea82c463d3a6a04b5664633f3c64b4c",
+      "blueprintGitBlobSha": "f16349494be8d917253dfffa3b942698fa0cbcf5"
+    },
+    "egolint": {
+      "version": "0.1.0-alpha.1",
+      "revision": "4efe92a2609b3384fcf3b5cda343a4f64d108824"
+    }
+  },
+  "policy": {
+    "unknownRepository": "fail-closed",
+    "writesBeforeReview": false,
+    "proposalMode": "one-repository-per-reviewed-proposal",
+    "missingFacts": "block",
+    "missingAssets": "block",
+    "egolintBeforeProposal": true
+  },
+  "canaryWave": [
+    {
+      "repository": "egohygiene/mantle",
+      "role": "small-tool"
+    },
+    {
+      "repository": "egohygiene/identity",
+      "role": "customized"
+    },
+    {
+      "repository": "egohygiene/antidote",
+      "role": "publication-product"
+    }
+  ],
+  "repositories": [
+    {
+      "repository": "egohygiene/.github",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "minimal",
+      "lifecycle": "active",
+      "customization": "small",
+      "adoptionState": "not_applicable",
+      "reasons": [
+        "Organization metadata repository uses its profile README and is outside product presentation rollout."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "1a80cd5d436409b96532ba3dd9edfd892e3b9aad",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "7d960edaacbb1e9e63fba253c96523c3a085d2d3",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/aether",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "library",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "8a2a3d08f3aa9da3847bd5277843506ab855192e",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "9bc4540dd55a63f1ef896fae1057d2203ca1bf18",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/akashic",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "publication",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "2f2e8c6ebd1456092a047809865b5d2dd909e0f9",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "99770e2d7f0f80d86091038adb0ad812020fdf91",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/aniflow",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "e704141742a7a55e486d9f24a7c97d9d2283f326",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "d7f210625bc4d8e540e1dd79cf36b7401efeca17",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/antidote",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "publication",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": "publication-product",
+      "observed": {
+        "representedCommit": "3cf642903fcc676a7bf59afb045bc83a968ca80d",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "09f166758a19068a23bc277b286a4baef338a4b9",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/athena",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "publication",
+      "lifecycle": "incubating",
+      "customization": "small",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "75b4d48007a1747615220cfd0d1b5677e867b7bc",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "258b3e257279ce993bb78bdea14db79941efab09",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/beacon",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "publication",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "e846695648f7fc2ae710d1df6939f06b6460de82",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "c833aa971bfbbe0b5f4b8b7cb14daeec163e7e80",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/civics",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "c95596afc206e38b3c5b1f80a3ccbae46326daa8",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "797f4b0898923ea7c1056877d4bffd4402263194",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/egohygiene",
+      "visibility": "private",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "private",
+      "lifecycle": "active",
+      "customization": "redacted",
+      "adoptionState": "deferred",
+      "reasons": [
+        "Private repository details are excluded from the public fleet artifact; assess through a separately authorized private plan."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": null,
+        "readme": {
+          "status": "redacted",
+          "gitBlobSha": null,
+          "managedRegion": null
+        },
+        "identityPackage": {
+          "status": "unassessed",
+          "descriptorPath": null,
+          "manifestPath": null
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/egohygiene.io",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "active",
+      "customization": "small",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "524aa4c139e926ca549f6bef067fc9ed40d15afb",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "dd4afcf74ebcf2df10a4267e6e54ef4aabe057f4",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/egolint",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "8d21e58f92c34dae577848a3e183c980388d7884",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/empathy",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "minimal",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "f8313641fa05cb1d062057a426b094c0e3770522",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "5df2087a759391a6330d3239a3c0cd99e19f9fe9",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/filament",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "incubating",
+      "lifecycle": "incubating",
+      "customization": "small",
+      "adoptionState": "deferred",
+      "reasons": [
+        "Repository purpose and ownership boundary are still provisional; defer presentation adoption until they are reviewed."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "95cb3ef04b1664bc51ccc666524dd7f5eb04127b",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "971f1d0b0bba6a1efb2a9c038b574cb746f6b2f4",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/flow",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "a7d28ee812f9d6ccd93b6786be924e24c455accd",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "76459f7ef85bc2ba25f41d3ba87c72cf02845516",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/holon",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "4d436b631ea82c463d3a6a04b5664633f3c64b4c",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "eaa6e94af59754074ef9a10c0b56ba86309f85e1",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/hygiene",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "28f9d6c7519d820644572634ba4476614f418d83",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "8ba8453f7550f9921f983c5f3abc544f750016a4",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/identity",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Consumer Identity package has not been rendered into this repository.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": "customized",
+      "observed": {
+        "representedCommit": "f9ba4ca9c8938b76e2564dc112455ad3b3e25cc2",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "1f95b9ba2dddb0feb00c4d1a82db3cfec50d2159",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/mantle",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": "small-tool",
+      "observed": {
+        "representedCommit": "b325fad88f3a809d0b928ac4a1f1e989546cfa2e",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "cdcd90e8b91db274678ab002c69c4f4b294d141b",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/mindcap",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "0749ccdf138fd0d81a6c113e02db454b770e85bb",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "ebab56b2853ca39dd187ee3870cf0d89a872bec0",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/mindgarden",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "943a22b1211c1a473153039ca906af6e1840a48a",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "3726bdc0debb568fd00ef47f1c1b77ac0f62fa6c",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/observatory",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "3cb3555f56b9b110e98e295c1201e8d9af641297",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "fcf3143ded9c0bb5f9d539491a1d65ea6620196f",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/optiflow",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "09eab73bfcf2b09c950703078401309a5e048915",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "df543040e67e20607e84d2c2cb24573912f49466",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/pace",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "cli",
+      "lifecycle": "incubating",
+      "customization": "small",
+      "adoptionState": "deferred",
+      "reasons": [
+        "Self-adoption is deferred until this no-write fleet plan is reviewed and merged."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "0a2f60badeb46509b2cb6348fc2e2ab55243bb66",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "861d315f67a6a7437222b2a4341135c7c1df9179",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/realm",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "02475f8df066b221c8b367d6261911f6fa5bae9b",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "70b1159e0812e1d83f4e51eafe4755ce13e2ab88",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/reflector",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "publication",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "5d4651e074a448e383220de60c0edee853497296",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "9fcfca43748f71a60b963810a1a3419a8c8592fc",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/relay",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "library",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "e8035712026c0173a6358a4e000f7ecc3e9f6304",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/renderflow",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "library",
+      "lifecycle": "active",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "824c29b0f340f1bce1ba1219bc5df98c46dd6893",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "ff65dc57076a80ec2e4a701af6e2cf605cdcfff0",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/sanctuary",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "incubating",
+      "lifecycle": "incubating",
+      "customization": "rich",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "0db2d923e110e49dec823c486ec4084d266f3627",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "499b19db8f97253a8bb94e71502308be2273442b",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    },
+    {
+      "repository": "egohygiene/store",
+      "visibility": "public",
+      "archived": false,
+      "defaultBranch": "main",
+      "profile": "application",
+      "lifecycle": "incubating",
+      "customization": "small",
+      "adoptionState": "blocked",
+      "reasons": [
+        "Identity repository-presentation package is missing.",
+        "Canonical presentation facts have not been assessed.",
+        "Pinned Egolint report has not run."
+      ],
+      "canaryRole": null,
+      "observed": {
+        "representedCommit": "599c90ca6a454c0f2e9aa95eab5f8395016474c5",
+        "readme": {
+          "status": "present",
+          "gitBlobSha": "61ad8ee7743130c00ef2b1a9392140f258f3f169",
+          "managedRegion": false
+        },
+        "identityPackage": {
+          "status": "missing",
+          "descriptorPath": "assets/identity/repository-presentation/repository-presentation.json",
+          "manifestPath": "assets/identity/repository-presentation/repository-presentation-manifest.json"
+        },
+        "facts": {
+          "status": "unassessed"
+        },
+        "egolint": {
+          "status": "not_run",
+          "validatorRevision": "4efe92a2609b3384fcf3b5cda343a4f64d108824",
+          "reportDigest": null
+        }
+      },
+      "exception": null
+    }
+  ]
+}

@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-24
+updated: 2026-08-31
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -40,7 +40,7 @@ updated: 2026-08-24
 > This evidence-reconciled snapshot is the issue-generation and visual-roadmap handoff. The longer-horizon strategy below remains canonical context; generated HTML, JSON, progress, issue plans, and commit lists are projections.
 
 **Lifecycle:** seed implementation  
-**Current gate:** Add observed-state capture and a drift report before attempting the reviewable convergence plan tracked by issue #2.  
+**Current gate:** Review issue #14's no-write repository-presentation fleet plan, then unblock and independently approve its three canaries before any consumer PR.  
 **North-star outcome:** Reviewable fleet convergence from declared desired state, observed state, and explicit drift.
 
 ### Visual roadmap publication
@@ -96,7 +96,8 @@ issues: []
 
 **Current evidence:**
 
-- No observed-state implementation was found.
+- A bounded, privacy-safe repository-presentation inventory now records all 29 repositories and explicit adoption states.
+- General-purpose observed-state collection remains unimplemented.
 
 <!-- roadmap-step
 id: PAC-Q03
@@ -118,7 +119,8 @@ issues: []
 
 **Current evidence:**
 
-- No drift engine or report was observed.
+- Issue #14 implements deterministic repository-presentation drift categories and an Observatory-safe projection.
+- The general cross-capability drift engine remains planned.
 
 <!-- roadmap-step
 id: PAC-Q04
@@ -140,7 +142,8 @@ issues: [2]
 
 **Current evidence:**
 
-- Issue #2 is the identified next planning gate.
+- Issue #14 now proves an exact no-write plan, plan digest, review record, supersession boundary, and one-repository proposal contract for repository presentation.
+- Issue #2 remains the broader convergence-planning gate.
 
 <!-- roadmap-step
 id: PAC-Q05
@@ -162,7 +165,8 @@ issues: []
 
 **Current evidence:**
 
-- No observed-state, drift, or fleet pilot evidence was found.
+- A 29-repository public-safe snapshot and Mantle/Identity/Antidote canary wave now exist.
+- Every canary is honestly blocked on Identity artifacts, reviewed facts, and pinned Egolint evidence; operator approval and consumer writes remain pending.
 
 <!-- roadmap-step
 id: PAC-Q06
@@ -278,8 +282,9 @@ Optional managed services, enterprise controls, marketplaces, and the conversati
 ## Evidence and uncertainty
 
 - **Observed:** Pace owns `egohygiene.pace.lock/v1`, an offline validator,
-  adversarial exception and provenance tests, a six-kind example, and a CI gate.
-  No updater or repository mutation path exists.
+  and a bounded repository-presentation inventory/planner with explicit review,
+  proposal, rollback, privacy, and Observatory contracts. No updater or
+  repository mutation path exists.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?

@@ -29,8 +29,30 @@ See the complete [lock and update policy](LOCK_POLICY.md), the
 [JSON Schema](schemas/pace-lock-v1.schema.json), and the
 [six-kind example](examples/pace.lock.json).
 
+## Plan repository-presentation rollout
+
+Pace now owns a read-only, privacy-safe repository-presentation inventory and a
+deterministic fleet planner. The checked snapshot classifies every repository,
+defines the Mantle/Identity/Antidote canary wave, reports blockers and drift,
+and requires an exact reviewed plan plus pinned Egolint evidence before it can
+emit one credential-free repository proposal.
+
+```bash
+python3 scripts/plan_repository_presentation.py validate-inventory \
+  --inventory "examples/repository-presentation.inventory.json"
+python3 scripts/plan_repository_presentation.py plan \
+  --inventory "examples/repository-presentation.inventory.json" \
+  --output "/tmp/repository-presentation.plan.json"
+python3 scripts/plan_repository_presentation.py verify-plan \
+  --plan "/tmp/repository-presentation.plan.json"
+```
+
+See the [rollout contract and operating guide](docs/repository-presentation-rollout.md).
+
 ## Current authority boundary
 
-Pace v1 validates desired state only. It does not resolve updates, edit files,
-open pull requests, or apply changes. Future detection, planning, application,
-verification, and publication phases remain separate authority boundaries.
+Pace validates desired locks and can now turn a reviewed repository-presentation
+inventory into a deterministic no-write fleet plan. It may emit a credential-free
+single-repository proposal only after exact plan review and valid pinned Egolint
+evidence. It still does not edit consumer files, open pull requests, or apply
+changes; those remain separately authorized authority boundaries.
