@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "architecture_release": "architecture-v0.1.0",
+  "observed_at": "2026-09-02",
+  "organization": "egohygiene",
+  "canonical_repository": "hygiene",
+  "repositories": [
+    {
+      "name": "example-tool",
+      "full_name": "egohygiene/example-tool",
+      "visibility": "public",
+      "plane": "developer-runtime",
+      "lifecycle": "active",
+      "maturity": "fixture",
+      "owns": ["convergence fixture"],
+      "excludes": ["production state"],
+      "consumes": [],
+      "outputs": ["test evidence"],
+      "domains": [],
+      "source_url": "https://github.com/egohygiene/example-tool"
+    }
+  ],
+  "proposed_repositories": [],
+  "planes": [
+    {
+      "id": "developer-runtime",
+      "title": "Developer runtime"
+    }
+  ],
+  "repository_count": 1
+}

@@ -1,0 +1,16 @@
+{
+  "contract": "egohygiene.hygiene.repository-catalog/v1",
+  "source_commit": "28f9d6c7519d820644572634ba4476614f418d83",
+  "source_repository": "https://github.com/egohygiene/hygiene",
+  "sources": [
+    {
+      "path": "catalog/repositories.yaml",
+      "sha256": "e1193c772640ceb8d3d569a1826d3931ee9de64b0a8357a94c9f03fbceab52e5"
+    },
+    {
+      "path": "schemas/repository-catalog.v1.schema.json",
+      "sha256": "3a06f19e8c0be6590223b04f580aef7ee9c9b23bcb11e8b3da3db6dd1e764724"
+    }
+  ],
+  "version": "1.0.0"
+}

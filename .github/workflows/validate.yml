@@ -60,6 +60,18 @@ jobs:
           python3 scripts/plan_repository_presentation.py verify-plan \
             --plan "${plan_path}"
 
+      - name: Prove reviewed general fleet convergence planning
+        shell: bash
+        run: |
+          plan_path="${RUNNER_TEMP}/fleet-convergence.plan.json"
+          python3 scripts/plan_fleet_convergence.py plan \
+            --manifest "examples/convergence/fleet.manifest.json" \
+            --catalog "examples/convergence/catalog.json" \
+            --observatory "examples/convergence/observatory.snapshot.json" \
+            --output "${plan_path}"
+          python3 scripts/plan_fleet_convergence.py verify-plan \
+            --plan "${plan_path}"
+
       - name: Run adversarial validator tests
         run: >-
           python3 -m unittest discover
@@ -76,4 +88,4 @@ jobs:
           set -euo pipefail
           while IFS= read -r document; do
             python3 -m json.tool "${document}" >/dev/null
-          done < <(find examples schemas -type f -name "*.json" -print | sort)
+          done < <(find contracts examples schemas -type f -name "*.json" -print | sort)

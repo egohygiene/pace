@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-21
+updated: 2026-09-02
 governed_by:
   - architecture-system
 depends_on:
@@ -34,13 +34,13 @@ This document identifies Pace's logical systems and responsibilities. It answers
 | --- | --- | --- |
 | Desired-state lock contract | Active | Records immutable source identity, content digest, target ownership, compatibility, rollback, and bounded exceptions for six dependency kinds. |
 | Independent lock validator | Active | Validates lock structure and semantics offline without trusting an updater or receiving write authority. |
-| Repository inventory reader | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
-| Desired-state resolver | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
-| Drift engine | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
-| Reconciliation planner | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
-| Change applier | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
+| Repository inventory reader | Active | Joins Hygiene membership to pinned Holon, Pace lock, and Observatory inputs without scanning repositories. |
+| Desired-state resolver | Active | Validates desired locks and binds repository intent to the matching foundation manifest. |
+| Drift engine | Active | Distinguishes lock additions, removals, and updates with deterministic risk reasons. |
+| Reconciliation planner | Active | Emits topologically ordered repository units with blockers, rollback anchors, source digests, and an exact review gate. |
+| Change applier | Active, bounded | Verifies one local candidate against one reviewed unit and opens one non-default-branch pull request; never merges. |
 | Override registry | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
-| Reporting adapter | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
+| Reporting adapter | Active | Publishes machine-readable fleet plans, PR proposals, and PR results with explicit coverage and failure state. |
 
 ## External systems
 
@@ -63,9 +63,10 @@ Systems fail closed at destructive, publication, privacy, and security boundarie
 
 ## Evidence and uncertainty
 
-- **Observed:** Desired-state lock validation is active. Repository inventory,
-  drift, planning, application, override storage, and reporting remain target
-  systems.
+- **Observed:** Desired-state lock validation and the general catalog/manifest/
+  lock/Observatory convergence path are active. Application is restricted to
+  one exact reviewed candidate PR. A durable override registry beyond explicit
+  paused manifest state and lock exceptions remains a target system.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?

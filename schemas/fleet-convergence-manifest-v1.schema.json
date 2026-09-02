@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/fleet-convergence-manifest/v1/schema.json",
+  "title": "Pace fleet convergence manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema", "organization", "policy", "repositories"],
+  "properties": {
+    "$schema": { "type": "string", "pattern": "(^|/)fleet-convergence-manifest-v1.schema.json$" },
+    "schema": { "const": "egohygiene.pace.fleet-convergence-manifest/v1" },
+    "organization": { "const": "egohygiene" },
+    "policy": {
+      "const": {
+        "unknown_state": "block",
+        "update_mode": "reviewed-pull-request",
+        "unit": "repository",
+        "partial_adoption": true
+      }
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "repository", "foundation_manifest", "current_lock", "desired_lock",
+          "holon_plan", "lock_path", "default_branch", "depends_on", "state"
+        ],
+        "properties": {
+          "repository": { "$ref": "#/$defs/repository" },
+          "foundation_manifest": { "$ref": "#/$defs/path" },
+          "current_lock": { "oneOf": [{ "$ref": "#/$defs/path" }, { "type": "null" }] },
+          "desired_lock": { "$ref": "#/$defs/path" },
+          "holon_plan": { "oneOf": [{ "$ref": "#/$defs/path" }, { "type": "null" }] },
+          "lock_path": { "$ref": "#/$defs/path" },
+          "default_branch": { "type": "string", "minLength": 1 },
+          "depends_on": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/repository" } },
+          "state": { "enum": ["active", "paused"] }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "repository": { "type": "string", "pattern": "^[a-z0-9_.-]+/[a-z0-9_.-]+$" },
+    "path": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*//)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*\/$)[^\\u0000]+$"
+    }
+  }
+}

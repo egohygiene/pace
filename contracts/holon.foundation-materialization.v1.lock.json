@@ -1,0 +1,22 @@
+{
+  "contracts": [
+    "https://egohygiene.io/schemas/holon/foundation-manifest.v1.schema.json",
+    "holon.materialization-plan/v1"
+  ],
+  "source_commit": "cd15eea31300997ce05a99d1a0bedc9c3437a8cc",
+  "source_repository": "https://github.com/egohygiene/holon",
+  "sources": [
+    {
+      "path": "schemas/foundation-manifest.v1.schema.json",
+      "sha256": "405a88a0df1b2d77ed534bdc65e833d61764883f93f5ef2c6042858bed0c9069"
+    },
+    {
+      "path": "schemas/materialization-plan.v1.schema.json",
+      "sha256": "7be8cd77ff41540889470937956e19b142077aa4721d62e205b2c3c2183845bd"
+    }
+  ],
+  "versions": {
+    "foundation_manifest": "1.0.0",
+    "materialization_plan": "holon.materialization-plan/v1"
+  }
+}

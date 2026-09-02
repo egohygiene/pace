@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/upgrade-pull-request/v1/schema.json",
+  "title": "Pace bounded upgrade pull-request proposal v1",
+  "$comment": "Exact proposal integrity and candidate-tree verification are enforced by scripts/plan_fleet_convergence.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "proposal_id", "proposal_digest", "plan_digest", "review", "unit_id",
+    "repository", "base_branch", "base_commit", "head_branch", "title", "body",
+    "risk", "changes", "depends_on", "lock_path", "expected_candidate_changes", "desired_lock",
+    "holon_plan", "rollback", "controls"
+  ],
+  "properties": {
+    "schema": { "const": "egohygiene.pace.upgrade-pull-request/v1" },
+    "proposal_id": { "type": "string", "pattern": "^pull-request:[0-9a-f]{64}$" },
+    "proposal_digest": { "$ref": "#/$defs/sha256" },
+    "plan_digest": { "$ref": "#/$defs/sha256" },
+    "review": { "type": "object" },
+    "unit_id": { "type": "string" },
+    "repository": { "type": "string" },
+    "base_branch": { "type": "string" },
+    "base_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "head_branch": { "type": "string" },
+    "title": { "type": "string" },
+    "body": { "type": "string" },
+    "risk": { "enum": ["low", "medium", "high"] },
+    "changes": { "type": "array" },
+    "depends_on": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "lock_path": { "type": "string" },
+    "expected_candidate_changes": { "type": "array", "minItems": 1 },
+    "desired_lock": { "type": "object" },
+    "holon_plan": { "type": ["object", "null"] },
+    "rollback": { "type": "object" },
+    "controls": { "type": "object" }
+  },
+  "$defs": { "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" } }
+}

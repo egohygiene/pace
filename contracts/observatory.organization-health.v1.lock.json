@@ -1,0 +1,12 @@
+{
+  "contract": "egohygiene.observatory.organization-health/v1",
+  "source_commit": "a4526ba65a4ec1110ad9f2f47dc866a0c6d2c5a3",
+  "source_repository": "https://github.com/egohygiene/observatory",
+  "sources": [
+    {
+      "path": "schemas/organization-health.v1.schema.json",
+      "sha256": "4f61ece1f744f5fc8dda519305c43de4a855f3368b8eb7508d066b3bc2103af9"
+    }
+  ],
+  "version": "1.0.0-alpha.1"
+}

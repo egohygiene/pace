@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-31
+updated: 2026-09-02
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -40,7 +40,8 @@ updated: 2026-08-24
 > This evidence-reconciled snapshot is the issue-generation and visual-roadmap handoff. The longer-horizon strategy below remains canonical context; generated HTML, JSON, progress, issue plans, and commit lists are projections.
 
 **Lifecycle:** seed implementation  
-**Current gate:** Review issue #14's no-write repository-presentation fleet plan, then unblock and independently approve its three canaries before any consumer PR.  
+**Current gate:** Review PAC-02's general convergence contracts and bounded PR adapter, while issue #14 separately unblocks its three presentation canaries.
+
 **North-star outcome:** Reviewable fleet convergence from declared desired state, observed state, and explicit drift.
 
 ### Visual roadmap publication
@@ -78,72 +79,75 @@ issues: []
 
 <!-- roadmap-step
 id: PAC-Q02
-status: active
+status: complete
 depends_on: [PAC-Q01]
 issues: []
 -->
 #### PAC-Q02 — Capture observed state
 
-**State:** `active`  
+**State:** `complete`
+
 **Depends on:** `PAC-Q01`
 
 **Outcome:** Pace can record what is actually deployed without mutating it.
 
 **Exit criteria:**
 
-- [ ] An observed-state schema and collector are implemented.
-- [ ] Fixtures prove stable normalization of at least one representative fleet.
+- [x] Pace consumes Observatory's pinned organization-health schema instead of adding a second collector.
+- [x] Fixtures prove stable ingestion of represented fleet state and block stale or ambiguous evidence.
 
 **Current evidence:**
 
-- A bounded, privacy-safe repository-presentation inventory now records all 29 repositories and explicit adoption states.
-- General-purpose observed-state collection remains unimplemented.
+- Observatory PR #15 provides the read-only organization-health contract.
+- Pace pins that contract and binds the exact catalog bytes, snapshot ID, freshness, and represented commit into every plan.
 
 <!-- roadmap-step
 id: PAC-Q03
-status: planned
+status: complete
 depends_on: [PAC-Q02]
 issues: []
 -->
 #### PAC-Q03 — Render actionable drift
 
-**State:** `planned`  
+**State:** `complete`
+
 **Depends on:** `PAC-Q02`
 
 **Outcome:** Desired and observed states produce a deterministic, human-reviewable drift report.
 
 **Exit criteria:**
 
-- [ ] Additions, removals, and changes are distinguished.
-- [ ] Repeated runs on unchanged input are identical.
+- [x] Additions, removals, and changes are distinguished.
+- [x] Repeated runs on unchanged input are identical.
 
 **Current evidence:**
 
-- Issue #14 implements deterministic repository-presentation drift categories and an Observatory-safe projection.
-- The general cross-capability drift engine remains planned.
+- PAC-02 compares complete current and desired Pace lock entries and explains categorical risk.
+- The canonical plan digest binds inputs, dependency order, drift, risk, blockers, and rollback state.
 
 <!-- roadmap-step
 id: PAC-Q04
-status: planned
+status: complete
 depends_on: [PAC-Q03]
 issues: [2]
 -->
 #### PAC-Q04 — Create a reviewable convergence plan
 
-**State:** `planned`  
+**State:** `complete`
+
 **Depends on:** `PAC-Q03`
 
 **Outcome:** Issue #2 yields an ordered plan with explicit risk, ownership, and rollback information.
 
 **Exit criteria:**
 
-- [ ] The plan is generated without applying changes.
-- [ ] Each action links to the drift that caused it.
+- [x] The plan is generated without applying changes.
+- [x] Each action links to the drift that caused it.
 
 **Current evidence:**
 
-- Issue #14 now proves an exact no-write plan, plan digest, review record, supersession boundary, and one-repository proposal contract for repository presentation.
-- Issue #2 remains the broader convergence-planning gate.
+- PAC-02 emits topologically ordered repository units with full before/after lock entries, risk reasons, exact review records, and partial-fleet selection.
+- One reviewed unit can verify one bounded candidate and open one non-default-branch PR; merge remains human-owned.
 
 <!-- roadmap-step
 id: PAC-Q05
@@ -206,8 +210,8 @@ This roadmap describes capability evolution, not promised dates or an issue queu
 
 ## Phase 1: Define desired and observed state schemas
 
-**Status:** Desired dependency lock v1 is implemented and independently
-validated. Observed-state and drift schemas remain planned for Phase 2.
+**Status:** Desired dependency lock v1 and pinned Observatory ingestion are
+implemented and independently validated.
 
 **Outcome:** A bounded capability advances from documented intent to validated, independently usable behavior.
 
@@ -221,6 +225,9 @@ validated. Observed-state and drift schemas remain planned for Phase 2.
 
 ## Phase 2: Implement read-only drift
 
+**Status:** Implemented for current and desired Pace locks with explainable risk
+and fail-closed Observatory freshness.
+
 **Outcome:** A bounded capability advances from documented intent to validated, independently usable behavior.
 
 **Exit signals:**
@@ -233,6 +240,9 @@ validated. Observed-state and drift schemas remain planned for Phase 2.
 
 ## Phase 3: Generate reviewable reconciliation plans
 
+**Status:** Implemented with deterministic dependency order, exact-digest
+reviews, blockers, pause state, and partial-fleet approval.
+
 **Outcome:** A bounded capability advances from documented intent to validated, independently usable behavior.
 
 **Exit signals:**
@@ -244,6 +254,9 @@ validated. Observed-state and drift schemas remain planned for Phase 2.
 - Remaining uncertainty is visible.
 
 ## Phase 4: Apply bounded changes
+
+**Status:** Implemented only for one exact candidate tree and one pull request.
+Default-branch writes, force, and merge remain unavailable.
 
 **Outcome:** A bounded capability advances from documented intent to validated, independently usable behavior.
 
@@ -282,9 +295,9 @@ Optional managed services, enterprise controls, marketplaces, and the conversati
 ## Evidence and uncertainty
 
 - **Observed:** Pace owns `egohygiene.pace.lock/v1`, an offline validator,
-  and a bounded repository-presentation inventory/planner with explicit review,
-  proposal, rollback, privacy, and Observatory contracts. No updater or
-  repository mutation path exists.
+  general fleet convergence contracts, exact review and rollback anchors, a
+  bounded one-PR adapter, and a specialized repository-presentation planner.
+  No default-branch or merge mutation path exists.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
