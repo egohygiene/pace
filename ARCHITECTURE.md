@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-31
+updated: 2026-09-02
 governed_by:
   - architecture-architecture
 depends_on:
@@ -92,6 +92,29 @@ Egolint report, reviewed plan, immutable contract set, and rollback snapshot.
 An external authorized operator may consume that artifact only after the review
 boundary; application remains outside this slice.
 
+## Implemented fleet convergence slice
+
+```text
+Hygiene catalog + Holon manifest + Pace current/desired locks
+                         +
+          Observatory organization-health snapshot
+                         |
+                         v
+ deterministic drift -> ordered repository units -> exact review
+                         |
+                         v
+        bounded candidate verification -> one upgrade PR
+```
+
+`scripts/plan_fleet_convergence.py` activates the general inventory reader,
+desired-state resolver, drift engine, reconciliation planner, and a deliberately
+narrow GitHub adapter. Observatory supplies observation; Pace does not scan.
+Holon supplies exact generated-file plans and rendering; Pace verifies the
+resulting candidate rather than reproducing the materializer. The adapter can
+create one non-default branch and pull request only when the remote base still
+equals the represented commit and the local diff exactly equals the reviewed
+allowlist. Merge remains outside the adapter.
+
 ## Dependency rules
 
 - Sibling domain capabilities integrate through versioned public contracts, not direct access to internals.
@@ -115,11 +138,11 @@ The architecture favors independently usable local and self-hosted operation. Op
 
 ## Evidence and uncertainty
 
-- **Observed:** Pace owns a versioned dependency-lock validator plus a bounded
-  repository-presentation inventory, deterministic drift/plan projection,
-  exact review authorization, credential-free single-repository proposal,
-  adversarial tests, and least-privilege CI gate. General update resolution and
-  every consumer write/application path remain unimplemented.
+- **Observed:** Pace owns a versioned dependency-lock validator, a general
+  deterministic convergence planner, exact partial-fleet review records,
+  bounded candidate verification, an idempotent one-PR GitHub adapter, and the
+  specialized repository-presentation rollout planner. It consumes pinned
+  sibling contracts and does not merge or mutate a default branch.
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?

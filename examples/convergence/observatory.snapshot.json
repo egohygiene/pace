@@ -1,0 +1,137 @@
+{
+  "schema": "egohygiene.observatory.organization-health/v1",
+  "contract_version": "1.0.0-alpha.1",
+  "snapshot_id": "organization-health:sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "as_of": "2026-09-02T12:00:00Z",
+  "generator": {
+    "name": "egohygiene/observatory:organization-health",
+    "version": "0.1.0"
+  },
+  "organization": "egohygiene",
+  "sources": {
+    "catalog": {
+      "schema_version": "1.0.0",
+      "architecture_release": "architecture-v0.1.0",
+      "observed_at": "2026-09-02",
+      "freshness": "unknown",
+      "freshness_reason": "the catalog contract does not declare a validity window",
+      "url": "https://example.invalid/hygiene/catalog/repositories.yaml",
+      "commit": "dddddddddddddddddddddddddddddddddddddddd",
+      "sha256": "ba5093f649b4dc39babcec4e23042c0610b434c3fff13b36acb5e661bad6f0c2"
+    },
+    "evidence_record_count": 1,
+    "evidence_digests": [
+      "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    ]
+  },
+  "summary": {
+    "repository_count": 1,
+    "assessed_repository_count": 1,
+    "unknown_repository_count": 0,
+    "conformance": {
+      "conformant": 1
+    },
+    "maturity_evidence": {
+      "unknown": 1
+    }
+  },
+  "repositories": [
+    {
+      "repository": {
+        "name": "example-tool",
+        "full_name": "egohygiene/example-tool",
+        "url": "https://github.com/egohygiene/example-tool",
+        "visibility": "public",
+        "plane": "developer-runtime"
+      },
+      "declared": {
+        "lifecycle": "active",
+        "maturity": "fixture",
+        "source": "Hygiene repository catalog"
+      },
+      "assessment": {
+        "maturity": {
+          "status": "unknown",
+          "reason": "no required evidence assesses this dimension",
+          "rule": "required checks only; no numeric score",
+          "counts": {
+            "pass": 0,
+            "fail": 0,
+            "partial": 0,
+            "unknown": 0,
+            "blocked": 0,
+            "not_applicable": 0,
+            "stale": 0
+          },
+          "check_ids": []
+        },
+        "conformance": {
+          "status": "conformant",
+          "reason": "all applicable required checks passed with current evidence",
+          "rule": "required checks only; no numeric score",
+          "counts": {
+            "pass": 1,
+            "fail": 0,
+            "partial": 0,
+            "unknown": 0,
+            "blocked": 0,
+            "not_applicable": 0,
+            "stale": 0
+          },
+          "check_ids": ["egohygiene/pace:lock-state"]
+        }
+      },
+      "evidence": {
+        "freshness": "current",
+        "record_count": 1,
+        "check_count": 1,
+        "earliest_observed_at": "2026-09-02T11:00:00Z",
+        "latest_observed_at": "2026-09-02T11:00:00Z",
+        "represented_commits": [
+          "ffffffffffffffffffffffffffffffffffffffff"
+        ],
+        "producers": [
+          "egohygiene/pace"
+        ],
+        "checks": [
+          {
+            "id": "lock-state",
+            "key": "egohygiene/pace:lock-state",
+            "title": "Pace lock state",
+            "domain": "dependencies",
+            "status": "pass",
+            "reported_status": "pass",
+            "freshness": "current",
+            "severity": "required",
+            "assesses": [
+              "conformance"
+            ],
+            "contract": {
+              "id": "egohygiene.pace.lock/v1",
+              "version": "1",
+              "url": "https://github.com/egohygiene/pace/blob/99d479445406/schemas/pace-lock-v1.schema.json"
+            },
+            "evidence": [
+              "https://example.invalid/evidence/example-tool/pace-lock.json"
+            ],
+            "observation": {
+              "observed_at": "2026-09-02T11:00:00Z",
+              "valid_until": "2026-09-09T11:00:00Z",
+              "represented_commit": "ffffffffffffffffffffffffffffffffffffffff",
+              "producer": {
+                "name": "egohygiene/pace",
+                "version": "0.1.0",
+                "url": "https://github.com/egohygiene/pace"
+              },
+              "source": {
+                "kind": "pace-lock-validation",
+                "url": "https://example.invalid/evidence/example-tool/pace-lock.json",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

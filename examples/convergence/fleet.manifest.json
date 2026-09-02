@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schemas/fleet-convergence-manifest-v1.schema.json",
+  "schema": "egohygiene.pace.fleet-convergence-manifest/v1",
+  "organization": "egohygiene",
+  "policy": {
+    "unknown_state": "block",
+    "update_mode": "reviewed-pull-request",
+    "unit": "repository",
+    "partial_adoption": true
+  },
+  "repositories": [
+    {
+      "repository": "egohygiene/example-tool",
+      "foundation_manifest": "example-tool.foundation-manifest.json",
+      "current_lock": "example-tool.current.lock.json",
+      "desired_lock": "example-tool.desired.lock.json",
+      "holon_plan": null,
+      "lock_path": ".config/pace.lock.json",
+      "default_branch": "main",
+      "depends_on": [],
+      "state": "active"
+    }
+  ]
+}

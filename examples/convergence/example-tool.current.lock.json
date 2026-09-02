@@ -1,0 +1,41 @@
+{
+  "$schema": "../../schemas/pace-lock-v1.schema.json",
+  "schema": "egohygiene.pace.lock/v1",
+  "repository": "egohygiene/example-tool",
+  "policy": {
+    "unknown_contract": "fail-closed",
+    "update_mode": "reviewed-pull-request",
+    "max_exception_days": 30,
+    "rollback": "restore-previous-lock-and-owned-targets"
+  },
+  "locks": [
+    {
+      "id": "schema-repository-report",
+      "kind": "schema",
+      "source": {
+        "owner": "egohygiene/relay",
+        "locator": "https://github.com/egohygiene/relay",
+        "version": "v1.0.0",
+        "reference_type": "content-digest",
+        "reference": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "digest": {
+          "algorithm": "sha256",
+          "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      },
+      "target": {
+        "path": "schemas/repository-report.schema.json",
+        "management": "consumer-owned",
+        "owner": "egohygiene/example-tool",
+        "generator": null
+      },
+      "compatibility": {
+        "contract": "egohygiene.relay.repository-report/v1",
+        "accepted_major": 1,
+        "migration": "not-required",
+        "rollback": "restore-lock-only"
+      },
+      "exception": null
+    }
+  ]
+}

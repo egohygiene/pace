@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/fleet-convergence-review/v1/schema.json",
+  "title": "Pace fleet convergence review v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "plan_digest", "reviewer", "reviewed_at", "decision",
+    "approved_units", "completed_units"
+  ],
+  "properties": {
+    "schema": { "const": "egohygiene.pace.fleet-convergence-review/v1" },
+    "plan_digest": { "$ref": "#/$defs/sha256" },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "format": "date-time", "pattern": "Z$" },
+    "decision": { "const": "approved" },
+    "approved_units": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "completed_units": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+  },
+  "$defs": { "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" } }
+}

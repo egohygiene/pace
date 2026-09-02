@@ -29,6 +29,28 @@ See the complete [lock and update policy](LOCK_POLICY.md), the
 [JSON Schema](schemas/pace-lock-v1.schema.json), and the
 [six-kind example](examples/pace.lock.json).
 
+## Plan reviewed fleet convergence
+
+The general convergence path consumes Hygiene catalog membership, Holon
+foundation intent, current and desired Pace locks, and Observatory's current
+represented state. It produces deterministic dependency-ordered drift before
+any write and requires an exact review for each repository-sized upgrade unit.
+
+```bash
+python3 scripts/plan_fleet_convergence.py plan \
+  --manifest "examples/convergence/fleet.manifest.json" \
+  --catalog "examples/convergence/catalog.json" \
+  --observatory "examples/convergence/observatory.snapshot.json" \
+  --output "/tmp/fleet-convergence.plan.json"
+
+python3 scripts/plan_fleet_convergence.py verify-plan \
+  --plan "/tmp/fleet-convergence.plan.json"
+```
+
+After review, `propose` prepares one credential-free PR request and `open-pr`
+accepts only an exact candidate tree on the still-current represented commit.
+See the [fleet convergence contract and operator guide](docs/fleet-convergence.md).
+
 ## Plan repository-presentation rollout
 
 Pace now owns a read-only, privacy-safe repository-presentation inventory and a
@@ -51,8 +73,8 @@ See the [rollout contract and operating guide](docs/repository-presentation-roll
 
 ## Current authority boundary
 
-Pace validates desired locks and can now turn a reviewed repository-presentation
-inventory into a deterministic no-write fleet plan. It may emit a credential-free
-single-repository proposal only after exact plan review and valid pinned Egolint
-evidence. It still does not edit consumer files, open pull requests, or apply
-changes; those remain separately authorized authority boundaries.
+Pace validates desired locks and can turn pinned catalog, Holon, lock, and
+Observatory inputs into deterministic no-write fleet plans. After an exact
+human review, it can verify a locally materialized candidate and open one
+bounded consumer pull request. It never scans repositories, renders Holon
+outputs, updates a default branch, or merges a pull request.
