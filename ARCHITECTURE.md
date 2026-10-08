@@ -115,6 +115,14 @@ create one non-default branch and pull request only when the remote base still
 equals the represented commit and the local diff exactly equals the reviewed
 allowlist. Merge remains outside the adapter.
 
+## Bounded label adoption preview
+
+The [Aether label checkpoint](docs/label-rollout.md) consumes an explicit captured
+inventory and source-pinned Relay planner. Pace retains adoption/coverage evidence
+and an advisory universal-label comparison; `.github` owns enrollment/taxonomy and
+Relay owns canonical planning and mutation. Missing enrollment remains blocked.
+The adapter is offline and supplies no new scanner, apply port, or fleet authority.
+
 ## Dependency rules
 
 - Sibling domain capabilities integrate through versioned public contracts, not direct access to internals.

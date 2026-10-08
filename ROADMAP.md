@@ -204,6 +204,16 @@ issues: []
 
 <!-- END ROADMAP EXECUTION SNAPSHOT -->
 
+## 2026-10-08 bounded label checkpoint
+
+Under [#10](https://github.com/egohygiene/pace/issues/10), the Aether-only read-only
+[preview checkpoint](docs/label-rollout.md) is prepared for review. It observes 41
+labels and 18 missing universals, preserving all existing labels. Canonical sync
+is blocked because the selected and current organization assignments do not enroll
+Aether. Next is an organization-owned enrollment change, then a reviewed Relay
+repin and fresh preview. No rollout, classification, or path-labeler installation
+is complete. The broader roadmap and parallel adoption programs remain unchanged.
+
 ## Strategic context
 
 This roadmap describes capability evolution, not promised dates or an issue queue. Sequence follows architecture dependencies and may change when evidence or risk changes.

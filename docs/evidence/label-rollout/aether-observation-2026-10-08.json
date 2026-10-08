@@ -1,0 +1,277 @@
+{
+  "configuration": {
+    "directory_response_sha256": "1c9d45dfc62321b9fb5d352dad099cfd60e71b3633b58fe78e3be7e1e9b37d92",
+    "path": ".github/relay-labels.json",
+    "source_revision": "8ef3bd34d5fec835da54eb8acd0d074b79ee8fe2",
+    "status": "absent"
+  },
+  "coverage": {
+    "error": null,
+    "pages": [
+      {
+        "number": 1,
+        "records": 41,
+        "response_sha256": "7cc1b35e2f9008890ff771a219f7be9f706e44c52d0c7c2b82a6a412c0516bbc"
+      }
+    ],
+    "per_page": 100,
+    "status": "complete"
+  },
+  "finished_at": "2026-10-08T01:32:12Z",
+  "kind": "github-public",
+  "labels": [
+    {
+      "color": "4338CA",
+      "description": "Local AI, agents, prompts, skills, and workflows ☁️",
+      "id": 11660487250,
+      "name": "☁️ aether"
+    },
+    {
+      "color": "16A34A",
+      "description": "Repository cleanup, restructuring, modernization, and technical debt ♻️",
+      "id": 11660487260,
+      "name": "♻️ refactor"
+    },
+    {
+      "color": "274472",
+      "description": "Infrastructure, repositories, tooling, and configuration ⚙️",
+      "id": 11660487270,
+      "name": "⚙️ infra"
+    },
+    {
+      "color": "7C5C1E",
+      "description": "Developer experience, tooling, and ergonomics ⚡",
+      "id": 11660487282,
+      "name": "⚡ dx"
+    },
+    {
+      "color": "7C3AED",
+      "description": "Writing workflow, editorial improvements, and authoring ✍️",
+      "id": 11660487294,
+      "name": "✍️ writing"
+    },
+    {
+      "color": "15803D",
+      "description": "Life domains, domain models, and domain-specific functionality 🌍",
+      "id": 11660487306,
+      "name": "🌍 domain"
+    },
+    {
+      "color": "0284C7",
+      "description": "Website, documentation site, and public experience 🌐",
+      "id": 11660487317,
+      "name": "🌐 website"
+    },
+    {
+      "color": "3A7D44",
+      "description": "Knowledge management, digital garden, and long-term thinking 🌱",
+      "id": 11660487327,
+      "name": "🌱 mindgarden"
+    },
+    {
+      "color": "B91C1C",
+      "description": "Video production, animation, and cinematic content 🎥",
+      "id": 11660487340,
+      "name": "🎥 video"
+    },
+    {
+      "color": "4E8065",
+      "description": "Design system, UI, UX, branding, and visuals 🎨",
+      "id": 11660487352,
+      "name": "🎨 design"
+    },
+    {
+      "color": "6D28D9",
+      "description": "Creative operating system and AI orchestration 🎬",
+      "id": 11660487362,
+      "name": "🎬 dreamscape"
+    },
+    {
+      "color": "15803D",
+      "description": "Practices, rituals, habits, and exercises 🎯",
+      "id": 11660487372,
+      "name": "🎯 practice"
+    },
+    {
+      "color": "7F1D1D",
+      "description": "Music, albums, lyrics, and audio production 🎵",
+      "id": 11660487381,
+      "name": "🎵 music"
+    },
+    {
+      "color": "1F4D8F",
+      "description": "Architecture, foundations, and system design 🏗️",
+      "id": 11660487387,
+      "name": "🏗️ architecture"
+    },
+    {
+      "color": "6D28D9",
+      "description": "Purpose, principles, ontology, and conceptual evolution 🏛️",
+      "id": 11660487399,
+      "name": "🏛️ philosophy"
+    },
+    {
+      "color": "DC2626",
+      "description": "Something isn't working 🐛",
+      "id": 11660487408,
+      "name": "🐛 bug"
+    },
+    {
+      "color": "B45309",
+      "description": "Grants, sponsorships, partnerships, and monetization 💰",
+      "id": 11660487419,
+      "name": "💰 funding"
+    },
+    {
+      "color": "64748B",
+      "description": "Documentation improvements and knowledge organization 📄",
+      "id": 11660487429,
+      "name": "📄 documentation"
+    },
+    {
+      "color": "486581",
+      "description": "Holistic repository reviews, quality assessments, and engineering audits 📋",
+      "id": 11660487448,
+      "name": "📋 audit"
+    },
+    {
+      "color": "4B5563",
+      "description": "Captured ideas and future work 📋",
+      "id": 11660487463,
+      "name": "📋 backlog"
+    },
+    {
+      "color": "7C3AED",
+      "description": "Schemas, specifications, contracts, and data models 📐",
+      "id": 11660487479,
+      "name": "📐 schema"
+    },
+    {
+      "color": "9333EA",
+      "description": "Magazine, comic, editorial, and visual storytelling 📖",
+      "id": 11660487488,
+      "name": "📖 magazine"
+    },
+    {
+      "color": "2563EB",
+      "description": "Long-form articles and essays 📚",
+      "id": 11660487499,
+      "name": "📚 article"
+    },
+    {
+      "color": "0E7490",
+      "description": "Publishing platform, workflows, and distribution 📝",
+      "id": 11660487508,
+      "name": "📝 publishing"
+    },
+    {
+      "color": "15803D",
+      "description": "Marketing, social media, SEO, and outreach 📣",
+      "id": 11660487520,
+      "name": "📣 marketing"
+    },
+    {
+      "color": "0369A1",
+      "description": "Reusable packages and shared libraries 📦",
+      "id": 11660487531,
+      "name": "📦 package"
+    },
+    {
+      "color": "0175C2",
+      "description": "Flutter application and Flutter Foundation 📱",
+      "id": 11660487539,
+      "name": "📱 flutter"
+    },
+    {
+      "color": "0F766E",
+      "description": "Application lifecycles, managers, and orchestration 🔄",
+      "id": 11660487547,
+      "name": "🔄 lifecycle"
+    },
+    {
+      "color": "2563EB",
+      "description": "Plugin architecture, registries, and extensibility 🔌",
+      "id": 11660487554,
+      "name": "🔌 plugin"
+    },
+    {
+      "color": "0F766E",
+      "description": "Research, literature, evidence, and references 🔬",
+      "id": 11660487565,
+      "name": "🔬 research"
+    },
+    {
+      "color": "0891B2",
+      "description": "Journey modeling, progress, and timeline systems 🗺️",
+      "id": 11660487576,
+      "name": "🗺️ journey"
+    },
+    {
+      "color": "EA580C",
+      "description": "Large initiative spanning multiple issues 🚀",
+      "id": 11660487587,
+      "name": "🚀 milestone"
+    },
+    {
+      "color": "CA8A04",
+      "description": "Merchandise, storefront, and brand products 🛍️",
+      "id": 11660487599,
+      "name": "🛍️ merch"
+    },
+    {
+      "color": "8B5CF6",
+      "description": "Artificial intelligence, providers, orchestration, and prompts 🤖",
+      "id": 11660487609,
+      "name": "🤖 ai"
+    },
+    {
+      "color": "5C3D99",
+      "description": "Automation, pipelines, workflows, and AI agents 🤖",
+      "id": 11660487620,
+      "name": "🤖 automation"
+    },
+    {
+      "color": "0F766E",
+      "description": "Community, contributors, collaboration, and ecosystem 🤝",
+      "id": 11660487635,
+      "name": "🤝 community"
+    },
+    {
+      "color": "7C2D12",
+      "description": "Memory systems, context, embeddings, and knowledge graphs 🧠",
+      "id": 11660487648,
+      "name": "🧠 memory"
+    },
+    {
+      "color": "5A3E99",
+      "description": "Ontology, schemas, semantics, and conceptual modeling 🧠",
+      "id": 11660487667,
+      "name": "🧠 ontology"
+    },
+    {
+      "color": "3B6EA5",
+      "description": "Reusable platform and shared packages 🧩",
+      "id": 11660487682,
+      "name": "🧩 foundation"
+    },
+    {
+      "color": "5A8F3D",
+      "description": "Testing, validation, and quality assurance 🧪",
+      "id": 11660487702,
+      "name": "🧪 testing"
+    },
+    {
+      "color": "7E22CE",
+      "description": "Reflection engine, journey, and self-awareness 🪞",
+      "id": 11660487716,
+      "name": "🪞 reflection"
+    }
+  ],
+  "observed_at": "2026-10-08T01:32:03Z",
+  "repository": {
+    "id": 1315637692,
+    "name": "egohygiene/aether",
+    "visibility": "public"
+  },
+  "schema": "egohygiene.pace.label-pilot-observation/v1"
+}

@@ -78,3 +78,9 @@ Observatory inputs into deterministic no-write fleet plans. After an exact
 human review, it can verify a locally materialized candidate and open one
 bounded consumer pull request. It never scans repositories, renders Holon
 outputs, updates a default branch, or merges a pull request.
+
+## Preview the Aether label pilot
+
+The bounded [label rollout checkpoint](docs/label-rollout.md) composes pinned Relay
+planning with a captured public inventory and reports canonical enrollment gaps.
+It has no provider-write capability.
