@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema/repositories.v1.schema.json",
+  "schema_version": 1,
+  "catalog_version": "1.0.0",
+  "repositories": [
+    {
+      "repository": "egohygiene/.github",
+      "include_universal": true,
+      "overlays": ["engineering"],
+      "additional_labels": []
+    }
+  ]
+}
