@@ -1,0 +1,427 @@
+{
+  "repository": "egohygiene/aether",
+  "operations": [
+    {
+      "issue": 63,
+      "classification": {
+        "method": "github_add_issue_labels",
+        "added": [
+          "type:architecture"
+        ],
+        "before": {
+          "id": 5303662554,
+          "node_id": "I_kwDOTmsJvM8AAAABPB932g",
+          "number": 63,
+          "url": "https://github.com/egohygiene/aether/issues/63",
+          "title": "spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings",
+          "labels": [],
+          "body_sha256": "89e2bc0bf676e72edb0346f98a486d4737aadba7b6d59727b9c25da815bf6cff",
+          "state": "open",
+          "updated_at": "2026-09-28T21:25:40Z",
+          "assignees": [
+            "szmyty"
+          ],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5303662554,
+          "node_id": "I_kwDOTmsJvM8AAAABPB932g",
+          "number": 63,
+          "url": "https://github.com/egohygiene/aether/issues/63",
+          "title": "spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "89e2bc0bf676e72edb0346f98a486d4737aadba7b6d59727b9c25da815bf6cff",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:32Z",
+          "assignees": [
+            "szmyty"
+          ],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified",
+        "write_response_at": "2026-10-10T09:25:33.681Z"
+      },
+      "title": {
+        "method": "github_update_issue",
+        "intent_saved_at": "2026-10-10T09:27:44.696Z",
+        "verified_at": "2026-10-10T09:27:46.919Z",
+        "plan_sha256": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+        "request": {
+          "title": "🏗️ [architecture] spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings"
+        },
+        "before": {
+          "id": 5303662554,
+          "node_id": "I_kwDOTmsJvM8AAAABPB932g",
+          "number": 63,
+          "url": "https://github.com/egohygiene/aether/issues/63",
+          "title": "spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "89e2bc0bf676e72edb0346f98a486d4737aadba7b6d59727b9c25da815bf6cff",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:32Z",
+          "assignees": [
+            "szmyty"
+          ],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5303662554,
+          "node_id": "I_kwDOTmsJvM8AAAABPB932g",
+          "number": 63,
+          "url": "https://github.com/egohygiene/aether/issues/63",
+          "title": "🏗️ [architecture] spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "89e2bc0bf676e72edb0346f98a486d4737aadba7b6d59727b9c25da815bf6cff",
+          "state": "open",
+          "updated_at": "2026-10-10T09:27:46Z",
+          "assignees": [
+            "szmyty"
+          ],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified"
+      }
+    },
+    {
+      "issue": 92,
+      "classification": {
+        "method": "github_add_issue_labels",
+        "added": [
+          "type:architecture"
+        ],
+        "before": {
+          "id": 5619761275,
+          "node_id": "I_kwDOTmsJvM8AAAABTvbAew",
+          "number": 92,
+          "url": "https://github.com/egohygiene/aether/issues/92",
+          "title": "🧭 Specify bounded issue checkpoints and resumable agent execution",
+          "labels": [],
+          "body_sha256": "c4012ffb73f64265562044f6133a4701cfa6faeabf136047461a01d9a1a7cc40",
+          "state": "open",
+          "updated_at": "2026-09-28T19:04:35Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5619761275,
+          "node_id": "I_kwDOTmsJvM8AAAABTvbAew",
+          "number": 92,
+          "url": "https://github.com/egohygiene/aether/issues/92",
+          "title": "🧭 Specify bounded issue checkpoints and resumable agent execution",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "c4012ffb73f64265562044f6133a4701cfa6faeabf136047461a01d9a1a7cc40",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:34Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified",
+        "write_response_at": "2026-10-10T09:25:35.339Z"
+      },
+      "title": {
+        "method": "github_update_issue",
+        "intent_saved_at": "2026-10-10T09:27:48.371Z",
+        "verified_at": "2026-10-10T09:27:50.535Z",
+        "plan_sha256": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+        "request": {
+          "title": "🏗️ [architecture] Specify bounded issue checkpoints and resumable agent execution"
+        },
+        "before": {
+          "id": 5619761275,
+          "node_id": "I_kwDOTmsJvM8AAAABTvbAew",
+          "number": 92,
+          "url": "https://github.com/egohygiene/aether/issues/92",
+          "title": "🧭 Specify bounded issue checkpoints and resumable agent execution",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "c4012ffb73f64265562044f6133a4701cfa6faeabf136047461a01d9a1a7cc40",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:34Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5619761275,
+          "node_id": "I_kwDOTmsJvM8AAAABTvbAew",
+          "number": 92,
+          "url": "https://github.com/egohygiene/aether/issues/92",
+          "title": "🏗️ [architecture] Specify bounded issue checkpoints and resumable agent execution",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "c4012ffb73f64265562044f6133a4701cfa6faeabf136047461a01d9a1a7cc40",
+          "state": "open",
+          "updated_at": "2026-10-10T09:27:49Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified"
+      }
+    },
+    {
+      "issue": 94,
+      "classification": {
+        "method": "github_add_issue_labels",
+        "added": [
+          "type:architecture"
+        ],
+        "before": {
+          "id": 5621390000,
+          "node_id": "I_kwDOTmsJvM8AAAABTw-asA",
+          "number": 94,
+          "url": "https://github.com/egohygiene/aether/issues/94",
+          "title": "🧭 [Release checkpoint 1] Decide the shared preparation engine and authority boundary",
+          "labels": [],
+          "body_sha256": "be1ad0c73a95b59946fa5fefad555226bf035a2d350c85dc293dd0169a0cb30f",
+          "state": "open",
+          "updated_at": "2026-09-28T21:19:34Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5621390000,
+          "node_id": "I_kwDOTmsJvM8AAAABTw-asA",
+          "number": 94,
+          "url": "https://github.com/egohygiene/aether/issues/94",
+          "title": "🧭 [Release checkpoint 1] Decide the shared preparation engine and authority boundary",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "be1ad0c73a95b59946fa5fefad555226bf035a2d350c85dc293dd0169a0cb30f",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:36Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified",
+        "write_response_at": "2026-10-10T09:25:36.801Z"
+      },
+      "title": {
+        "method": "github_update_issue",
+        "intent_saved_at": "2026-10-10T09:27:51.837Z",
+        "verified_at": "2026-10-10T09:27:53.906Z",
+        "plan_sha256": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+        "request": {
+          "title": "🏗️ [architecture] [Release checkpoint 1] Decide the shared preparation engine and authority boundary"
+        },
+        "before": {
+          "id": 5621390000,
+          "node_id": "I_kwDOTmsJvM8AAAABTw-asA",
+          "number": 94,
+          "url": "https://github.com/egohygiene/aether/issues/94",
+          "title": "🧭 [Release checkpoint 1] Decide the shared preparation engine and authority boundary",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "be1ad0c73a95b59946fa5fefad555226bf035a2d350c85dc293dd0169a0cb30f",
+          "state": "open",
+          "updated_at": "2026-10-10T09:25:36Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "after": {
+          "id": 5621390000,
+          "node_id": "I_kwDOTmsJvM8AAAABTw-asA",
+          "number": 94,
+          "url": "https://github.com/egohygiene/aether/issues/94",
+          "title": "🏗️ [architecture] [Release checkpoint 1] Decide the shared preparation engine and authority boundary",
+          "labels": [
+            {
+              "id": 12624547265,
+              "name": "type:architecture",
+              "color": "1f4d8f",
+              "description": "Architecture, boundaries, or system-design work."
+            }
+          ],
+          "body_sha256": "be1ad0c73a95b59946fa5fefad555226bf035a2d350c85dc293dd0169a0cb30f",
+          "state": "open",
+          "updated_at": "2026-10-10T09:27:53Z",
+          "assignees": [],
+          "milestone": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          }
+        },
+        "result": "verified"
+      }
+    }
+  ]
+}
