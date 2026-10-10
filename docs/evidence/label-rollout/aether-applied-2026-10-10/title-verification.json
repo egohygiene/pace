@@ -1,0 +1,66 @@
+{
+  "checkpoint": "aether-canonical-title-manual-pilot",
+  "checks": {
+    "59_provider_labels_identical_to_before": "passed",
+    "complete_bounded_snapshot": "passed",
+    "historical_pins_unchanged": "passed",
+    "other_25_issue_records_identical_to_before": "passed",
+    "repeat_json_and_markdown_byte_identical": "passed",
+    "three_current_titles_native_conformant": "passed",
+    "three_reviewed_titles_unchanged_noop": "passed"
+  },
+  "file_sha256": {
+    "title-after/plan.json": "3d666b14c89ae9f80bce3580c22b76d1eb1fa0c5306cea0f6d4099cc93b6e98e",
+    "title-after/preview.md": "d54e4238c026d95deb74b31b0436acc484d72a281c93aa8a82e73c7cd393a79d",
+    "title-after/reviews.json": "6e55c87431b028be2f622f80ed2015f4b527352b8563dd6c2e23b72f0d1f959c",
+    "title-after/snapshot.json": "05ad063b5b3bb75bdfe0f526f0f422ca30734fd404e45ee8dfa16cb3e6c9e096"
+  },
+  "limits": [
+    "Sequential public reads are non-atomic.",
+    "No reusable apply or recovery engine is implemented by these preview artifacts.",
+    "The other 25 issues remain unclassified and were not modified.",
+    "Native title contract authority remains candidate/observe.",
+    "Hosted Actions, broad tests, linting and audits remain deferred."
+  ],
+  "observation": {
+    "finished_at": "2026-10-10T09:28:18Z",
+    "issues": 28,
+    "labels": 59,
+    "observed_at": "2026-10-10T09:28:07Z"
+  },
+  "runtime": {
+    "egolint_sha256": "6da154c54aba6d4e4715e9c7afb47cb078bcae90f03b1d893ae0423a85320a67",
+    "lock_sha256": "ba4df41a0a19eb314ebfad4231efcb682d09adcca30307c32a1359b2cdf46ccd"
+  },
+  "scope": "Aether issues 63, 92 and 94 only; manual connector application recorded separately",
+  "source_selection": {
+    "contract": {
+      "authority": "candidate",
+      "contract_id": "egohygiene.issue-title/v1",
+      "contract_version": "1.0.0",
+      "repository": "egohygiene/.github",
+      "revision": "19d2be9bf0191710508cefbb9f0b1abb3a40d9be",
+      "source_digests": {
+        ".github/issues/schema/title-contract.v1.schema.json": "9df220330ad07758122567620f557aa11aad85522914fe3f4cdc7de6a5ca7295",
+        ".github/issues/title-contract.v1.json": "205202bda3c3b069a105924499ba7213a6a99645658e500cc910dfa085eeb30e",
+        ".github/labels/catalog.v1.json": "7063a61608a66454310e5a7746b1514d1d11018da08427bfb49f4612326ff6ff",
+        "docs/issue-titles.md": "243b5fdfec3fff82623fdcb43fa490829af9380d5f0b1d568f9f32b277de0660",
+        "fixtures/issue-titles/cases.v1.json": "c21989c506e363c7b7845e0f63bdaf14f2e0de78f9d6c421d04e0f5a444edab2"
+      }
+    },
+    "egolint": {
+      "repository": "egohygiene/egolint",
+      "revision": "20edc7d98ab7750388e4783ffaf1bab0d9278d60",
+      "tree": "caeb2d3800d0d65de1822c59e74a9c671f0eab95"
+    }
+  },
+  "summary": {
+    "blocked": 0,
+    "needs-classification": 25,
+    "needs-review": 0,
+    "proposed": 0,
+    "unavailable": 0,
+    "unchanged": 3
+  },
+  "verified_at": "2026-10-10T09:28:52Z"
+}

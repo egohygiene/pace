@@ -2,12 +2,62 @@
 
 Refs [Pace #10](https://github.com/egohygiene/pace/issues/10).
 
-The current checkpoint produces a real, checksum-bound synchronization plan for
-`egohygiene/aether` using the pinned Relay planner and the organization's merged
-Aether enrollment. It is **ready for review**. This Pace adapter remains read-only:
-no provider labels, issue classifications, or titles have been changed by it.
+The bounded Aether label pilot has been applied and read back: 18 canonical
+labels were created, all 41 existing labels were preserved, and the pinned Relay
+planner now reports zero operations against 59 provider labels. An authorized
+operator used GitHub's browser interface because the available connector could
+not create repository labels. Pace's adapter remains read-only; this does not add
+a provider write port or claim fleet rollout. Aether #63, #92 and #94 now have
+`type:architecture` and their reviewed canonical titles. Provider read-back and a
+fresh native preview verify all three titles conform and need no further changes.
 
-## Result at the current observation
+## Applied label checkpoint
+
+| Finding | Verified result |
+| --- | --- |
+| Provider labels after application | 59 |
+| Canonical additions | 18; exact catalog names, colors, and descriptions verified |
+| Existing labels | All 41 IDs and metadata preserved |
+| Native Relay operations after read-back | Create 0; update 0; delete 0; unchanged 18 |
+| Reviewed plan checksum before writes | `c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23` |
+| Native plan checksum after read-back | `c8547fee264dfb062ed97842d11bcb394e1a23c831ca5d0c1e7297cff520de69` |
+| Hosted workflow dispatches | 0 |
+
+These label checks establish convergence only for Aether at the recorded
+read-back. Classification and title writes have separate receipts below; neither
+pilot enforces future titles or establishes fleet convergence. The original
+planning evidence remains unchanged.
+
+## Applied three-issue title checkpoint
+
+The operator added only `type:architecture` to Aether #63, #92 and #94, then
+applied the three explicitly reviewed canonical titles. Existing subject wording
+and the `[Release checkpoint 1]` identifier were preserved. Fresh issue reads
+confirmed the expected titles and full label sets; the native after-preview
+reports three unchanged, conformant titles. No other issues were selected.
+
+Evidence for this bounded execution:
+
+- [Execution receipt](evidence/label-rollout/aether-applied-2026-10-10/receipt.json)
+  and [execution details](evidence/label-rollout/aether-applied-2026-10-10/execution.json).
+- Label inventories [before](evidence/label-rollout/aether-applied-2026-10-10/labels-before.json)
+  and [after](evidence/label-rollout/aether-applied-2026-10-10/labels-after.json),
+  with native plans [before](evidence/label-rollout/aether-applied-2026-10-10/label-plan-before.json)
+  and [after](evidence/label-rollout/aether-applied-2026-10-10/label-plan-after.json).
+- Title [operation receipts](evidence/label-rollout/aether-applied-2026-10-10/title-operations.json);
+  before [snapshot](evidence/label-rollout/aether-applied-2026-10-10/title-before/snapshot.json),
+  [reviews](evidence/label-rollout/aether-applied-2026-10-10/title-before/reviews.json),
+  [plan](evidence/label-rollout/aether-applied-2026-10-10/title-before/plan.json) and
+  [preview](evidence/label-rollout/aether-applied-2026-10-10/title-before/preview.md).
+- After [snapshot](evidence/label-rollout/aether-applied-2026-10-10/title-after/snapshot.json),
+  [reviews](evidence/label-rollout/aether-applied-2026-10-10/title-after/reviews.json),
+  [plan](evidence/label-rollout/aether-applied-2026-10-10/title-after/plan.json) and
+  [preview](evidence/label-rollout/aether-applied-2026-10-10/title-after/preview.md).
+
+This proves a manual pilot and repeat verification. No rollback or interruption
+recovery drill was executed, and no reusable apply/recovery engine was introduced.
+
+## Historical planning observation
 
 | Finding | Result |
 | --- | --- |
@@ -21,9 +71,9 @@ no provider labels, issue classifications, or titles have been changed by it.
 
 Evidence:
 
-- [Current public observation](evidence/label-rollout/aether-observation-2026-10-10.json)
-- [Current machine preview](evidence/label-rollout/aether-preview-2026-10-10.json)
-- [Current verification and handoff](evidence/label-rollout/checkpoint-2-verification-2026-10-10.json)
+- [Planning public observation](evidence/label-rollout/aether-observation-2026-10-10.json)
+- [Planning machine preview](evidence/label-rollout/aether-preview-2026-10-10.json)
+- [Planning verification and handoff](evidence/label-rollout/checkpoint-2-verification-2026-10-10.json)
 
 The observation spans 2026-10-10 02:54:43–02:54:54 UTC. One terminal label page
 contained all 41 records. Public reads were credential-free GETs without redirect
@@ -65,7 +115,7 @@ exists in the Pace adapter. Initial capture is an explicit bounded operator read
 the adapter only consumes the saved observation. Pace's separate Observatory-based
 fleet convergence flow is unchanged.
 
-## Values for the local apply handoff
+## Replaying the original local apply handoff
 
 Use the [pinned Relay local-apply guide](https://github.com/egohygiene/relay/blob/425d3cc22673b0509abb3c54f184e07111d5a4df/docs/label-rollout-local.md)
 with the [current preview artifact](evidence/label-rollout/aether-preview-2026-10-10.json).
@@ -76,10 +126,11 @@ RELAY_REVISION="425d3cc22673b0509abb3c54f184e07111d5a4df"
 EXPECTED_PLAN_SHA256="c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23"
 ```
 
-The checksum belongs to the native plan, not this outer Pace report. The guide
+The checksum belongs to the native plan, not this outer Pace report. This is the
+original 18-create plan, not an instruction to repeat its writes. The guide
 recaptures provider state and requires its newly generated plan to match before
-writing. A mismatch requires review of the changed state. No authenticated label
-application or provider read-back is claimed here; retain those receipts separately.
+writing. A mismatch requires review of changed state. After the recorded
+application, a fresh plan should have no operations; never replay the old creates.
 
 ## Local replay
 
@@ -131,22 +182,54 @@ PR #33 merge commit; using today's lock intentionally yields today's selection.
 
 ## Checkpoint handoff and next work
 
-1. **Complete:** organization-owned Aether enrollment and Relay/Pace pin updates;
-   fresh provider observation and a native synchronization plan with 18 additive
-   operations. Pace #10 remains open because rollout is broader than this pilot.
-2. **Next:** refresh the bounded provider inventory, compare the exact plan, apply
-   the reviewed additions through Relay's authorized provider path, and retain
-   read-back evidence. A missing authenticated execution capability is a blocker,
-   never evidence of application. Existing labels must be retained.
-3. **Then:** explicitly classify selected issues and rerun the title preview.
-   Label creation alone does not classify an issue or authorize title rewriting.
-4. **Then:** complete the separate title apply/recovery checkpoint with fresh-state
-   comparison, conflicts, receipts, guarded rollback, retry and no-op repeat.
-   Path-labeler installation and broader Pace #10 rollout remain later work.
+1. **Complete:** organization-owned Aether enrollment, Relay/Pace pin updates,
+   reviewed synchronization plan, 18 browser-applied additions, and provider
+   read-back with zero native operations. All 41 prior labels remain intact.
+2. **Complete:** Aether #63, #92 and #94 were explicitly classified as
+   `type:architecture` and received their reviewed titles. Fresh provider
+   read-back and the pinned native preview confirm three unchanged titles.
+3. **Later:** implement reusable title apply/recovery, event enforcement, path
+   labelers and broader Pace #10 rollout. A successful manual pilot does not
+   establish these capabilities. Pace #10 remains open.
 
-Rollback of this preview means reverting the Pace selection or discarding local
-output; it has no provider state to reverse. A future additive label rollout must
-not equate rollback with deleting labels that other issues may already use.
+## Scoped three-issue recovery procedure
+
+This is an operator procedure for Aether #63, #92 and #94, not a generic apply
+engine. The title contract and Relay preview selection remain separately pinned;
+label catalog adoption does not promote title authority.
+
+1. Save each issue's repository, number, stable provider ID, title, complete label
+   set, body digest, state, `updated_at` and observation time. Bind explicit type/subject reviews
+   to the collected snapshot digest and retain the exact native preview plan.
+2. Immediately before each classification or title write, reread the issue and
+   compare identity, title and the full normalized label set with that operation's
+   recorded before-state. Also verify the body, open state and `updated_at` remain unchanged.
+   Stop on drift; recollect and review it instead of overwriting another edit.
+3. Add only `type:architecture` through the additive label operation. Preserve
+   every existing label. Recollect and generate a fresh title preview after
+   classification; do not use a plan made against the pre-classification state.
+   Apply only the exact reviewed title, then read back identity, title, full label
+   set, body digest, state and `updated_at`. Save a receipt immediately after each operation, including
+   the requested transition, write result, read-back and any uncertainty.
+4. On interruption or an uncertain response, reread before retrying. If current
+   state exactly matches the recorded expected after-state, record reconciliation
+   and skip the already-applied operation. Retry only a still-pending operation
+   whose before-state matches. Any other state is a conflict requiring review.
+   After all three, collect again and run the native preview: expect conformant
+   titles with no proposed title changes, not merely successful API responses.
+5. Title rollback is eligible only when fresh identity, title, complete label set,
+   body digest, state and `updated_at` exactly match that title operation's recorded
+   after-state. Restore only the prior title, then retain the reversal and read-back
+   receipt. Stop on any drift. Classification retirement requires separate review;
+   this procedure never removes labels or replaces the full label list.
+
+These provider calls are sequential and do not provide atomic compare-and-swap.
+A fresh comparison narrows the race window; read-back detects mismatches but cannot
+prove no concurrent edit occurred. Preserve uncertain outcomes for reconciliation.
+
+Reverting Pace evidence or a source selection does not reverse live labels. Do
+not delete the 18 additions as a rollback shortcut: other issues may already use
+them. Any label deletion needs a separate dependency review and authorization.
 
 This scoped guide is the handoff; it does not install Pace #26's separate continuity
 rollout. Fresh sessions should read this guide and Pace's architecture, system,

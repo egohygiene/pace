@@ -1,0 +1,57 @@
+{
+  "kind": "scoped-manual-issue-title-execution",
+  "repository": "egohygiene/aether",
+  "repository_id": 1315637692,
+  "created_at": "2026-10-10T09:27:21.806Z",
+  "authority": "Maintainer's sprint and merge authorization, followed by explicit approval to apply reviewed labels and continue the three reviewed titles.",
+  "preview_plan_sha256": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+  "scope": [
+    {
+      "id": 5303662554,
+      "number": 63,
+      "current_title": "spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings",
+      "expected_labels": [
+        "type:architecture"
+      ],
+      "proposed_title": "🏗️ [architecture] spec(distribution): extend release declarations with distribution targets, package coordinates, and publisher bindings"
+    },
+    {
+      "id": 5619761275,
+      "number": 92,
+      "current_title": "🧭 Specify bounded issue checkpoints and resumable agent execution",
+      "expected_labels": [
+        "type:architecture"
+      ],
+      "proposed_title": "🏗️ [architecture] Specify bounded issue checkpoints and resumable agent execution"
+    },
+    {
+      "id": 5621390000,
+      "number": 94,
+      "current_title": "🧭 [Release checkpoint 1] Decide the shared preparation engine and authority boundary",
+      "expected_labels": [
+        "type:architecture"
+      ],
+      "proposed_title": "🏗️ [architecture] [Release checkpoint 1] Decide the shared preparation engine and authority boundary"
+    }
+  ],
+  "writes": {
+    "title_only": true,
+    "classification": "Separately applied additive type:architecture; repository labels verified first."
+  },
+  "guards": [
+    "Exact repository and issue ID, URL and number; original title; complete label objects; state, body, assignees, milestone, updated_at match immediately before writing.",
+    "Persist an intent before each title-only write; reread and retain per-operation result afterward.",
+    "Non-atomic API compare then write: a concurrent edit in the gap remains possible; reread detects observed mismatch, not all intermediate races."
+  ],
+  "recovery": [
+    "On interruption, reread saved issue identity and current fields; if recorded desired title and original preserved fields match, skip writing and record recovered success.",
+    "If original title and preserved fields still match, revalidate/review the remaining plan before retry; all other drift stops the issue.",
+    "Rollback only the title after a fresh comparison against exact recorded after-state including updated_at and full labels; restore recorded old title only. Never overwrite newer edits or automatically remove labels.",
+    "Verify repeat native preview yields three unchanged rows; no duplicate write for an already applied title."
+  ],
+  "limitations": [
+    "Manual scoped procedure, not a reusable apply/recovery engine.",
+    "Candidate/observe title source remains unchanged; no automatic policy promotion.",
+    "No fleet sweep or event enforcement."
+  ]
+}

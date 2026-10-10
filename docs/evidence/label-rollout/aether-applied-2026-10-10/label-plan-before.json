@@ -1,0 +1,117 @@
+{
+  "schema": "egohygiene.relay.label-sync-plan/v1",
+  "repository": "egohygiene/aether",
+  "contract": {
+    "repository": "egohygiene/.github",
+    "revision": "8b16273eaf0709a7ce95f5e352a2b0d38cfac131",
+    "catalog_version": "1.1.0",
+    "catalog_sha256": "8c8c118005b828b4c521d11a9c94309dd4d7affb06a3feddc51d4ef195376399",
+    "assignments_sha256": "4782d6cf35fceeb66557d0c285d5292e98085ab62c1d497d849e7b07157ba41b"
+  },
+  "configuration_present": false,
+  "observed_labels_sha256": "2f5dbe9aa040f0e0599f17533da0c9fb003923f08c5b968aefaa3990cdf29b31",
+  "removal_policy": "retain",
+  "operations": {
+    "create": [
+      {
+        "name": "area:automation",
+        "description": "Automation, continuous integration, and delivery.",
+        "color": "0369a1"
+      },
+      {
+        "name": "area:developer-experience",
+        "description": "Developer workflows, tooling, and ergonomics.",
+        "color": "7c5c1e"
+      },
+      {
+        "name": "area:governance",
+        "description": "Organization policy, contracts, and coordination.",
+        "color": "6d28d9"
+      },
+      {
+        "name": "area:security",
+        "description": "Security, privacy, provenance, and trust boundaries.",
+        "color": "b91c1c"
+      },
+      {
+        "name": "blocked",
+        "description": "Work waiting on an explicit dependency or decision.",
+        "color": "b60205"
+      },
+      {
+        "name": "cross-repo",
+        "description": "Work coordinated across multiple repositories.",
+        "color": "5319e7"
+      },
+      {
+        "name": "needs-routing",
+        "description": "Work that does not yet have a durable repository owner.",
+        "color": "d4c5f9"
+      },
+      {
+        "name": "priority:p0",
+        "description": "Correctness, security, or data-integrity blocker.",
+        "color": "b60205"
+      },
+      {
+        "name": "priority:p1",
+        "description": "Required foundation or near-term release work.",
+        "color": "d93f0b"
+      },
+      {
+        "name": "priority:p2",
+        "description": "Important planned capability.",
+        "color": "fbca04"
+      },
+      {
+        "name": "priority:p3",
+        "description": "Research, exploration, or later direction.",
+        "color": "c5def5"
+      },
+      {
+        "name": "ready",
+        "description": "Work with sufficient scope, ownership, and acceptance criteria.",
+        "color": "0e8a16"
+      },
+      {
+        "name": "type:architecture",
+        "description": "Architecture, boundaries, or system-design work.",
+        "color": "1f4d8f"
+      },
+      {
+        "name": "type:bug",
+        "description": "Incorrect or unexpected behavior.",
+        "color": "dc2626"
+      },
+      {
+        "name": "type:documentation",
+        "description": "Documentation or knowledge-organization work.",
+        "color": "64748b"
+      },
+      {
+        "name": "type:feature",
+        "description": "New or expanded user-visible capability.",
+        "color": "0e8a16"
+      },
+      {
+        "name": "type:maintenance",
+        "description": "Maintenance, cleanup, or dependency work.",
+        "color": "6b7280"
+      },
+      {
+        "name": "type:research",
+        "description": "Research, discovery, or evidence gathering.",
+        "color": "0f766e"
+      }
+    ],
+    "update": [],
+    "delete": []
+  },
+  "summary": {
+    "create": 18,
+    "update": 0,
+    "delete": 0,
+    "unchanged": 0
+  },
+  "plan_sha256": "c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23"
+}

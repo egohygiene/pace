@@ -1,0 +1,26 @@
+{
+  "schema": "egohygiene.relay.label-sync-plan/v1",
+  "repository": "egohygiene/aether",
+  "contract": {
+    "repository": "egohygiene/.github",
+    "revision": "8b16273eaf0709a7ce95f5e352a2b0d38cfac131",
+    "catalog_version": "1.1.0",
+    "catalog_sha256": "8c8c118005b828b4c521d11a9c94309dd4d7affb06a3feddc51d4ef195376399",
+    "assignments_sha256": "4782d6cf35fceeb66557d0c285d5292e98085ab62c1d497d849e7b07157ba41b"
+  },
+  "configuration_present": false,
+  "observed_labels_sha256": "8864a2a6aaa51ea12752d7f0b8a09bd334a5cf753bcca02c3750db0c0268a9af",
+  "removal_policy": "retain",
+  "operations": {
+    "create": [],
+    "update": [],
+    "delete": []
+  },
+  "summary": {
+    "create": 0,
+    "update": 0,
+    "delete": 0,
+    "unchanged": 18
+  },
+  "plan_sha256": "c8547fee264dfb062ed97842d11bcb394e1a23c831ca5d0c1e7297cff520de69"
+}

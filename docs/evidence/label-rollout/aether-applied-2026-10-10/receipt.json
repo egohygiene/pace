@@ -1,0 +1,210 @@
+{
+  "kind": "aether-label-and-title-pilot-receipt",
+  "repository": "egohygiene/aether",
+  "repository_id": 1315637692,
+  "recorded_at": "2026-10-10T09:29:41.990760+00:00",
+  "authority": "Explicit maintainer sprint/merge authorization plus approved browser fallback for the reviewed labels and three titles.",
+  "sources": {
+    "relay": "425d3cc22673b0509abb3c54f184e07111d5a4df",
+    "organization_labels": "8b16273eaf0709a7ce95f5e352a2b0d38cfac131",
+    "pace_base": "f416a5c8f48b40e3bfd1cc986b41258fa63145c8",
+    "aether": "8ef3bd34d5fec835da54eb8acd0d074b79ee8fe2",
+    "aether_label_config": "absent; fresh connector contents GET returned404"
+  },
+  "labels": {
+    "method": "Authorized GitHub browser UI; each create followed by visible heading verification. Native sync-apply was not run.",
+    "before_observation": {
+      "started_at": "2026-10-10T09:22:45.056459+00:00",
+      "completed_at": "2026-10-10T09:22:50.102102+00:00",
+      "url": "https://api.github.com/repos/egohygiene/aether/labels?per_page=100",
+      "count": 41,
+      "link": null,
+      "complete": true,
+      "atomic": false
+    },
+    "after_observation": {
+      "started_at": "2026-10-10T09:24:49.024158+00:00",
+      "completed_at": "2026-10-10T09:24:52.764225+00:00",
+      "url": "https://api.github.com/repos/egohygiene/aether/labels?per_page=100",
+      "count": 59,
+      "link": null,
+      "complete": true,
+      "atomic": false
+    },
+    "reviewed_and_fresh_plan_sha256": "c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23",
+    "after_plan_sha256": "c8547fee264dfb062ed97842d11bcb394e1a23c831ca5d0c1e7297cff520de69",
+    "created": [
+      {
+        "id": 12624538976,
+        "name": "area:automation",
+        "color": "0369a1",
+        "description": "Automation, continuous integration, and delivery."
+      },
+      {
+        "id": 12624541281,
+        "name": "area:developer-experience",
+        "color": "7c5c1e",
+        "description": "Developer workflows, tooling, and ergonomics."
+      },
+      {
+        "id": 12624541552,
+        "name": "area:governance",
+        "color": "6d28d9",
+        "description": "Organization policy, contracts, and coordination."
+      },
+      {
+        "id": 12624541876,
+        "name": "area:security",
+        "color": "b91c1c",
+        "description": "Security, privacy, provenance, and trust boundaries."
+      },
+      {
+        "id": 12624542156,
+        "name": "blocked",
+        "color": "b60205",
+        "description": "Work waiting on an explicit dependency or decision."
+      },
+      {
+        "id": 12624543732,
+        "name": "cross-repo",
+        "color": "5319e7",
+        "description": "Work coordinated across multiple repositories."
+      },
+      {
+        "id": 12624544042,
+        "name": "needs-routing",
+        "color": "d4c5f9",
+        "description": "Work that does not yet have a durable repository owner."
+      },
+      {
+        "id": 12624544357,
+        "name": "priority:p0",
+        "color": "b60205",
+        "description": "Correctness, security, or data-integrity blocker."
+      },
+      {
+        "id": 12624544653,
+        "name": "priority:p1",
+        "color": "d93f0b",
+        "description": "Required foundation or near-term release work."
+      },
+      {
+        "id": 12624544942,
+        "name": "priority:p2",
+        "color": "fbca04",
+        "description": "Important planned capability."
+      },
+      {
+        "id": 12624545264,
+        "name": "priority:p3",
+        "color": "c5def5",
+        "description": "Research, exploration, or later direction."
+      },
+      {
+        "id": 12624545627,
+        "name": "ready",
+        "color": "0e8a16",
+        "description": "Work with sufficient scope, ownership, and acceptance criteria."
+      },
+      {
+        "id": 12624547265,
+        "name": "type:architecture",
+        "color": "1f4d8f",
+        "description": "Architecture, boundaries, or system-design work."
+      },
+      {
+        "id": 12624547577,
+        "name": "type:bug",
+        "color": "dc2626",
+        "description": "Incorrect or unexpected behavior."
+      },
+      {
+        "id": 12624547829,
+        "name": "type:documentation",
+        "color": "64748b",
+        "description": "Documentation or knowledge-organization work."
+      },
+      {
+        "id": 12624548126,
+        "name": "type:feature",
+        "color": "0e8a16",
+        "description": "New or expanded user-visible capability."
+      },
+      {
+        "id": 12624548329,
+        "name": "type:maintenance",
+        "color": "6b7280",
+        "description": "Maintenance, cleanup, or dependency work."
+      },
+      {
+        "id": 12624548643,
+        "name": "type:research",
+        "color": "0f766e",
+        "description": "Research, discovery, or evidence gathering."
+      }
+    ],
+    "created_count": 18,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "existing_preserved_count": 41,
+    "after_count": 59,
+    "native_after_summary": {
+      "create": 0,
+      "update": 0,
+      "delete": 0,
+      "unchanged": 18
+    }
+  },
+  "titles": {
+    "scope": [
+      63,
+      92,
+      94
+    ],
+    "method": "Additive connector classification then guarded title-only connector writes; per-operation intents saved before title writes and rereads saved after.",
+    "before_plan_file_sha256": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+    "after_plan_file_sha256": "3d666b14c89ae9f80bce3580c22b76d1eb1fa0c5306cea0f6d4099cc93b6e98e",
+    "classification_operations": 3,
+    "title_operations": 3,
+    "verified_unchanged": 3,
+    "other25_records_preserved": true,
+    "native_repeat_byte_identical": true,
+    "contract_authority": "candidate/observe; unchanged",
+    "recovery": "Scoped procedure retained in execution.json and guide; interrupted execution and rollback were not exercised."
+  },
+  "checks": {
+    "label_metadata_exact": "passed",
+    "existing_label_ids_and_metadata_preserved": "passed",
+    "native_label_noop": "passed",
+    "three_native_titles_conformant_noop": "passed",
+    "other25_issue_records_preserved": "passed",
+    "native_title_repeat_byte_identical": "passed",
+    "broad_tests_lint_audits": "deferred",
+    "manual_workflow_dispatches": 0
+  },
+  "limits": [
+    "Sequential provider reads and compare/write operations are non-atomic.",
+    "Browser write responses have visible UI verification; provider IDs and exact metadata come from final public GET read-back.",
+    "Repository-label creation does not prove prior issue associations globally unchanged; this run issued no label rename/delete commands or out-of-scope issue writes.",
+    "Pace remains read-only; this evidence does not implement a reusable title apply/recovery engine.",
+    "25 other Aether issues remain unclassified; fleet migration and future-event enforcement remain open.",
+    "No rollback or interruption drill was executed; no mutation authority is granted by preview output."
+  ],
+  "artifact_sha256": {
+    "execution.json": "404d4f58b3c324412445cb6a19dd95e263e142cd46879b2c18fb7edbe3c6ed9d",
+    "label-plan-after.json": "edc65c5cda3e16a50cfc08a340c54af1e54e221ef078c06afaf02e3fe3b62f3f",
+    "label-plan-before.json": "187e7bbf27258e1a80f3e71a6779e8ae30793a5da63bd9155f7fafe919692eb1",
+    "labels-after.json": "3f082fca2f3cbd81a0fe6bf8d651d6b9413b61c0070f7f0d83f29be6d301183f",
+    "labels-before.json": "3a2be43d7df478df8a0d29564c377759be23063cfe121fa7cba0386ae94b72ec",
+    "title-after/plan.json": "3d666b14c89ae9f80bce3580c22b76d1eb1fa0c5306cea0f6d4099cc93b6e98e",
+    "title-after/preview.md": "d54e4238c026d95deb74b31b0436acc484d72a281c93aa8a82e73c7cd393a79d",
+    "title-after/reviews.json": "6e55c87431b028be2f622f80ed2015f4b527352b8563dd6c2e23b72f0d1f959c",
+    "title-after/snapshot.json": "05ad063b5b3bb75bdfe0f526f0f422ca30734fd404e45ee8dfa16cb3e6c9e096",
+    "title-before/plan.json": "306d36dc1c8cdffd8cab06e7880b6f7881485a107736897ea3007b8347cdd541",
+    "title-before/preview.md": "a30ca733d0dda413be1c70049360078499d53132065c9f9d81895c3f1c82f6ca",
+    "title-before/reviews.json": "c459b70752d2628a71abd9d7be390b4c28266b79ddf61c5a86b4e1431378467a",
+    "title-before/snapshot.json": "2de96db6cc93ba744f445ef87354bf87f3fdc4590335ac0a03de22b39d3ce053",
+    "title-operations.json": "e7101ed19e6096c6bc02f7cc9269f33da53534fc8d01d4572e1639aa37cc5bb7",
+    "title-verification.json": "e01325708af0b00ce4aea0900e9fed8937f2eae3df6a518bc74082f4efeaaaff"
+  }
+}

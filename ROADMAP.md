@@ -227,6 +227,21 @@ verification, then explicit issue classification and title preview. Provider
 application, title changes, path labelers and fleet rollout are not claimed by
 this read-only checkpoint. Hosted Actions and broad linting remain deferred.
 
+## 2026-10-10 applied Aether label pilot
+
+The [label pilot](docs/label-rollout.md) has provider read-back evidence: 18
+canonical labels were added through an authorized browser operator, bringing the
+total to 59. All 41 existing label IDs and metadata were preserved. Exact catalog
+metadata matches, and the pinned native Relay planner reports zero operations.
+Pace's adapter remains read-only; no generic provider mutation capability was added.
+
+The scoped Aether #63/#92/#94 classification and title pilot is also complete:
+per-operation receipts, provider read-back and a fresh native preview verify three
+unchanged canonical titles. This is a manual pilot with repeat verification; no
+rollback or interruption recovery drill was executed. Reusable title apply/recovery,
+future event enforcement, path labelers and broader fleet rollout remain open
+under their owning work. No hosted Actions or broad linting were run.
+
 ## Strategic context
 
 This roadmap describes capability evolution, not promised dates or an issue queue. Sequence follows architecture dependencies and may change when evidence or risk changes.
