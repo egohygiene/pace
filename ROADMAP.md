@@ -214,6 +214,19 @@ Aether. Next is an organization-owned enrollment change, then a reviewed Relay
 repin and fresh preview. No rollout, classification, or path-labeler installation
 is complete. The broader roadmap and parallel adoption programs remain unchanged.
 
+## 2026-10-10 enrolled label checkpoint
+
+The Aether enrollment is merged in organization PR #47 and the first Pace preview
+is merged in PR #33. The [current pilot](docs/label-rollout.md) selects catalog
+1.1.0 through Relay and produces a real native synchronization plan: create 18
+universal labels, update none, delete none; retain all 41 observed labels. The
+2026-10-08 blocked evidence remains an unchanged historical record.
+
+Next is fresh-state comparison and authorized Relay application with read-back
+verification, then explicit issue classification and title preview. Provider
+application, title changes, path labelers and fleet rollout are not claimed by
+this read-only checkpoint. Hosted Actions and broad linting remain deferred.
+
 ## Strategic context
 
 This roadmap describes capability evolution, not promised dates or an issue queue. Sequence follows architecture dependencies and may change when evidence or risk changes.

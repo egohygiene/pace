@@ -1,0 +1,106 @@
+{
+  "authority": {
+    "mode": "observe",
+    "pace_provider_writes": "forbidden",
+    "provider_application": "not performed",
+    "title_contract": "separate existing selection; not promoted by this checkpoint"
+  },
+  "checkpoint": "pace-10-aether-label-preview-2",
+  "checks": [
+    {
+      "command": "python3 scripts/preview_repository_labels.py --relay PINNED_RELAY_CHECKOUT --observation docs/evidence/label-rollout/aether-observation-2026-10-10.json --output NEW_PREVIEW.json",
+      "exit_code": 0,
+      "native_plan_sha256": "c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23",
+      "native_summary": {
+        "create": 18,
+        "delete": 0,
+        "unchanged": 0,
+        "update": 0
+      },
+      "result": "ready-for-review"
+    },
+    {
+      "command": "PACE_LABEL_RELAY_SOURCE=PINNED_RELAY_CHECKOUT python3 -m unittest discover --start-directory tests --pattern test_label_pilot.py --verbose",
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "result": "passed: real Relay additive planning, repeat byte equality, unchanged input, integrity/coverage/configuration refusal, exclusive output and symlink denial",
+      "skips": 0,
+      "tests": 7
+    },
+    {
+      "command": "Compare historical checkpoint 1 evidence against Pace base Git objects",
+      "files": [
+        "docs/evidence/label-rollout/aether-observation-2026-10-08.json",
+        "docs/evidence/label-rollout/aether-preview-2026-10-08.json",
+        "docs/evidence/label-rollout/checkpoint-1-verification-2026-10-08.json"
+      ],
+      "result": "byte-identical"
+    }
+  ],
+  "collection": {
+    "configuration": {
+      "directory_response_sha256": "1c9d45dfc62321b9fb5d352dad099cfd60e71b3633b58fe78e3be7e1e9b37d92",
+      "path": ".github/relay-labels.json",
+      "source_revision": "8ef3bd34d5fec835da54eb8acd0d074b79ee8fe2",
+      "status": "absent"
+    },
+    "coverage": "complete recorded traversal; sequential and non-atomic",
+    "credentials": false,
+    "finished_at": "2026-10-10T02:54:54Z",
+    "follow_redirects": false,
+    "labels": 41,
+    "methods": [
+      "GET"
+    ],
+    "mode": "bounded operator read; no Pace scanner added",
+    "observed_at": "2026-10-10T02:54:43Z",
+    "origin": "https://api.github.com",
+    "page_limit": 20,
+    "page_size": 100,
+    "pages": [
+      {
+        "number": 1,
+        "records": 41,
+        "response_sha256": "7cc1b35e2f9008890ff771a219f7be9f706e44c52d0c7c2b82a6a412c0516bbc"
+      }
+    ],
+    "repository": "egohygiene/aether"
+  },
+  "deferred": [
+    "Hosted Actions",
+    "Broad tests/linting/audits",
+    "Provider label application and read-back",
+    "Issue classification and title apply/recovery",
+    "Path labeler installation",
+    "Fleet rollout"
+  ],
+  "delivery": "candidate PR; user authorized merge after focused review; Pace #10 remains open",
+  "file_sha256": {
+    "ROADMAP.md": "7f34dea583abcb536eb41481eb0b0ea69fa533c27aab60c982fd8db24822bc59",
+    "contracts/label-rollout-pilot.v1.lock.json": "062ad0a77f01c3c3985f34380cf6997f5cb7520ff146ef6ef931c32ef3740850",
+    "docs/evidence/label-rollout/aether-observation-2026-10-10.json": "b59678d0f340b060b73510af7a1f8ba2f44181cc2e5a3bb3e2346270d5dada56",
+    "docs/evidence/label-rollout/aether-preview-2026-10-10.json": "c6d6c3a696a504c0eb560040f20d83199cecb5c7022bc00213f499fd2ef57ad7",
+    "docs/label-rollout.md": "645d0bf8527533034b49ad8a67d443807648465ba53e8a99001d90542e8fba96",
+    "scripts/preview_repository_labels.py": "aaaff6bb9526197a9b4b3b29c413288d42443811d81b38b31e7bb3141da90422",
+    "tests/test_label_pilot.py": "51ca9b58ac14b67154d79eb05e70ff69e86360a66dc9871ba73177a5bf24a85b",
+    "vendor/github/label-rollout/catalog.v1.json": "8c8c118005b828b4c521d11a9c94309dd4d7affb06a3feddc51d4ef195376399",
+    "vendor/github/label-rollout/repositories.v1.json": "4782d6cf35fceeb66557d0c285d5292e98085ab62c1d497d849e7b07157ba41b"
+  },
+  "next": [
+    "Refresh and compare the native plan using Relay's pinned local-apply guide.",
+    "Apply the reviewed create-only labels through an authenticated Relay runtime; retain receipts and read-back no-op proof.",
+    "Explicitly classify the selected issues, then regenerate title preview and implement the separate apply/recovery checkpoint."
+  ],
+  "pace_base_revision": "cfe8ed9db55a5ddf8580c72f4d7991f6391386a1",
+  "recorded_at": "2026-10-10T02:59:39Z",
+  "remote_workflow_dispatches": 0,
+  "sources": {
+    "catalog_version": "1.1.0",
+    "enrollment": "egohygiene/aether; universals only, no overlays or additions",
+    "organization_revision": "8b16273eaf0709a7ce95f5e352a2b0d38cfac131",
+    "relay_revision": "425d3cc22673b0509abb3c54f184e07111d5a4df",
+    "relay_tree": "d8e6e34d1f1c4c2e04ced39fdd66bf4798cb4ff7"
+  },
+  "target_repository_label_issue_writes": 0
+}
