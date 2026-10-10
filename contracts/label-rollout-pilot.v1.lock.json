@@ -5,24 +5,24 @@
   "repository": "egohygiene/aether",
   "relay": {
     "repository": "egohygiene/relay",
-    "revision": "e273030836b68bcb9912aae73e56ffbb31f33d48",
-    "tree": "a3022bad1a5e35f0417825c60426d3fbe3fdc1a6",
+    "revision": "425d3cc22673b0509abb3c54f184e07111d5a4df",
+    "tree": "d8e6e34d1f1c4c2e04ced39fdd66bf4798cb4ff7",
     "files": {
       "actions/repository-labels/scripts/repository_labels.py": "e6dad8418e1885147568bb30fd2814386c750164b1a47a3d29caaa1e12d08164",
-      "actions/repository-labels/contracts/organization-labels.lock.json": "2316fc6aa64d48f7f1afe5683a3c1b7afe7e96f5285d7c6bc329b10458feb090"
+      "actions/repository-labels/contracts/organization-labels.lock.json": "7772edf8aa8373db1b0735812d388491a4f5ea863149f1ecfd7e5eb10504f528"
     }
   },
   "organization": {
     "repository": "egohygiene/.github",
-    "revision": "b415c8029bf2fb5d474f367e7129791588ba3860",
+    "revision": "8b16273eaf0709a7ce95f5e352a2b0d38cfac131",
     "files": {
       ".github/labels/catalog.v1.json": {
         "local_path": "vendor/github/label-rollout/catalog.v1.json",
-        "sha256": "7063a61608a66454310e5a7746b1514d1d11018da08427bfb49f4612326ff6ff"
+        "sha256": "8c8c118005b828b4c521d11a9c94309dd4d7affb06a3feddc51d4ef195376399"
       },
       ".github/labels/repositories.v1.json": {
         "local_path": "vendor/github/label-rollout/repositories.v1.json",
-        "sha256": "96743b7889d90cc99ea01d0720d50a4602d109d96cb2c6592e4a4ddac3d6325f"
+        "sha256": "4782d6cf35fceeb66557d0c285d5292e98085ab62c1d497d849e7b07157ba41b"
       }
     }
   }

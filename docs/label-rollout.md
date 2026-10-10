@@ -1,53 +1,48 @@
-# Label rollout — Aether checkpoint 1
+# Label rollout — Aether pilot
 
 Refs [Pace #10](https://github.com/egohygiene/pace/issues/10).
 
-The first checkpoint is a local, read-only preview for `egohygiene/aether`.
-It consumes a captured public label inventory and the actual pinned Relay label
-planner. The checkpoint is complete for review; **canonical Aether synchronization
-is blocked by missing enrollment**, not approved for application.
+The current checkpoint produces a real, checksum-bound synchronization plan for
+`egohygiene/aether` using the pinned Relay planner and the organization's merged
+Aether enrollment. It is **ready for review**. This Pace adapter remains read-only:
+no provider labels, issue classifications, or titles have been changed by it.
 
-## Result at the recorded observation
+## Result at the current observation
 
 | Finding | Result |
 | --- | --- |
 | Observed labels | 41, all retained in the report |
 | Missing universal labels | 18, including all six `type:*` labels |
-| Drifted existing universal labels | 0 |
-| Proposed deletions / renames | 0 / 0 |
-| Aether canonical assignment | Missing |
-| Native Relay synchronization plan | Unavailable; no fabricated plan or checksum |
+| Native Relay operations | Create 18; update 0; delete 0 |
+| Aether canonical assignment | Universal labels, no overlays or additions |
+| Native Relay synchronization plan | Present with a content checksum |
 | `.github/relay-labels.json` | Absent at the recorded Aether source revision |
-| Aether label/issue mutations / workflow dispatches | 0 / 0 |
+| Aether label/issue mutations / workflow dispatches by this checkpoint | 0 / 0 |
 
 Evidence:
 
-- [Public observation](evidence/label-rollout/aether-observation-2026-10-08.json)
-- [Machine preview](evidence/label-rollout/aether-preview-2026-10-08.json)
-- [Verification and handoff](evidence/label-rollout/checkpoint-1-verification-2026-10-08.json)
+- [Current public observation](evidence/label-rollout/aether-observation-2026-10-10.json)
+- [Current machine preview](evidence/label-rollout/aether-preview-2026-10-10.json)
+- [Current verification and handoff](evidence/label-rollout/checkpoint-2-verification-2026-10-10.json)
 
-The observation spans 2026-10-08 01:32:03–01:32:12 UTC. One terminal label page
+The observation spans 2026-10-10 02:54:43–02:54:54 UTC. One terminal label page
 contained all 41 records. Public reads were credential-free GETs without redirect
-following. Provider reads are sequential and non-atomic; capture times and raw
-response digests are retained. Git source/configuration evidence is separately
-bound to Aether `8ef3bd34d5fec835da54eb8acd0d074b79ee8fe2`. Neither a repository
-commit nor this saved report proves that provider labels remain current later.
+following. Reads are sequential and non-atomic; capture times and raw response
+digests are retained. Configuration absence is separately bound to Aether
+`8ef3bd34d5fec835da54eb8acd0d074b79ee8fe2`. Neither the repository commit nor this
+saved report proves that provider labels remain current later. Refresh before apply.
 
-The required universal names, if Aether is enrolled, are:
-
-| Group | Labels |
+| Group | Required universal labels |
 | --- | --- |
 | Primary type | `type:architecture`, `type:feature`, `type:bug`, `type:documentation`, `type:research`, `type:maintenance` |
 | Priority | `priority:p0`, `priority:p1`, `priority:p2`, `priority:p3` |
 | Area | `area:automation`, `area:developer-experience`, `area:governance`, `area:security` |
 | Coordination/status | `cross-repo`, `needs-routing`, `blocked`, `ready` |
 
-The JSON retains canonical colors and descriptions. This universal-only comparison
-is advisory and deliberately distinct from `native_sync_plan`. Overlay selections
-and repository-local additions require a canonical assignment; they are not inferred
-from currently installed expressive labels. For example, `🏗️ architecture` is not
-an alias that can silently replace `type:architecture`. Existing issue associations,
-labels, titles, bodies, states and relationships have not been changed.
+The JSON retains canonical colors and descriptions. `native_sync_plan` is Relay's
+canonical plan; the separate universal-only comparison stays advisory. Expressive
+labels such as `🏗️ architecture` are retained and are not aliases for `type:architecture`.
+Creating the six primary-type labels does not attach them to any issue.
 
 ## Ownership and exact inputs
 
@@ -58,50 +53,60 @@ verification. They are snapshots, not Pace-owned taxonomy or enrollment.
 
 | Owner | Selected input |
 | --- | --- |
-| Relay execution | `e273030836b68bcb9912aae73e56ffbb31f33d48`, the merge of PR #136 |
-| Organization taxonomy/assignments selected by Relay | `egohygiene/.github@b415c8029bf2fb5d474f367e7129791588ba3860` |
-| Organization current-source comparison | `333e4e914b762cb817dcaed1d792435432f4fd5c`; assignment bytes unchanged and still only enroll `.github` |
-| Issue-title preview | Relay #133 completed; its title contract remains candidate/observe at its separate existing pin |
+| Relay execution | `425d3cc22673b0509abb3c54f184e07111d5a4df` |
+| Organization taxonomy/assignments selected by Relay | `egohygiene/.github@8b16273eaf0709a7ce95f5e352a2b0d38cfac131`, catalog 1.1.0 |
+| Enrollment change | Organization PR #47; Aether receives universals with no overlay or additions |
+| Issue-title preview | Separate existing contract selection; this label update does not promote title authority |
 
-The selected label catalog SHA-256 is
-`7063a61608a66454310e5a7746b1514d1d11018da08427bfb49f4612326ff6ff`,
-the same catalog bytes consumed by the issue-title pilot. The matching catalog
-bytes do not grant Aether adoption or promote title-contract authority.
+Relay owns canonical label resolution and provider mutation. Pace composes its
+`validate_contract`, `plan_sync` and `verify_plan` functions from verified Git objects,
+without executing a modified checkout file. No network or provider-write command
+exists in the Pace adapter. Initial capture is an explicit bounded operator read;
+the adapter only consumes the saved observation. Pace's separate Observatory-based
+fleet convergence flow is unchanged.
 
-Relay remains responsible for canonical label resolution and provider mutation.
-Pace composes its `validate_contract`, `plan_sync` and `verify_plan` functions from
-verified Git objects, without executing a potentially modified checkout file.
-No network or provider-write command exists in the Pace adapter. It does not alter
-Pace's separate Observatory-based fleet convergence flow. Initial capture was an
-explicit bounded operator read; this adapter consumes the saved observation.
+## Values for the local apply handoff
+
+Use the [pinned Relay local-apply guide](https://github.com/egohygiene/relay/blob/425d3cc22673b0509abb3c54f184e07111d5a4df/docs/label-rollout-local.md)
+with the [current preview artifact](evidence/label-rollout/aether-preview-2026-10-10.json).
+Its `native_sync_plan` proposes the 18 additions above. The concrete selections are:
+
+```bash
+RELAY_REVISION="425d3cc22673b0509abb3c54f184e07111d5a4df"
+EXPECTED_PLAN_SHA256="c0ee4b005b477e88deb8235cf9b418de30319881c5f11771d241a087a6922f23"
+```
+
+The checksum belongs to the native plan, not this outer Pace report. The guide
+recaptures provider state and requires its newly generated plan to match before
+writing. A mismatch requires review of the changed state. No authenticated label
+application or provider read-back is claimed here; retain those receipts separately.
 
 ## Local replay
 
-Use Python 3.10+ and Git; the adapter and pinned Relay planner use the standard
-library. Acquire the selected Relay commit, then replay offline:
+Use Python 3.10+ and Git; the adapter and Relay planner use the standard library.
+Acquire the selected Relay commit, then replay offline:
 
 ```bash
 git clone --no-checkout "https://github.com/egohygiene/relay.git" \
   "/absolute/path/to/relay"
 git -C "/absolute/path/to/relay" fetch origin \
-  "e273030836b68bcb9912aae73e56ffbb31f33d48"
+  "425d3cc22673b0509abb3c54f184e07111d5a4df"
 
 python3 scripts/preview_repository_labels.py \
   --relay "/absolute/path/to/relay" \
-  --observation "docs/evidence/label-rollout/aether-observation-2026-10-08.json" \
+  --observation "docs/evidence/label-rollout/aether-observation-2026-10-10.json" \
   --output "/absolute/path/to/new-label-preview.json"
 ```
 
-Exit **2 is the expected blocked result** for this capture: the enrollment prerequisite
-is missing. Exit 0 means an enrolled native plan was generated for review, not approved
-or applied. Exit 3 means invalid/unavailable inputs or unsafe/existing output.
-The output parent must already exist; the destination must be new and have no symlink
-components. Existing evidence is never overwritten. A partial or unterminated label
-inventory is rejected, and configured consumers require a separately reviewed extension.
+Exit **0 is expected for the current selection**: a native plan was generated for
+review, not applied. Exit 2 identifies missing canonical enrollment. Exit 3 means
+invalid/unavailable inputs or unsafe/existing output. The output parent must exist;
+the destination must be new and have no symlink components. Partial inventories are
+rejected; configured consumers require a separately reviewed extension.
 
-Seven focused tests passed with no skips, including real pinned Relay execution,
-byte-identical CLI replay, unchanged observation bytes, rejection of incomplete
-coverage and source drift, and output preservation. Repeat locally if needed:
+Seven focused tests cover real pinned Relay planning, additive operations,
+byte-identical CLI replay, unchanged observation bytes, incomplete coverage and
+source drift rejection, and output preservation. Run only these when needed:
 
 ```bash
 PACE_LABEL_RELAY_SOURCE="/absolute/path/to/relay" \
@@ -109,37 +114,40 @@ PACE_LABEL_RELAY_SOURCE="/absolute/path/to/relay" \
   --pattern "test_label_pilot.py" --verbose
 ```
 
-Without that environment variable the native tests skip. Hosted Actions, broad tests,
+Without the environment variable the native tests skip. Hosted Actions, broad tests,
 linting, audits, path-labeler installation and fleet mutation remain deferred.
+
+## Historical checkpoint 1
+
+[Pace PR #33](https://github.com/egohygiene/pace/pull/33) merged at
+`cfe8ed9db55a5ddf8580c72f4d7991f6391386a1`. Its original
+[observation](evidence/label-rollout/aether-observation-2026-10-08.json),
+[blocked preview](evidence/label-rollout/aether-preview-2026-10-08.json), and
+[verification](evidence/label-rollout/checkpoint-1-verification-2026-10-08.json)
+remain unchanged. Relay then selected organization revision
+`b415c8029bf2fb5d474f367e7129791588ba3860`, which did not enroll Aether. The blocked
+report is accurate for that historic selection. Replay that checkpoint from the
+PR #33 merge commit; using today's lock intentionally yields today's selection.
 
 ## Checkpoint handoff and next work
 
-1. **Completed here:** capture Aether's labels, verify canonical inputs, run the actual
-   planner, retain the enrollment blocker and universal-label comparison, prove replay,
-   and deliver the evidence through a Pace draft PR. Pace #10 remains open.
-2. **Next owner change — `.github`:** add explicit Aether enrollment to
-   `.github/labels/repositories.v1.json`. A proposed minimal starting point is universal
-   labels with no overlays or additions, retaining all existing provider labels.
-   Review relevant overlays explicitly. Follow `docs/label-governance.md`: additive
-   assignments require the appropriate catalog minor-version update and matching
-   assignment version. This is a proposal, not an accepted assignment in this checkpoint.
-3. **Then Relay/Pace:** repin Relay's label contract to the reviewed merged organization
-   change, preserve compatible title-contract selection, update this pilot selection,
-   acquire fresh provider evidence, and regenerate a real checksum-bound sync plan.
-4. **Then label adoption/classification:** apply only the reviewed label operations,
-   verify them, explicitly classify the selected issues, and rerun the title preview.
-   Creating labels alone does not attach a primary type to an issue.
-5. **Then title application:** the separate Relay apply/recovery checkpoint still needs
-   approval binding, fresh-state comparison, conflicts, receipts, guarded rollback,
-   interruption/retry and no-op repeat. Broader Pace #10 rollout remains later work.
+1. **Complete:** organization-owned Aether enrollment and Relay/Pace pin updates;
+   fresh provider observation and a native synchronization plan with 18 additive
+   operations. Pace #10 remains open because rollout is broader than this pilot.
+2. **Next:** refresh the bounded provider inventory, compare the exact plan, apply
+   the reviewed additions through Relay's authorized provider path, and retain
+   read-back evidence. A missing authenticated execution capability is a blocker,
+   never evidence of application. Existing labels must be retained.
+3. **Then:** explicitly classify selected issues and rerun the title preview.
+   Label creation alone does not classify an issue or authorize title rewriting.
+4. **Then:** complete the separate title apply/recovery checkpoint with fresh-state
+   comparison, conflicts, receipts, guarded rollback, retry and no-op repeat.
+   Path-labeler installation and broader Pace #10 rollout remain later work.
 
-Rollback of this preview means discarding its local output or reverting the Pace
-candidate; it has no provider state to reverse. Future additive label adoption must
-retain existing labels by default and must not equate rollback with deletion.
+Rollback of this preview means reverting the Pace selection or discarding local
+output; it has no provider state to reverse. A future additive label rollout must
+not equate rollback with deleting labels that other issues may already use.
 
-Relay PR #136 was merged at the source revision above and issue #133 was closed with
-its preview-only acceptance receipt. Parallel Relay PR #135 remains separate.
-Pace had no `AGENTS.md`, root `CONTINUITY.md`, or open PRs at inspection; this scoped
-handoff does not claim installation of the separate Pace #26 continuity rollout.
-Fresh sessions should read this guide, Pace's architecture/system/decisions/roadmap,
-then verify the parent issue and current PR state before selecting the next action.
+This scoped guide is the handoff; it does not install Pace #26's separate continuity
+rollout. Fresh sessions should read this guide and Pace's architecture, system,
+decisions and roadmap, then verify current issues, PRs and provider state.

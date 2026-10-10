@@ -16,7 +16,7 @@ SCRIPT = ROOT / "scripts/preview_repository_labels.py"
 SPEC = importlib.util.spec_from_file_location("pilot", SCRIPT)
 pilot = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(pilot)
-OBSERVATION = ROOT / "docs/evidence/label-rollout/aether-observation-2026-10-08.json"
+OBSERVATION = ROOT / "docs/evidence/label-rollout/aether-observation-2026-10-10.json"
 
 
 @unittest.skipUnless(os.environ.get("PACE_LABEL_RELAY_SOURCE"), "Set PACE_LABEL_RELAY_SOURCE to the pinned Relay checkout")
@@ -24,15 +24,26 @@ class LabelPilot(unittest.TestCase):
     def setUp(self):
         self.source = Path(os.environ["PACE_LABEL_RELAY_SOURCE"])
 
-    def test_missing_enrollment_is_blocked_without_fabricated_native_plan(self):
+    def test_enrollment_produces_native_additive_plan_without_provider_writes(self):
         result = pilot.preview(self.source, OBSERVATION)
-        self.assertEqual(result["status"], "blocked")
-        self.assertEqual(result["diagnostics"], ["CANONICAL_ASSIGNMENT_MISSING"])
-        self.assertIsNone(result["native_sync_plan"])
+        self.assertEqual(result["status"], "ready-for-review")
+        self.assertEqual(result["diagnostics"], [])
+        self.assertEqual(result["canonical_assignment"], {
+            "repository": "egohygiene/aether", "include_universal": True,
+            "overlays": [], "additional_labels": [],
+        })
+        native = result["native_sync_plan"]
+        self.assertEqual(native["summary"], {"create": 18, "update": 0, "delete": 0, "unchanged": 0})
+        self.assertEqual(native["contract"]["catalog_version"], "1.1.0")
+        self.assertEqual(native["operations"]["create"], result["universal_preview"]["create"])
+        self.assertEqual(native["operations"]["update"], [])
+        self.assertEqual(native["operations"]["delete"], [])
+        self.assertRegex(native["plan_sha256"], "^[0-9a-f]{64}$")
         self.assertEqual(result["summary"]["missing_universal"], 18)
         self.assertEqual(len(result["preserved_observed_labels"]), 41)
         self.assertEqual(result["summary"]["proposed_deletions"], 0)
         self.assertEqual(result["provider_writes"], "forbidden")
+        self.assertIn("Review the native synchronization plan", result["next"])
 
     def test_cli_repeat_is_identical_and_existing_output_is_preserved(self):
         before = OBSERVATION.read_bytes()
@@ -41,7 +52,7 @@ class LabelPilot(unittest.TestCase):
             command = [sys.executable, str(SCRIPT), "--relay", str(self.source), "--observation", str(OBSERVATION)]
             for output in outputs:
                 run = subprocess.run([*command, "--output", str(output)], capture_output=True)
-                self.assertEqual(run.returncode, 2, run.stderr)
+                self.assertEqual(run.returncode, 0, run.stderr)
             self.assertEqual(outputs[0].read_bytes(), outputs[1].read_bytes())
             retained = outputs[0].read_bytes()
             rerun = subprocess.run([*command, "--output", str(outputs[0])], capture_output=True)

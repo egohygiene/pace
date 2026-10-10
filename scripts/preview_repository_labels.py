@@ -160,7 +160,11 @@ def preview(source, observation_path):
                         "proposed_deletions": 0, "proposed_renames": 0},
             "provenance": {"pilot_lock_sha256": sha(LOCK.read_bytes()), "adapter_sha256": sha(Path(__file__).read_bytes()),
                            "observation_sha256": sha(observation_path.read_bytes()), "selection": lock},
-            "next": "Review canonical Aether enrollment and overlays in .github, then repin Relay and regenerate; separate label application and issue classification remain required.",
+            "next": (
+                "Review canonical Aether enrollment and overlays in .github, then repin Relay and regenerate; separate label application and issue classification remain required."
+                if diagnostics else
+                "Review the native synchronization plan, refresh provider state before applying through Relay, and verify the resulting labels; issue classification and title application remain separate steps."
+            ),
         }
 
 
