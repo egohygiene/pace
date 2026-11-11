@@ -242,6 +242,17 @@ rollback or interruption recovery drill was executed. Reusable title apply/recov
 future event enforcement, path labelers and broader fleet rollout remain open
 under their owning work. No hosted Actions or broad linting were run.
 
+## 2026-11-11 Repository Intelligence source checkpoint
+
+The [adoption ledger](docs/intelligence-adoption.md) now records every member of
+the exact reviewed public snapshot with independent source, builder, model
+artifact, destination, live verification and refresh ownership stages. It links
+proposed next handoffs to Pace #13/#31 and the preserved Hygiene #47 and Akashic
+#197 owner issues. Model artifacts, executed builds, provider configuration,
+live verification, upkeep ownership and eligibility remain unknown/unassessed.
+This source implementation does not complete PAC-Q06 or either campaign;
+projector runtime and operational qualification remain deferred.
+
 ## Strategic context
 
 This roadmap describes capability evolution, not promised dates or an issue queue. Sequence follows architecture dependencies and may change when evidence or risk changes.

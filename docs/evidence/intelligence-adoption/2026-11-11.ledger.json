@@ -1,0 +1,3082 @@
+{
+  "authority": {
+    "adoption_projection": "egohygiene/pace",
+    "canonical_membership": "egohygiene/hygiene",
+    "eligibility_decisions": "none",
+    "human_dispositions": "none",
+    "mutation": "none",
+    "source_observation": "egohygiene/.github"
+  },
+  "coordination": {
+    "adoption": "https://github.com/egohygiene/pace/issues/13",
+    "membership_and_policy": "https://github.com/egohygiene/hygiene/issues/36",
+    "roadmaps": "https://github.com/egohygiene/pace/issues/31"
+  },
+  "projection_as_of": "2026-11-11T18:58:15Z",
+  "qualification": {
+    "build": "not-run",
+    "ci": "not-checked",
+    "live": "not-checked",
+    "projector_runtime": "not-qualified",
+    "provider": "not-checked",
+    "source": "captured-immutable-source",
+    "tests": "not-run"
+  },
+  "repositories": [
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/.github",
+      "repository_id": 1196401336,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:28Z",
+        "paths": [
+          ".github/workflows/validate-label-contract.yml",
+          "README.md"
+        ],
+        "revision": "ac2e4035173ed252d71d6655e723964ef93684df",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/.github/commit/ac2e4035173ed252d71d6655e723964ef93684df",
+          "repository": "https://github.com/egohygiene/.github"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/aether",
+      "repository_id": 1315637692,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:29Z",
+        "paths": [
+          ".github/workflows/pr-validation.yml",
+          ".github/workflows/release-first-party-skills.yml",
+          "README.md"
+        ],
+        "revision": "7ad20f3c73497ccc3aa9ee3b92d181b2436ef375",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/aether/commit/7ad20f3c73497ccc3aa9ee3b92d181b2436ef375",
+          "repository": "https://github.com/egohygiene/aether"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Capture consumer routes before composition",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'current'",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Capture public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Verify current composition provenance and non-clobber boundary",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'current'",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "finalize-deployment",
+            "job_condition": "${{ always() && github.event_name != 'pull_request' && needs.build.result == 'success' && needs.deploy.result != 'cancelled' && needs.deploy.result != 'skipped' }}",
+            "name": "Record separate consumer deployment receipt",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "${{ needs.build.outputs.deployment-mode == 'current' && steps.download_provenance.outcome == 'success' }}",
+            "workflow_path": ".github/workflows/pages.yml"
+          }
+        ],
+        "declarations": [
+          {
+            "action_path": ".github/workflows/repository-intelligence.yml",
+            "collectors": {
+              "collect-journey": true,
+              "search-attribution": true
+            },
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "intelligence-review",
+            "job_condition": "${{ github.event_name != 'workflow_dispatch' || inputs.mode != 'rollback-v1.3' }}",
+            "name": "intelligence-review",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "${{ github.event_name != 'workflow_dispatch' || inputs.mode != 'rollback-v1.3' }}",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Generate current Repository Intelligence bundle",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'current'",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Rebuild current Repository Intelligence bundle",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'current'",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ always() && (needs.intelligence-review.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rollback-v1.3' && needs.intelligence-review.result == 'skipped')) }}",
+            "name": "Generate fixed rollback Repository Intelligence bundle",
+            "pages_workflow_composition_declared": true,
+            "ref": "55587de4ff322931d401e964f5af0716633dd675",
+            "selection_context": "historical-rollback",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "step_condition": "steps.identity.outputs.deployment-mode == 'rollback-v1.3'",
+            "workflow_path": ".github/workflows/pages.yml"
+          },
+          {
+            "action_path": ".github/workflows/repository-intelligence.yml",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "failure-evidence",
+            "job_condition": null,
+            "name": "failure-evidence",
+            "pages_workflow_composition_declared": false,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/repository-intelligence-failure-evidence.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/repository-intelligence-failure-evidence.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/pages.yml",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "pages-composition-source-declared"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [],
+        "declarations": [
+          {
+            "base_path": "/",
+            "field": "CANONICAL_ORIGIN",
+            "host": "akashic.egohygiene.io",
+            "kind": "canonical-workflow-url",
+            "origin": "https://akashic.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "url": "https://akashic.egohygiene.io/"
+          },
+          {
+            "base_path": "/akashic/",
+            "field": "FALLBACK_ORIGIN",
+            "host": "egohygiene.github.io",
+            "kind": "fallback-workflow-url",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/akashic/blob/dc21c6a24506d748deb45f29ce54fc7e7bf69753/.github/workflows/pages.yml",
+            "url": "https://egohygiene.github.io/akashic/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": "https://akashic.egohygiene.io/intelligence/",
+        "intelligence_url_basis": "explicit-origin-and-base-path-with-composed-route",
+        "origin": "https://akashic.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [
+        {
+          "effect": "Reconcile the issue-reported AKA-Q03/AKA-Q02 dependency through source review; do not infer resolution from a newer builder pin.",
+          "issue": "https://github.com/egohygiene/akashic/issues/197",
+          "issue_updated_at": "2026-09-26T19:59:12Z",
+          "observed_at": "2026-11-11T18:54:40Z",
+          "scope": "roadmap-canary-source-prerequisite",
+          "state": "issue-reported-unresolved"
+        }
+      ],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-roadmap-canary-prerequisite",
+        "instruction": "Reconcile the roadmap source prerequisite in the canary issue, then select real revision-matched model and delivery evidence without changing its rollback path.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/akashic/issues/197",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/akashic",
+      "repository_id": 1320228396,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [],
+        "observed_at": "2026-11-10T23:49:29Z",
+        "paths": [
+          ".github/workflows/awesome-lint.yml",
+          ".github/workflows/freshness.yml",
+          ".github/workflows/pages.yml",
+          ".github/workflows/quality.yml",
+          ".github/workflows/repository-intelligence-failure-evidence.yml",
+          ".github/workflows/repository-intelligence-gates.yml",
+          ".github/workflows/search-performance.yml",
+          ".github/workflows/search-research.yml",
+          "README.md",
+          "package.json"
+        ],
+        "revision": "dc21c6a24506d748deb45f29ce54fc7e7bf69753",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/akashic/commit/dc21c6a24506d748deb45f29ce54fc7e7bf69753",
+          "repository": "https://github.com/egohygiene/akashic"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/aniflow",
+      "repository_id": 1315637894,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:28Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          ".github/workflows/corpus.yml",
+          ".github/workflows/release-candidate.yml",
+          ".github/workflows/release-check.yml",
+          ".github/workflows/release.yml",
+          "README.md"
+        ],
+        "revision": "8db708087f002aa6063c85faddb99bbc980ff732",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/aniflow/commit/8db708087f002aa6063c85faddb99bbc980ff732",
+          "repository": "https://github.com/egohygiene/aniflow"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [
+          {
+            "action_path": ".github/workflows/repository-intelligence.yml",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "intelligence",
+            "job_condition": null,
+            "name": "intelligence",
+            "pages_workflow_composition_declared": false,
+            "ref": "46cf1d66a7e66ca5a35d2c99cbaed5ccfb67573f",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/antidote/blob/34f7653469002c8f19c9adc87d4bfdcecc0eda33/.github/workflows/repository-intelligence.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/repository-intelligence.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/pages.yml",
+            "source_url": "https://github.com/egohygiene/antidote/blob/34f7653469002c8f19c9adc87d4bfdcecc0eda33/.github/workflows/pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "artifact-or-preview-source-declared"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [],
+        "declarations": [
+          {
+            "base_path": "/antidote/",
+            "field": "explicit-site-link",
+            "host": "egohygiene.github.io",
+            "kind": "readme-pages-link",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/antidote/blob/34f7653469002c8f19c9adc87d4bfdcecc0eda33/README.md",
+            "url": "https://egohygiene.github.io/antidote/"
+          },
+          {
+            "base_path": "/",
+            "field": "site.canonicalUrl/site.basePath",
+            "host": "antidote.egohygiene.io",
+            "kind": "local-primary-declaration",
+            "origin": "https://antidote.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/antidote/blob/34f7653469002c8f19c9adc87d4bfdcecc0eda33/publication/antidote-site.content.json",
+            "url": "https://antidote.egohygiene.io/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": "https://antidote.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-artifact-to-destination-handoff",
+        "instruction": "Review the existing artifact/preview builder and intended delivery profile; retain its pin and publisher until a bounded consumer change is reviewed.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/antidote",
+      "repository_id": 1347532537,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "intelligence-pages-composition-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:30Z",
+        "paths": [
+          ".github/workflows/mvp.yml",
+          ".github/workflows/pages.yml",
+          ".github/workflows/quality.yml",
+          ".github/workflows/repository-intelligence.yml",
+          ".github/workflows/research-paper.yml",
+          "README.md",
+          "package.json",
+          "publication/antidote-site.content.json"
+        ],
+        "revision": "34f7653469002c8f19c9adc87d4bfdcecc0eda33",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/antidote/commit/34f7653469002c8f19c9adc87d4bfdcecc0eda33",
+          "repository": "https://github.com/egohygiene/antidote"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/athena",
+      "repository_id": 1315681605,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:30Z",
+        "paths": [
+          "README.md"
+        ],
+        "revision": "5c0221deab24a17b007c9aba8217b64fed2f04de",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/athena/commit/5c0221deab24a17b007c9aba8217b64fed2f04de",
+          "repository": "https://github.com/egohygiene/athena"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/beacon",
+      "repository_id": 1315637921,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:30Z",
+        "paths": [
+          ".github/workflows/core.yml",
+          ".github/workflows/magazine.yml",
+          ".github/workflows/nih-nimh-rpg.yml",
+          ".github/workflows/publication-hub.yml",
+          ".github/workflows/research-paper.yml",
+          ".github/workflows/technical-whitepaper.yml",
+          "README.md"
+        ],
+        "revision": "1d53983ee1ed760d59802dcb472be4481710d507",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/beacon/commit/1d53983ee1ed760d59802dcb472be4481710d507",
+          "repository": "https://github.com/egohygiene/beacon"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/pages.yml",
+            "source_url": "https://github.com/egohygiene/civics/blob/c95596afc206e38b3c5b1f80a3ccbae46326daa8/.github/workflows/pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [
+          {
+            "domain": "civics.egohygiene.io",
+            "path": "public/CNAME",
+            "source_url": "https://github.com/egohygiene/civics/blob/c95596afc206e38b3c5b1f80a3ccbae46326daa8/public/CNAME"
+          }
+        ],
+        "declarations": [
+          {
+            "base_path": "/",
+            "field": "explicit-site-link",
+            "host": "civics.egohygiene.io",
+            "kind": "readme-pages-link",
+            "origin": "https://civics.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/civics/blob/c95596afc206e38b3c5b1f80a3ccbae46326daa8/README.md",
+            "url": "https://civics.egohygiene.io"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": "https://civics.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/civics",
+      "repository_id": 1344564036,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:30Z",
+        "paths": [
+          ".github/workflows/pages.yml",
+          ".github/workflows/quality.yml",
+          ".github/workflows/refresh-civic-data.yml",
+          "README.md",
+          "package.json",
+          "public/CNAME",
+          "vite.config.js"
+        ],
+        "revision": "c95596afc206e38b3c5b1f80a3ccbae46326daa8",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/civics/commit/c95596afc206e38b3c5b1f80a3ccbae46326daa8",
+          "repository": "https://github.com/egohygiene/civics"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-fleet-artifact",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "fleet-artifact",
+            "job_condition": "github.repository == 'egohygiene/egohygiene.io' && github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'",
+            "name": "Acquire and retain the exact public fleet handoff",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/egohygiene.io/blob/785aec3099b196cebe1e5d801297cb49258edc64/.github/workflows/intelligence-fleet-refresh.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/intelligence-fleet-refresh.yml"
+          }
+        ],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [
+          {
+            "domain": "egohygiene.io",
+            "path": "apps/egohygiene.io/public/CNAME",
+            "source_url": "https://github.com/egohygiene/egohygiene.io/blob/785aec3099b196cebe1e5d801297cb49258edc64/apps/egohygiene.io/public/CNAME"
+          }
+        ],
+        "declarations": [
+          {
+            "base_path": "/",
+            "field": "homepage",
+            "host": "egohygiene.io",
+            "kind": "package-homepage",
+            "origin": "https://egohygiene.io",
+            "source_url": "https://github.com/egohygiene/egohygiene.io/blob/785aec3099b196cebe1e5d801297cb49258edc64/package.json",
+            "url": "https://egohygiene.io"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": "https://egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/egohygiene.io",
+      "repository_id": 1318535423,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          ".github/workflows/codeql.yml",
+          ".github/workflows/dependency-review.yml",
+          ".github/workflows/deploy.yml",
+          ".github/workflows/intelligence-fleet-refresh.yml",
+          ".github/workflows/preview.yml",
+          ".github/workflows/release.yml",
+          "README.md",
+          "apps/egohygiene.io/public/CNAME",
+          "apps/egohygiene.io/vite.config.ts",
+          "package.json",
+          "vite.config.ts"
+        ],
+        "revision": "785aec3099b196cebe1e5d801297cb49258edc64",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/egohygiene.io/commit/785aec3099b196cebe1e5d801297cb49258edc64",
+          "repository": "https://github.com/egohygiene/egohygiene.io"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/egolint",
+      "repository_id": 1315144197,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          ".github/workflows/dogfood.yml",
+          ".github/workflows/identity.yml",
+          ".github/workflows/javascript-architecture.yml",
+          ".github/workflows/javascript-package-quality.yml",
+          ".github/workflows/release.yml",
+          "README.md",
+          "package.json"
+        ],
+        "revision": "f14f7fd3ab0ce9e87c367352fcb3af11a32eda59",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/egolint/commit/f14f7fd3ab0ce9e87c367352fcb3af11a32eda59",
+          "repository": "https://github.com/egohygiene/egolint"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Capture consumer routes before composition",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'current'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Capture public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Verify current provenance and Quartz non-clobber boundary",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'current'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "finalize-deployment",
+            "job_condition": "${{ always() && needs.build.result == 'success' && needs.deploy.result != 'cancelled' && needs.deploy.result != 'skipped' && (((github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) || (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch))) }}",
+            "name": "Record current deployment receipt",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "needs.build.outputs.deployment-mode == 'current'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "generate",
+            "job_condition": null,
+            "name": "Capture public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/repository-intelligence.yml",
+            "step_condition": "github.event_name == 'workflow_dispatch'",
+            "workflow_path": ".github/workflows/repository-intelligence.yml"
+          }
+        ],
+        "declarations": [
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": ".cache/mindgarden/site/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Generate repository intelligence dashboard",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'current'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": ".cache/mindgarden/site/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Rebuild identical Repository Intelligence inputs",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'current'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {},
+            "declared_output_directory": ".cache/mindgarden/site/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('[\"push\",\"schedule\",\"workflow_dispatch\"]'), github.event.workflow_run.event) && contains(fromJSON('[\"MegaLinter\",\"OpenSSF Scorecard\",\"🔍 OSV Vulnerability Scan\"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch) }}",
+            "name": "Generate historical Repository Intelligence dashboard",
+            "pages_workflow_composition_declared": true,
+            "ref": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "step_condition": "matrix.mode == 'rollback-v1.4'",
+            "workflow_path": ".github/workflows/mindgarden-pages.yml"
+          },
+          {
+            "action_path": ".github/workflows/repository-intelligence.yml",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "reject-invalid-input",
+            "job_condition": null,
+            "name": "reject-invalid-input",
+            "pages_workflow_composition_declared": false,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/repository-intelligence-failure.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/repository-intelligence-failure.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}",
+            "immutable": true,
+            "job": "generate",
+            "job_condition": null,
+            "name": "Generate intelligence artifacts and dashboard",
+            "pages_workflow_composition_declared": false,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/repository-intelligence.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/repository-intelligence.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/mindgarden-pages.yml",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch",
+              "workflow_run"
+            ]
+          }
+        ],
+        "state": "pages-composition-source-declared"
+      },
+      "destination": {
+        "base_path": "/empathy/",
+        "cname_domains": [],
+        "declarations": [
+          {
+            "base_path": "/empathy/",
+            "field": "CANONICAL_ORIGIN",
+            "host": "egohygiene.github.io",
+            "kind": "canonical-workflow-url",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/empathy/blob/18d22e113e87c306b76d24873841249d41358c77/.github/workflows/mindgarden-pages.yml",
+            "url": "https://egohygiene.github.io/empathy/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": "https://egohygiene.github.io/empathy/intelligence/",
+        "intelligence_url_basis": "explicit-origin-and-base-path-with-composed-route",
+        "origin": "https://egohygiene.github.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "select-revision-matched-model-evidence",
+        "instruction": "Select actual model artifact identity, source revision, provenance and coverage; assess consumer composition, deployment and live bytes independently.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/empathy",
+      "repository_id": 1315637648,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          ".github/workflows/automation.yml",
+          ".github/workflows/codeql.yml",
+          ".github/workflows/commitlint.yml",
+          ".github/workflows/contributors.yml",
+          ".github/workflows/copilot-setup-steps.yml",
+          ".github/workflows/dependency-review.yml",
+          ".github/workflows/identity.yml",
+          ".github/workflows/lint-architecture.yml",
+          ".github/workflows/megalinter-fix.yml",
+          ".github/workflows/megalinter.yml",
+          ".github/workflows/mindgarden-pages.yml",
+          ".github/workflows/ossf-scorecard.yml",
+          ".github/workflows/osv-scan.yml",
+          ".github/workflows/repository-intelligence-checks.yml",
+          ".github/workflows/repository-intelligence-failure.yml",
+          ".github/workflows/repository-intelligence-gates.yml",
+          ".github/workflows/repository-intelligence.yml",
+          ".github/workflows/reusable-autofix.yml",
+          ".github/workflows/reusable-flutter-build.yml",
+          "README.md",
+          "package.json"
+        ],
+        "revision": "18d22e113e87c306b76d24873841249d41358c77",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/empathy/commit/18d22e113e87c306b76d24873841249d41358c77",
+          "repository": "https://github.com/egohygiene/empathy"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/filament",
+      "repository_id": 1340174644,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          "README.md"
+        ],
+        "revision": "c3eb64b8087face7504e7571dc8396c19525649f",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/filament/commit/c3eb64b8087face7504e7571dc8396c19525649f",
+          "repository": "https://github.com/egohygiene/filament"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/flow",
+      "repository_id": 1333207724,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          "README.md"
+        ],
+        "revision": "5ac9c4bf9004275a74f774c13ef4ac74b6a53529",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/flow/commit/5ac9c4bf9004275a74f774c13ef4ac74b6a53529",
+          "repository": "https://github.com/egohygiene/flow"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/holon",
+      "repository_id": 1315637967,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:31Z",
+        "paths": [
+          ".github/workflows/validate.yml",
+          "README.md",
+          "package.json"
+        ],
+        "revision": "934e559400336cbf1acac325c89754056e27e3f2",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/holon/commit/934e559400336cbf1acac325c89754056e27e3f2",
+          "repository": "https://github.com/egohygiene/holon"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ needs.admission.outputs.ready == 'true' }}",
+            "name": "Capture public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "step_condition": "github.repository == 'egohygiene/hygiene' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')",
+            "workflow_path": ".github/workflows/publish-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ needs.admission.outputs.ready == 'true' }}",
+            "name": "Capture the consumer route baseline",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ needs.admission.outputs.ready == 'true' }}",
+            "name": "Verify preserved routes, aliases, source and complete bundle",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-pages.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "deploy",
+            "job_condition": "github.repository == 'egohygiene/hygiene' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')",
+            "name": "Reverify the shared composition at the deployment boundary",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-pages.yml"
+          }
+        ],
+        "declarations": [
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-adrs": "true",
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": "dist/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": "${{ needs.admission.outputs.ready == 'true' }}",
+            "name": "Collect and build through the shared strict pipeline",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-pages.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/publish-pages.yml",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/.github/workflows/publish-pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "pages-composition-source-declared"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [
+          {
+            "base_path": null,
+            "field": "origin",
+            "host": "hygiene.egohygiene.io",
+            "kind": "local-primary-declaration",
+            "origin": "https://hygiene.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/hygiene/blob/95f6ddb948e6b874f02510d586b89e99cc20e38e/publication/site.json",
+            "url": "https://hygiene.egohygiene.io"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": "https://hygiene.egohygiene.io/intelligence/",
+        "intelligence_url_basis": "explicit-origin-and-absolute-required-route",
+        "origin": "https://hygiene.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [
+          "/",
+          "/intelligence/",
+          "/intelligence/decisions/",
+          "/decisions/",
+          "/adr/"
+        ],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [
+        {
+          "effect": "Preserve original ADR-0001 and strict source admission; this checkpoint supplies no human disposition or publication waiver.",
+          "issue": "https://github.com/egohygiene/hygiene/issues/47",
+          "issue_updated_at": "2026-10-20T04:23:39Z",
+          "observed_at": "2026-11-11T18:54:40Z",
+          "scope": "original-ADR-0001-metadata-and-human-disposition",
+          "state": "issue-reported-unresolved"
+        }
+      ],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-preserved-source-hold",
+        "instruction": "Resolve original ADR-0001 metadata and durable human disposition through the owning issue; retain strict admission and separate artifact/deployment/live evidence.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/hygiene/issues/47",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/hygiene",
+      "repository_id": 1315637988,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit"
+        ],
+        "observed_at": "2026-11-10T23:49:32Z",
+        "paths": [
+          ".github/workflows/publish-pages.yml",
+          ".github/workflows/release-policy.yml",
+          "README.md",
+          "publication/site.json"
+        ],
+        "revision": "95f6ddb948e6b874f02510d586b89e99cc20e38e",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/hygiene/commit/95f6ddb948e6b874f02510d586b89e99cc20e38e",
+          "repository": "https://github.com/egohygiene/hygiene"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)",
+            "name": "Capture the unchanged Brand Kit before composition",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)",
+            "name": "Capture bounded public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": "steps.compare_selection.outputs.capture_enabled == 'true'",
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-compare-artifact",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)",
+            "name": "Retain the selected native pair and compose Compare in place",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": "steps.compare_selection.outputs.enabled == 'true'",
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": "github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)",
+            "name": "Verify composed routes and byte-preserved Brand Kit",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "deploy",
+            "job_condition": null,
+            "name": "Revalidate downloaded composition before deployment",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          },
+          {
+            "action_path": "actions/repository-intelligence-deployment-provenance",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "deploy",
+            "job_condition": null,
+            "name": "Record the actual deployment result independently of live verification",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": "always() && steps.download.outcome == 'success' && contains(fromJSON('[\"success\",\"failure\",\"cancelled\"]'), steps.deployment.outcome)",
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          }
+        ],
+        "declarations": [
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-adrs": "true",
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": "renderer/dist/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": "github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)",
+            "name": "Build validated Repository Intelligence from canonical ADRs",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/publish-brand-kit.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/publish-brand-kit.yml",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "triggers": [
+              "push",
+              "release",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "pages-composition-source-declared"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [
+          {
+            "domain": "identity.egohygiene.io",
+            "path": "publication/CNAME",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/publication/CNAME"
+          }
+        ],
+        "declarations": [
+          {
+            "base_path": "/",
+            "field": "CANONICAL_URL",
+            "host": "identity.egohygiene.io",
+            "kind": "canonical-workflow-url",
+            "origin": "https://identity.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/.github/workflows/publish-brand-kit.yml",
+            "url": "https://identity.egohygiene.io/"
+          },
+          {
+            "base_path": "/",
+            "field": "explicit-site-link",
+            "host": "identity.egohygiene.io",
+            "kind": "readme-pages-link",
+            "origin": "https://identity.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/README.md",
+            "url": "https://identity.egohygiene.io/"
+          },
+          {
+            "base_path": "/",
+            "field": "canonicalUrl",
+            "host": "identity.egohygiene.io",
+            "kind": "local-primary-declaration",
+            "origin": "https://identity.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/identity/blob/401b2f1de298a171fbb5bf4ee6b510e0cf12c301/publication/identity-brand-kit.config.json",
+            "url": "https://identity.egohygiene.io/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": "https://identity.egohygiene.io/intelligence/",
+        "intelligence_url_basis": "explicit-origin-and-base-path-with-composed-route",
+        "origin": "https://identity.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "select-revision-matched-model-evidence",
+        "instruction": "Select actual model artifact identity, source revision, provenance and coverage; assess consumer composition, deployment and live bytes independently.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/identity",
+      "repository_id": 1315637826,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [],
+        "observed_at": "2026-11-10T23:49:33Z",
+        "paths": [
+          ".github/workflows/decision-validation.yml",
+          ".github/workflows/development-image.yml",
+          ".github/workflows/identity-experience.yml",
+          ".github/workflows/publish-brand-kit.yml",
+          ".github/workflows/reference-renderer.yml",
+          ".github/workflows/release.yml",
+          ".github/workflows/validate.yml",
+          "README.md",
+          "publication/CNAME",
+          "publication/channel-registry.v1.json",
+          "publication/identity-brand-kit.config.json",
+          "publication/identity-experience.architecture.json",
+          "publication/identity-experience.content.json"
+        ],
+        "revision": "401b2f1de298a171fbb5bf4ee6b510e0cf12c301",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/identity/commit/401b2f1de298a171fbb5bf4ee6b510e0cf12c301",
+          "repository": "https://github.com/egohygiene/identity"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/mantle",
+      "repository_id": 1320127077,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:32Z",
+        "paths": [
+          ".github/workflows/hls.yml",
+          ".github/workflows/identity.yml",
+          ".github/workflows/release.yml",
+          ".github/workflows/test.yml",
+          "README.md"
+        ],
+        "revision": "0f54fa6e100c5b86af64aa383e41eed8c64e363a",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/mantle/commit/0f54fa6e100c5b86af64aa383e41eed8c64e363a",
+          "repository": "https://github.com/egohygiene/mantle"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/mindcap",
+      "repository_id": 1315637844,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:32Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          "README.md"
+        ],
+        "revision": "02d30d6eb19037b3f770aad3a12c598778b5ae22",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/mindcap/commit/02d30d6eb19037b3f770aad3a12c598778b5ae22",
+          "repository": "https://github.com/egohygiene/mindcap"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [
+          {
+            "action_path": ".github/workflows/repository-intelligence.yml",
+            "collectors": {
+              "collect-adrs": true
+            },
+            "declared_output_directory": ".cache/decisions-preview/intelligence",
+            "immutable": true,
+            "job": "preview",
+            "job_condition": null,
+            "name": "preview",
+            "pages_workflow_composition_declared": false,
+            "ref": "b4a88db20bc26f9ddefbee174baa8162cbe94ff2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/mindgarden/blob/7594921fb89097d9dae04f14e3ebc967055aa470/.github/workflows/decisions-preview.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/decisions-preview.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "artifact-or-preview-source-declared"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-artifact-to-destination-handoff",
+        "instruction": "Review the existing artifact/preview builder and intended delivery profile; retain its pin and publisher until a bounded consumer change is reviewed.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/mindgarden",
+      "repository_id": 1315637864,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "intelligence-pages-composition-not-declared-in-inspected-source",
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:33Z",
+        "paths": [
+          ".github/workflows/decisions-preview.yml",
+          ".github/workflows/release-checks.yml",
+          ".github/workflows/release.yml",
+          ".github/workflows/test.yml",
+          "README.md"
+        ],
+        "revision": "7594921fb89097d9dae04f14e3ebc967055aa470",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/mindgarden/commit/7594921fb89097d9dae04f14e3ebc967055aa470",
+          "repository": "https://github.com/egohygiene/mindgarden"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/observatory",
+      "repository_id": 1325309565,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:33Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          "README.md"
+        ],
+        "revision": "7f399a0b32a1abdd1283ef8bf06b8c3cda703636",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/observatory/commit/7f399a0b32a1abdd1283ef8bf06b8c3cda703636",
+          "repository": "https://github.com/egohygiene/observatory"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [
+          {
+            "action_path": "actions/repository-intelligence-github-sources",
+            "collectors": {},
+            "declared_output_directory": null,
+            "immutable": true,
+            "job": "build",
+            "job_condition": null,
+            "name": "Capture public Work, Health and Releases sources",
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "source_url": "https://github.com/egohygiene/optiflow/blob/18dc494bffbb76c2872b3f5d64903bf8e4e7e510/.github/workflows/pages.yml",
+            "step_condition": "github.event_name == 'push' || github.event_name == 'workflow_dispatch'",
+            "workflow_path": ".github/workflows/pages.yml"
+          }
+        ],
+        "declarations": [
+          {
+            "action_path": "actions/repository-intelligence",
+            "collectors": {
+              "collect-journey": "true",
+              "search-attribution": "true"
+            },
+            "declared_output_directory": ".site/producers/intelligence",
+            "immutable": true,
+            "job": "build",
+            "job_condition": null,
+            "name": "Generate public repository intelligence",
+            "pages_workflow_composition_declared": true,
+            "ref": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+            "selection_context": "source-declared",
+            "source_url": "https://github.com/egohygiene/optiflow/blob/18dc494bffbb76c2872b3f5d64903bf8e4e7e510/.github/workflows/pages.yml",
+            "step_condition": null,
+            "workflow_path": ".github/workflows/pages.yml"
+          }
+        ],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/pages.yml",
+            "source_url": "https://github.com/egohygiene/optiflow/blob/18dc494bffbb76c2872b3f5d64903bf8e4e7e510/.github/workflows/pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "pages-composition-source-declared"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "record-explicit-destination",
+        "instruction": "Record the repository-owned Pages origin and base path before selecting a public destination; retain the observed builder and producer ownership.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/optiflow",
+      "repository_id": 1324450169,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit"
+        ],
+        "observed_at": "2026-11-10T23:49:33Z",
+        "paths": [
+          ".github/workflows/adversarial.yml",
+          ".github/workflows/ci.yml",
+          ".github/workflows/docs.yml",
+          ".github/workflows/identity.yml",
+          ".github/workflows/pages.yml",
+          ".github/workflows/release.yml",
+          ".github/workflows/security.yml",
+          "README.md"
+        ],
+        "revision": "18dc494bffbb76c2872b3f5d64903bf8e4e7e510",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/optiflow/commit/18dc494bffbb76c2872b3f5d64903bf8e4e7e510",
+          "repository": "https://github.com/egohygiene/optiflow"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/pace",
+      "repository_id": 1315637735,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/validate.yml",
+          "README.md"
+        ],
+        "revision": "76a28ee10fdf73e556beacda1893383e3d31cc36",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/pace/commit/76a28ee10fdf73e556beacda1893383e3d31cc36",
+          "repository": "https://github.com/egohygiene/pace"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/realm",
+      "repository_id": 1315637781,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/release.yml",
+          ".github/workflows/validate.yml",
+          "README.md"
+        ],
+        "revision": "0a3bbdc379b54db07dc5103887af0dfe05f97a0a",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/realm/commit/0a3bbdc379b54db07dc5103887af0dfe05f97a0a",
+          "repository": "https://github.com/egohygiene/realm"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/pages.yml",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/.github/workflows/pages.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": "/",
+        "cname_domains": [
+          {
+            "domain": "reflector.egohygiene.io",
+            "path": "docs/CNAME",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/docs/CNAME"
+          }
+        ],
+        "declarations": [
+          {
+            "base_path": "/",
+            "field": "CANONICAL_URL",
+            "host": "reflector.egohygiene.io",
+            "kind": "canonical-workflow-url",
+            "origin": "https://reflector.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/.github/workflows/pages.yml",
+            "url": "https://reflector.egohygiene.io/"
+          },
+          {
+            "base_path": "/reflector/",
+            "field": "FALLBACK_URL",
+            "host": "egohygiene.github.io",
+            "kind": "fallback-workflow-url",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/.github/workflows/pages.yml",
+            "url": "https://egohygiene.github.io/reflector/"
+          },
+          {
+            "base_path": "/",
+            "field": "pages_url",
+            "host": "reflector.egohygiene.io",
+            "kind": "local-declaration",
+            "origin": "https://reflector.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/publication.json",
+            "url": "https://reflector.egohygiene.io/"
+          },
+          {
+            "base_path": "/",
+            "field": "explicit-site-link",
+            "host": "reflector.egohygiene.io",
+            "kind": "readme-pages-link",
+            "origin": "https://reflector.egohygiene.io",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/README.md",
+            "url": "https://reflector.egohygiene.io/"
+          },
+          {
+            "base_path": "/reflector/",
+            "field": "explicit-site-link",
+            "host": "egohygiene.github.io",
+            "kind": "readme-pages-link",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/reflector/blob/dfca10718f4cca20cc126d689d1fd70d29c27a02/README.md",
+            "url": "https://egohygiene.github.io/reflector/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": "https://reflector.egohygiene.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/reflector",
+      "repository_id": 1247115338,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/beacon-compatibility.yml",
+          ".github/workflows/build-magazine.yml",
+          ".github/workflows/build-paper.yml",
+          ".github/workflows/bump-version.yml",
+          ".github/workflows/commitlint.yml",
+          ".github/workflows/copilot-setup-steps.yml",
+          ".github/workflows/pages.yml",
+          ".github/workflows/paper-quality.yml",
+          ".github/workflows/publication.yml",
+          ".github/workflows/release-paper.yml",
+          ".github/workflows/release-please.yml",
+          ".github/workflows/release-tag.yml",
+          ".github/workflows/reuse.yml",
+          ".github/workflows/synchronization.yml",
+          "README.md",
+          "docs/CNAME",
+          "docs/_config.yml",
+          "publication.json"
+        ],
+        "revision": "dfca10718f4cca20cc126d689d1fd70d29c27a02",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/reflector/commit/dfca10718f4cca20cc126d689d1fd70d29c27a02",
+          "repository": "https://github.com/egohygiene/reflector"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "reusable-library",
+            "components": [
+              "actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+              "actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+              "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/publication-pages.yml",
+            "source_url": "https://github.com/egohygiene/relay/blob/73f750ef9dd1782b20d280b4c555aacd92ee5f4e/.github/workflows/publication-pages.yml",
+            "triggers": [
+              "workflow_call"
+            ]
+          }
+        ],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/relay",
+      "repository_id": 1321918958,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "only-reusable-pages-library-source",
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/artifact-budget.yml",
+          ".github/workflows/automerge-dependabot.yml",
+          ".github/workflows/continuity-preflight-dogfood.yml",
+          ".github/workflows/continuity-preflight.yml",
+          ".github/workflows/dependency-review.yml",
+          ".github/workflows/label-sync-apply.yml",
+          ".github/workflows/label-sync-plan.yml",
+          ".github/workflows/publication-pages.yml",
+          ".github/workflows/publication-review.yml",
+          ".github/workflows/pull-request-label-apply.yml",
+          ".github/workflows/pull-request-label-plan.yml",
+          ".github/workflows/release-artifact.yml",
+          ".github/workflows/release-prepare.yml",
+          ".github/workflows/release.yml",
+          ".github/workflows/repository-architecture-dogfood.yml",
+          ".github/workflows/repository-architecture-validation.yml",
+          ".github/workflows/repository-intelligence-captures.yml",
+          ".github/workflows/repository-intelligence.yml",
+          ".github/workflows/repository-journal-copilot.yml",
+          ".github/workflows/repository-journal-dogfood.yml",
+          ".github/workflows/repository-journal.yml",
+          ".github/workflows/semantic-release.yml",
+          ".github/workflows/stale-pull-requests.yml",
+          ".github/workflows/validate.yml",
+          "README.md"
+        ],
+        "revision": "73f750ef9dd1782b20d280b4c555aacd92ee5f4e",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/relay/commit/73f750ef9dd1782b20d280b4c555aacd92ee5f4e",
+          "repository": "https://github.com/egohygiene/relay"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [
+          {
+            "caller_mode": "repository-workflow",
+            "components": [
+              "actions/configure-pages@v5",
+              "actions/deploy-pages@v4",
+              "actions/upload-pages-artifact@v3"
+            ],
+            "deployment_declared": true,
+            "path": ".github/workflows/docs.yml",
+            "source_url": "https://github.com/egohygiene/renderflow/blob/f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33/.github/workflows/docs.yml",
+            "triggers": [
+              "pull_request",
+              "push",
+              "workflow_dispatch"
+            ]
+          }
+        ],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": "/renderflow/",
+        "cname_domains": [],
+        "declarations": [
+          {
+            "base_path": "/renderflow/",
+            "field": "site_url",
+            "host": "egohygiene.github.io",
+            "kind": "site-configuration",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/renderflow/blob/f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33/mkdocs.yml",
+            "url": "https://egohygiene.github.io/renderflow/"
+          },
+          {
+            "base_path": "/renderflow/",
+            "field": "explicit-site-link",
+            "host": "egohygiene.github.io",
+            "kind": "readme-pages-link",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/renderflow/blob/f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33/README.md",
+            "url": "https://egohygiene.github.io/renderflow/"
+          },
+          {
+            "base_path": "/renderflow/",
+            "field": "explicit-site-link",
+            "host": "egohygiene.github.io",
+            "kind": "readme-pages-link",
+            "origin": "https://egohygiene.github.io",
+            "source_url": "https://github.com/egohygiene/renderflow/blob/f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33/README.md",
+            "url": "https://egohygiene.github.io/renderflow/"
+          }
+        ],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": "https://egohygiene.github.io",
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "source-declared"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/renderflow",
+      "repository_id": 1187580231,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/benchmarks.yml",
+          ".github/workflows/canonical-planner-fix.yml",
+          ".github/workflows/ci.yml",
+          ".github/workflows/commitlint.yml",
+          ".github/workflows/conformance.yml",
+          ".github/workflows/docs.yml",
+          ".github/workflows/release.yml",
+          "README.md",
+          "mkdocs.yml",
+          "package.json"
+        ],
+        "revision": "f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/renderflow/commit/f68a4ad4ff6122e45e1aa0fe29fdc244838d8d33",
+          "repository": "https://github.com/egohygiene/renderflow"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/sanctuary",
+      "repository_id": 1341342928,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:34Z",
+        "paths": [
+          ".github/workflows/validate.yml",
+          "README.md"
+        ],
+        "revision": "0db2d923e110e49dec823c486ec4084d266f3627",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/sanctuary/commit/0db2d923e110e49dec823c486ec4084d266f3627",
+          "repository": "https://github.com/egohygiene/sanctuary"
+        }
+      },
+      "visibility": "public"
+    },
+    {
+      "builder": {
+        "components": [],
+        "declarations": [],
+        "execution": "unknown",
+        "pages_workflows": [],
+        "state": "not-declared-in-inspected-source"
+      },
+      "destination": {
+        "base_path": null,
+        "cname_domains": [],
+        "declarations": [],
+        "explicit_base_paths": [],
+        "intelligence_url": null,
+        "intelligence_url_basis": "unavailable",
+        "origin": null,
+        "provider_configuration": "unknown",
+        "publication": "unknown",
+        "required_routes": [],
+        "state": "unknown"
+      },
+      "eligibility": "unassessed",
+      "holds": [],
+      "live_verification": {
+        "reason": "No deployment or live-byte verification was performed for this checkpoint.",
+        "receipt": null,
+        "state": "unknown"
+      },
+      "model_artifact": {
+        "reason": "No actual model artifact was selected in the source-only inventory.",
+        "selection": null,
+        "state": "unknown"
+      },
+      "next_action": {
+        "code": "review-repository-delivery-intent",
+        "instruction": "Review eligibility and the repository-owned delivery profile in the campaign, then select one bounded owner issue; missing declarations confer no exemption.",
+        "state": "proposed"
+      },
+      "next_issue": "https://github.com/egohygiene/pace/issues/13",
+      "refresh_owner": {
+        "cadence": null,
+        "evidence": null,
+        "owner": null,
+        "procedure": null,
+        "state": "unknown"
+      },
+      "repository": "egohygiene/store",
+      "repository_id": 1318861461,
+      "source": {
+        "decision_conformance": "not-assessed",
+        "gaps": [
+          "pages-base-path-not-explicit",
+          "pages-origin-not-explicit",
+          "pages-workflow-not-declared-in-inspected-source",
+          "repository-intelligence-consumer-builder-not-declared-in-inspected-source"
+        ],
+        "observed_at": "2026-11-10T23:49:35Z",
+        "paths": [
+          ".github/workflows/ci.yml",
+          "README.md",
+          "package.json"
+        ],
+        "revision": "e97ee727e6c2300e804579cf2122d34d4c162158",
+        "roadmap_content": "not-assessed",
+        "state": "source-inspected",
+        "urls": {
+          "commit": "https://github.com/egohygiene/store/commit/e97ee727e6c2300e804579cf2122d34d4c162158",
+          "repository": "https://github.com/egohygiene/store"
+        }
+      },
+      "visibility": "public"
+    }
+  ],
+  "schema": "egohygiene.pace.repository-intelligence-adoption-ledger/v1",
+  "scope": {
+    "kind": "fixed-reviewed-public-roster",
+    "organization": "egohygiene",
+    "organization_total_claim": false
+  },
+  "source_inputs": {
+    "public_roster": {
+      "observed_at": "2026-11-09T14:06:57Z",
+      "path": "catalog/public-repositories.json",
+      "repository": "egohygiene/hygiene",
+      "revision": "49639c1845cdfd08fbd5a768261a8b3cf515f80f",
+      "sha256": "af9c7186ded0bb57b18741eaa5905314b96d6adb03736946c868e0fc4aa50b26",
+      "url": "https://github.com/egohygiene/hygiene/blob/49639c1845cdfd08fbd5a768261a8b3cf515f80f/catalog/public-repositories.json"
+    },
+    "source_inventory": {
+      "observed_at": "2026-11-10T23:49:35Z",
+      "path": "docs/intelligence/repositories.source.json",
+      "repository": "egohygiene/.github",
+      "revision": "101a0d4553dc380ab3f88c50b11cb53beadfce18",
+      "sha256": "c4e41df201500c5a00aa7b0e5e30cc4d8054f33eb39c842718266c70530175a9",
+      "url": "https://github.com/egohygiene/.github/blob/101a0d4553dc380ab3f88c50b11cb53beadfce18/docs/intelligence/repositories.source.json"
+    }
+  },
+  "visibility": "public"
+}

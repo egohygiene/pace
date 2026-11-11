@@ -41,6 +41,7 @@ This document identifies Pace's logical systems and responsibilities. It answers
 | Change applier | Active, bounded | Verifies one local candidate against one reviewed unit and opens one non-default-branch pull request; never merges. |
 | Override registry | Target | Owns its bounded portion of the repository adoption, reconciliation, synchronization, and conformance mechanism for the Ego Hygiene organization; exposes explicit inputs, outputs, failure states, and evidence. |
 | Reporting adapter | Active | Publishes machine-readable fleet plans, PR proposals, and PR results with explicit coverage and failure state. |
+| Repository Intelligence adoption projection | Source implementation; runtime unqualified | Projects pinned public source observations into independent source/builder/artifact/destination/live/refresh stages and proposed next owner-issue handoffs; no scan, eligibility decision, completion promotion or write port. |
 
 ## External systems
 
