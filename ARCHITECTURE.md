@@ -123,6 +123,18 @@ and an advisory universal-label comparison; `.github` owns enrollment/taxonomy a
 Relay owns canonical planning and mutation. Missing enrollment remains blocked.
 The adapter is offline and supplies no new scanner, apply port, or fleet authority.
 
+## Repository Intelligence adoption projection
+
+`scripts/project_intelligence_adoption.py` consumes exact public Hygiene
+membership and the immutable .github source inventory. It projects independent
+adoption stages and proposed owner-issue handoffs under a closed source-only
+contract. Source declarations never stand in for model artifacts, deployment,
+live verification, eligibility or human disposition. Input byte authentication
+precedes identity joining; unknown stages cannot be promoted through this
+profile. The [dated checkpoint and operator guide](docs/intelligence-adoption.md)
+record its unqualified runtime boundary. This adapter performs no scan, build,
+provider operation or application.
+
 ## Dependency rules
 
 - Sibling domain capabilities integrate through versioned public contracts, not direct access to internals.

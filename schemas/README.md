@@ -11,6 +11,7 @@
 | Presentation dry-run plan | `egohygiene.pace.repository-presentation-plan/v1` | [`repository-presentation-plan-v1.schema.json`](repository-presentation-plan-v1.schema.json) |
 | Reviewed-plan authorization | `egohygiene.pace.repository-presentation-review/v1` | [`repository-presentation-review-v1.schema.json`](repository-presentation-review-v1.schema.json) |
 | Credential-free proposal | `egohygiene.pace.repository-presentation-proposal/v1` | [`repository-presentation-proposal-v1.schema.json`](repository-presentation-proposal-v1.schema.json) |
+| Intelligence source-only adoption ledger | `egohygiene.pace.repository-intelligence-adoption-ledger/v1` | [`repository-intelligence-adoption-ledger-v1.schema.json`](repository-intelligence-adoption-ledger-v1.schema.json) |
 
 Pace-owned contracts use the stable namespace:
 

@@ -1,0 +1,21 @@
+{
+  "schema": "egohygiene.pace.repository-intelligence-adoption-inputs/v1",
+  "status": "source-checkpoint",
+  "mode": "offline-project-only",
+  "source_inventory": {
+    "repository": "egohygiene/.github",
+    "revision": "101a0d4553dc380ab3f88c50b11cb53beadfce18",
+    "tree": "cd9a9ed184204d779f8fd1810282060eb1f52c57",
+    "path": "docs/intelligence/repositories.source.json",
+    "sha256": "c4e41df201500c5a00aa7b0e5e30cc4d8054f33eb39c842718266c70530175a9",
+    "local_path": "vendor/intelligence-adoption/repositories.source.json"
+  },
+  "public_roster": {
+    "repository": "egohygiene/hygiene",
+    "revision": "49639c1845cdfd08fbd5a768261a8b3cf515f80f",
+    "tree": "f35e00f075ae5fa53bcf7734392f8d1443eb172d",
+    "path": "catalog/public-repositories.json",
+    "sha256": "af9c7186ded0bb57b18741eaa5905314b96d6adb03736946c868e0fc4aa50b26",
+    "local_path": "vendor/intelligence-adoption/public-repositories.json"
+  }
+}

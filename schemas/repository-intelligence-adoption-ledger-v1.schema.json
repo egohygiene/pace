@@ -1,0 +1,921 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.github.io/pace/contracts/repository-intelligence-adoption-ledger/v1/schema.json",
+  "title": "Pace repository intelligence source-only adoption ledger v1",
+  "description": "A fixed public source checkpoint. Shape validation is not authentication; use validate_ledger for exact reviewed source binding. No eligibility, artifact, execution or publication success is representable in this source-only profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "egohygiene.pace.repository-intelligence-adoption-ledger/v1"
+    },
+    "visibility": {
+      "const": "public"
+    },
+    "projection_as_of": {
+      "$ref": "#/$defs/utc"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "fixed-reviewed-public-roster"
+        },
+        "organization": {
+          "const": "egohygiene"
+        },
+        "organization_total_claim": {
+          "const": false
+        }
+      },
+      "required": [
+        "kind",
+        "organization",
+        "organization_total_claim"
+      ]
+    },
+    "source_inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_inventory": {
+          "$ref": "#/$defs/source_input"
+        },
+        "public_roster": {
+          "$ref": "#/$defs/source_input"
+        }
+      },
+      "required": [
+        "source_inventory",
+        "public_roster"
+      ]
+    },
+    "coordination": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "adoption": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "roadmaps": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "membership_and_policy": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "adoption",
+        "roadmaps",
+        "membership_and_policy"
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "canonical_membership": {
+          "const": "egohygiene/hygiene"
+        },
+        "adoption_projection": {
+          "const": "egohygiene/pace"
+        },
+        "source_observation": {
+          "const": "egohygiene/.github"
+        },
+        "mutation": {
+          "const": "none"
+        },
+        "eligibility_decisions": {
+          "const": "none"
+        },
+        "human_dispositions": {
+          "const": "none"
+        }
+      },
+      "required": [
+        "canonical_membership",
+        "adoption_projection",
+        "source_observation",
+        "mutation",
+        "eligibility_decisions",
+        "human_dispositions"
+      ]
+    },
+    "qualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "const": "captured-immutable-source"
+        },
+        "projector_runtime": {
+          "const": "not-qualified"
+        },
+        "tests": {
+          "const": "not-run"
+        },
+        "ci": {
+          "const": "not-checked"
+        },
+        "build": {
+          "const": "not-run"
+        },
+        "provider": {
+          "const": "not-checked"
+        },
+        "live": {
+          "const": "not-checked"
+        }
+      },
+      "required": [
+        "source",
+        "projector_runtime",
+        "tests",
+        "ci",
+        "build",
+        "provider",
+        "live"
+      ]
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/row"
+      },
+      "maxItems": 128
+    }
+  },
+  "required": [
+    "schema",
+    "visibility",
+    "projection_as_of",
+    "scope",
+    "source_inputs",
+    "coordination",
+    "authority",
+    "qualification",
+    "repositories"
+  ],
+  "$defs": {
+    "utc": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+      "format": "date-time"
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "action_path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "collectors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "boolean"
+            ]
+          },
+          "maxProperties": 64
+        },
+        "declared_output_directory": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "immutable": {
+          "type": "boolean"
+        },
+        "job": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "job_condition": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "ref": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "step_condition": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "workflow_path": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "action_path",
+        "collectors",
+        "declared_output_directory",
+        "immutable",
+        "job",
+        "job_condition",
+        "name",
+        "ref",
+        "source_url",
+        "step_condition",
+        "workflow_path"
+      ]
+    },
+    "builder": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "action_path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "collectors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "boolean"
+            ]
+          },
+          "maxProperties": 64
+        },
+        "declared_output_directory": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "immutable": {
+          "type": "boolean"
+        },
+        "job": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "job_condition": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "ref": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "step_condition": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "workflow_path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "pages_workflow_composition_declared": {
+          "type": "boolean"
+        },
+        "selection_context": {
+          "enum": [
+            "source-declared",
+            "historical-rollback"
+          ]
+        }
+      },
+      "required": [
+        "action_path",
+        "collectors",
+        "declared_output_directory",
+        "immutable",
+        "job",
+        "job_condition",
+        "name",
+        "ref",
+        "source_url",
+        "step_condition",
+        "workflow_path",
+        "pages_workflow_composition_declared",
+        "selection_context"
+      ]
+    },
+    "pages_workflow": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "caller_mode": {
+          "enum": [
+            "reusable-library",
+            "repository-workflow"
+          ]
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "maxItems": 128
+        },
+        "deployment_declared": {
+          "type": "boolean"
+        },
+        "path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "maxItems": 128
+        }
+      },
+      "required": [
+        "caller_mode",
+        "components",
+        "deployment_declared",
+        "path",
+        "source_url",
+        "triggers"
+      ]
+    },
+    "declaration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "field": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "host": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "kind": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "origin": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "base_path",
+        "field",
+        "host",
+        "kind",
+        "origin",
+        "source_url",
+        "url"
+      ]
+    },
+    "cname": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "domain": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "domain",
+        "path",
+        "source_url"
+      ]
+    },
+    "base_path": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base_path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "field": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "base_path",
+        "source_url",
+        "field"
+      ]
+    },
+    "hold": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "issue": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        },
+        "scope": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "state": {
+          "const": "issue-reported-unresolved"
+        },
+        "issue_updated_at": {
+          "$ref": "#/$defs/utc"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/utc"
+        },
+        "effect": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "issue",
+        "scope",
+        "state",
+        "issue_updated_at",
+        "observed_at",
+        "effect"
+      ]
+    },
+    "source_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^egohygiene/(?:\\.github|[a-z0-9][a-z0-9_.-]*)$",
+          "maxLength": 120
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "path": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/utc"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "repository",
+        "revision",
+        "path",
+        "sha256",
+        "observed_at",
+        "url"
+      ]
+    },
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^egohygiene/(?:\\.github|[a-z0-9][a-z0-9_.-]*)$",
+          "maxLength": 120
+        },
+        "repository_id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "visibility": {
+          "const": "public"
+        },
+        "eligibility": {
+          "const": "unassessed"
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "const": "source-inspected"
+            },
+            "observed_at": {
+              "$ref": "#/$defs/utc"
+            },
+            "revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "urls": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "repository": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://",
+                  "maxLength": 4096
+                },
+                "commit": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://",
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "repository",
+                "commit"
+              ]
+            },
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 4096
+              },
+              "maxItems": 128
+            },
+            "gaps": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 4096
+              },
+              "maxItems": 128
+            },
+            "roadmap_content": {
+              "const": "not-assessed"
+            },
+            "decision_conformance": {
+              "const": "not-assessed"
+            }
+          },
+          "required": [
+            "state",
+            "observed_at",
+            "revision",
+            "urls",
+            "paths",
+            "gaps",
+            "roadmap_content",
+            "decision_conformance"
+          ]
+        },
+        "builder": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "enum": [
+                "pages-composition-source-declared",
+                "artifact-or-preview-source-declared",
+                "not-declared-in-inspected-source"
+              ]
+            },
+            "declarations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/builder"
+              },
+              "maxItems": 128
+            },
+            "components": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/component"
+              },
+              "maxItems": 128
+            },
+            "pages_workflows": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pages_workflow"
+              },
+              "maxItems": 128
+            },
+            "execution": {
+              "const": "unknown"
+            }
+          },
+          "required": [
+            "state",
+            "declarations",
+            "components",
+            "pages_workflows",
+            "execution"
+          ]
+        },
+        "model_artifact": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "const": "unknown"
+            },
+            "selection": {
+              "const": null
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "state",
+            "selection",
+            "reason"
+          ]
+        },
+        "destination": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "enum": [
+                "source-declared",
+                "unknown"
+              ]
+            },
+            "origin": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 4096
+            },
+            "base_path": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 4096
+            },
+            "intelligence_url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 4096
+            },
+            "intelligence_url_basis": {
+              "enum": [
+                "unavailable",
+                "explicit-origin-and-base-path-with-composed-route",
+                "explicit-origin-and-absolute-required-route"
+              ]
+            },
+            "declarations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/declaration"
+              },
+              "maxItems": 128
+            },
+            "cname_domains": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/cname"
+              },
+              "maxItems": 128
+            },
+            "explicit_base_paths": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/base_path"
+              },
+              "maxItems": 128
+            },
+            "required_routes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 4096
+              },
+              "maxItems": 128
+            },
+            "provider_configuration": {
+              "const": "unknown"
+            },
+            "publication": {
+              "const": "unknown"
+            }
+          },
+          "required": [
+            "state",
+            "origin",
+            "base_path",
+            "intelligence_url",
+            "intelligence_url_basis",
+            "declarations",
+            "cname_domains",
+            "explicit_base_paths",
+            "required_routes",
+            "provider_configuration",
+            "publication"
+          ]
+        },
+        "live_verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "const": "unknown"
+            },
+            "receipt": {
+              "const": null
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "state",
+            "receipt",
+            "reason"
+          ]
+        },
+        "refresh_owner": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "const": "unknown"
+            },
+            "owner": {
+              "const": null
+            },
+            "procedure": {
+              "const": null
+            },
+            "cadence": {
+              "const": null
+            },
+            "evidence": {
+              "const": null
+            }
+          },
+          "required": [
+            "state",
+            "owner",
+            "procedure",
+            "cadence",
+            "evidence"
+          ]
+        },
+        "holds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hold"
+          },
+          "maxItems": 16
+        },
+        "next_action": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "const": "proposed"
+            },
+            "code": {
+              "enum": [
+                "review-preserved-source-hold",
+                "review-roadmap-canary-prerequisite",
+                "record-explicit-destination",
+                "select-revision-matched-model-evidence",
+                "review-artifact-to-destination-handoff",
+                "review-repository-delivery-intent"
+              ]
+            },
+            "instruction": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "state",
+            "code",
+            "instruction"
+          ]
+        },
+        "next_issue": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "repository",
+        "repository_id",
+        "visibility",
+        "eligibility",
+        "source",
+        "builder",
+        "model_artifact",
+        "destination",
+        "live_verification",
+        "refresh_owner",
+        "holds",
+        "next_action",
+        "next_issue"
+      ]
+    }
+  }
+}

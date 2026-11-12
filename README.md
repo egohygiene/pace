@@ -79,6 +79,16 @@ human review, it can verify a locally materialized candidate and open one
 bounded consumer pull request. It never scans repositories, renders Holon
 outputs, updates a default branch, or merges a pull request.
 
+## Review Repository Intelligence adoption
+
+The [dated adoption ledger and operator path](docs/intelligence-adoption.md)
+project an exact 28-entry reviewed public source snapshot into independent
+source, builder, model artifact, destination, live verification and refresh
+owner stages, with a next action and existing issue for every row. Unknown
+artifact and publication evidence remains unknown; no eligibility, exemption
+or completion decision is inferred. The offline projector has no collection,
+consumer-execution or provider-write capability.
+
 ## Preview the Aether label pilot
 
 The bounded [label rollout checkpoint](docs/label-rollout.md) composes pinned Relay
