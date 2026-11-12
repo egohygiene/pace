@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-11T19:06:19Z'
+  updated_at: '2026-11-12T23:44:42Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -25,8 +25,10 @@ scope:
   - Operator documentation and canonical navigation expose the actual source/pin/destination gaps. This is
     a Pace adoption/coordination projection, not a new Hygiene catalog, eligibility decision, runtime scanner
     or provider mutation.
+  - Integration corrects Python boolean/number equality at the verifier boundary through canonical JSON comparison.
+    Five focused offline regressions and exact dated-ledger CLI verification passed; the dated inputs and artifact remain unchanged.
   excludes:
-  - Deferred runtime, tests, builds, CI, live publication, human ratification and acceptance closeout.
+  - Broad runtime/test suites, builds, CI, live publication, human ratification and acceptance closeout.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -60,55 +62,65 @@ work:
     url: https://github.com/egohygiene/pace/issues/13
   next:
     kind: action
-    id: review-adoption-ledger-and-bounded-consumers
-    description: Review this checkpoint with the shared typed review feed and Identity/Empathy/Civics consumer
-      changes; later select actual reports/artifacts and refresh repository-sized records through reviewed
-      owner evidence.
+    id: finish-ledger-integration-and-return-to-canary
+    description: Complete exact-head PR 37 integration after independent source review, then return to the separately
+      authorized canary plan. Later source refreshes require new reviewed owner evidence; this dated roster is not live org discovery.
     readiness: ready
     references:
-    - https://github.com/egohygiene/pace/issues/13
+    - https://github.com/egohygiene/pace/pull/37
     depends_on: []
 state:
   base:
     revision: 76a28ee10fdf73e556beacda1893383e3d31cc36
     ref: refs/heads/main
-    verified_at: '2026-11-11T19:06:19Z'
+    verified_at: '2026-11-12T23:44:42Z'
   candidate:
     branch: codex/intelligence-adoption-ledger
     revision: null
-    pull_request: null
-    handoff_state: ready-for-review
+    pull_request:
+      provider: github
+      id: egohygiene/pace#37
+      url: https://github.com/egohygiene/pace/pull/37
+    handoff_state: in-progress
   live:
     status: verified
-    observed_at: '2026-11-11T19:06:19Z'
+    observed_at: '2026-11-12T23:44:42Z'
     default_branch_revision: 76a28ee10fdf73e556beacda1893383e3d31cc36
     issue_state: open
-    pull_request_state: not-applicable
-    notes: Pace main76a28ee10fdf73e556beacda1893383e3d31cc36 was refreshed. Functional source3f3a6d6c3cbcbb07c3e65efe436f6bcf73e5529e
-      is ready for source review. Pace13/31 and Hygiene36 remain open; dated source inventory is the exact
-      .github101a package with older represented source commits, not current deployment proof.
+    pull_request_state: draft
+    notes: Fresh main76a28ee10fdf73e556beacda1893383e3d31cc36 remains the ancestor of original PR37 head
+      abe7b29391e788908b92a921a4f27ff54c9a9b41; no source merge conflict exists. PR37 was open draft with no
+      reviews, comments or threads. Focused offline verification does not refresh source observations or prove a deployment.
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-11T19:06:19Z'
+  reviewed_at: '2026-11-12T23:44:42Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent root source peer of exact-public-admission/order/stages/holds/clocks; Python AST,
-      closed JSON schema definitions and dated artifact validation,28 unique exact IDs, immutable raw mirror
-      hashes and independent unknown-stage checks; continuity schema/size/links and whitespace
+  - command: Static source and exact input/ledger byte identities, Python AST, schema definitions/artifact metadata,
+      fixed28 identities, unchanged unknown stages/observation clocks, continuity schema/size/links and whitespace.
     outcome: limited
-    observed_at: '2026-11-11T19:06:19Z'
-    notes: Static source and metadata inspection only; no application execution.
-  - command: Native/runtime execution, tests, builds, CI investigation, browser/provider/consumer/publication
-      qualification
+    observed_at: '2026-11-12T23:44:42Z'
+    notes: Integration source review preserves existing owner boundaries; independent exact-head peer precedes merge.
+  - command: python3 -m unittest discover --start-directory tests --pattern test_intelligence_adoption.py --verbose
+    outcome: passed
+    observed_at: '2026-11-12T23:44:42Z'
+    notes: Five focused offline tests cover exact dated replay, JSON type distinctions, denied completion promotion,
+      unchanged observations/holds and pre-parse rejection of unreviewed bytes.
+  - command: python3 scripts/project_intelligence_adoption.py verify --ledger docs/evidence/intelligence-adoption/2026-11-11.ledger.json
+    outcome: passed
+    observed_at: '2026-11-12T23:44:42Z'
+    notes: Exact source-only projection verified. This does not refresh or promote its historical qualification fields.
+  - command: Broad runtime/test suites, builds, CI, native collectors, browser/provider/consumer/publication qualification.
     outcome: not-run
-    observed_at: '2026-11-11T19:06:19Z'
-    notes: Deferred at maintainer request; source merges do not establish acceptance.
+    observed_at: '2026-11-12T23:44:42Z'
+    notes: Remain deferred; focused offline checks and source merges do not establish acceptance.
   environment_limitations:
   - Eligibility, actual model/artifact selections, source execution, provider configuration, live publication
     and refresh operators remain unassessed/unknown.
-  - No runtime/tool conformance, human ratification, applicability exemption or fleet completion is supplied.
+  - Focused offline replay does not establish broader runtime/tool conformance, human ratification, applicability exemption or fleet completion.
   - The previous source inventory is dated; new consumer drafts do not retroactively rewrite those observations.
+  - No root AGENTS.md is present; canonical Pace documents and the existing continuity contract were inspected.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -139,7 +151,7 @@ Make repository Intelligence adoption actionable through an immutable public-sou
 
 ## State snapshot
 
-Candidate `codex/intelligence-adoption-ledger` is based on observed main `76a28ee10fdf73e556beacda1893383e3d31cc36`. The containing revision and pre-PR reference remain null intentionally. Pace main76a28ee10fdf73e556beacda1893383e3d31cc36 was refreshed. Functional source3f3a6d6c3cbcbb07c3e65efe436f6bcf73e5529e is ready for source review. Pace13/31 and Hygiene36 remain open; dated source inventory is the exact .github101a package with older represented source commits, not current deployment proof.
+PR 37 is based on freshly observed main `76a28ee10fdf73e556beacda1893383e3d31cc36`; original head `abe7b29391e788908b92a921a4f27ff54c9a9b41` already contains that base. The candidate's containing revision remains null intentionally. PR 37 is not claimed merged by this snapshot. The exact .github101a source package and fixed28 public roster retain their original observation clocks and represented commits, not current deployment or organization-count claims.
 
 ## Completed and material changes
 
@@ -149,17 +161,19 @@ Source readiness, builder declarations, model/artifact selection, declared desti
 
 Operator documentation and canonical navigation expose the actual source/pin/destination gaps. This is a Pace adoption/coordination projection, not a new Hygiene catalog, eligibility decision, runtime scanner or provider mutation.
 
+Integration changes only the verifier's JSON-type comparison, adds focused regressions and refreshes this handoff. Numeric zero can no longer substitute for boolean false. Dated ledger, raw mirrors, source pins, holds and canonical observation timestamps remain unchanged.
+
 ## Validation and review evidence
 
-Independent root source peer of exact-public-admission/order/stages/holds/clocks; Python AST, closed JSON schema definitions and dated artifact validation,28 unique exact IDs, immutable raw mirror hashes and independent unknown-stage checks; continuity schema/size/links and whitespace. Static source/metadata review only. The dated ledger is authored from admitted public structured observations; the shipped projector, consumer applications, native helpers, tests, builds, CI, providers and live verification were not executed.
+Five focused offline regressions and exact dated-ledger CLI verification passed. Static source/schema/hash inspection preserves all fixed28 identities and unchanged data artifacts. Broader suites, native collectors, consumer applications, builds, CI, provider configuration and live publication remain unrun. Historical qualification fields are not rewritten by the focused check. Independent exact-head source review precedes merge.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Eligibility, actual model/artifact selections, source execution, provider configuration, live publication and refresh operators remain unassessed/unknown. No runtime/tool conformance, human ratification, applicability exemption or fleet completion is supplied. The previous source inventory is dated; new consumer drafts do not retroactively rewrite those observations.
+Eligibility, actual model/artifact selections, consumer/source collection execution, provider configuration, live publication and refresh operators remain unassessed/unknown. Focused offline replay supplies no human ratification, exemption or fleet completion. The dated inventory remains historical; current organization discovery or new consumer work cannot silently expand or refresh its fixed28 roster.
 
 ## Next dependency-ready work
 
-Review this checkpoint with the shared typed review feed and Identity/Empathy/Civics consumer changes; later select actual reports/artifacts and refresh repository-sized records through reviewed owner evidence.
+Complete independently reviewed PR 37 integration, report the exact merge, then return to the separately authorized canary plan. Later evidence selection and source refresh require reviewed owner inputs rather than editing this old checkpoint's dates.
 
 ## Parallel changes and reconciliation
 

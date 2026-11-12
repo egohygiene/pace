@@ -232,7 +232,10 @@ def validate_ledger(value, inventory_bytes, public_catalog_bytes):
     """Require semantic identity with the source-only projection, not a status claim."""
     require(type(value) is dict and value.get("schema") == SCHEMA
             and value.get("visibility") == "public")
-    require(value == project(inventory_bytes, public_catalog_bytes, as_of=value.get("projection_as_of")),
+    # Python equality aliases False/0 and True/1. Canonical JSON comparison
+    # preserves the closed projection's JSON types as well as its values.
+    require(canonical_bytes(value) == canonical_bytes(
+                project(inventory_bytes, public_catalog_bytes, as_of=value.get("projection_as_of"))),
             "Ledger does not match the reviewed source-only projection")
     return value
 
