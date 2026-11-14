@@ -3,6 +3,9 @@
 The [release-adoption observer](docs/release-adoption-observation.md) reads bounded,
 digest-pinned supplied source captures without scanning or modifying repositories.
 Declared channels, unknown conformance and actual publication stay separate.
+The [commit-authoring inventory](docs/commit-authoring-observation.md) similarly
+records supplied config/hook/workflow/merge-policy evidence without executing
+configuration, rewriting history or choosing enforcement.
 
 ⚡ Automation, CI/CD, adoption, reconciliation, and synchronization infrastructure for evolving repositories.
 

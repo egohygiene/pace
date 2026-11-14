@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.io/schemas/pace/commit-authoring-observation/v1.json",
+  "title": "Source-only commit-authoring observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "audience",
+    "observed_at",
+    "evaluated_at",
+    "freshness",
+    "snapshot_sha256",
+    "target",
+    "coverage",
+    "qualification",
+    "repositories"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "egohygiene.pace.commit-authoring-observation/v1"
+    },
+    "audience": {
+      "enum": [
+        "public",
+        "private"
+      ]
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "freshness": {
+      "enum": [
+        "stale",
+        "within-age-budget"
+      ]
+    },
+    "snapshot_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "target": {
+      "type": "object"
+    },
+    "coverage": {
+      "const": "Explicit supplied inventory only; not organization discovery"
+    },
+    "qualification": {
+      "const": "source-observation-only"
+    },
+    "repositories": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "repository",
+          "revision",
+          "visibility",
+          "lifecycle",
+          "scopes",
+          "merge_policy",
+          "compatibility",
+          "adoption",
+          "enforcement",
+          "next_action"
+        ],
+        "properties": {
+          "repository": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "visibility": {
+            "enum": [
+              "public",
+              "private",
+              "internal"
+            ]
+          },
+          "lifecycle": {
+            "enum": [
+              "active",
+              "incubating",
+              "internal",
+              "archived",
+              "unknown"
+            ]
+          },
+          "scopes": {
+            "type": "object",
+            "required": [
+              "commitlint",
+              "commitizen",
+              "hooks",
+              "taskfile",
+              "pr_titles",
+              "release",
+              "workflow_sources",
+              "package_scripts"
+            ]
+          },
+          "merge_policy": {
+            "type": "object"
+          },
+          "compatibility": {
+            "const": "not-assessed"
+          },
+          "adoption": {
+            "const": "not-assessed"
+          },
+          "enforcement": {
+            "const": "not-assessed"
+          },
+          "next_action": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
