@@ -81,6 +81,17 @@ class ReleaseObservationTests(unittest.TestCase):
         lock["target"]["schema_version"] = "egohygiene.repository-release/v2"
         self.assertEqual(self.report(snapshot, lock)["repositories"][0]["drift"]["state"], "schema-differs")
 
+    def test_profile_names_are_observed_without_reinventing_owner_taxonomy(self):
+        for profile in ("cli-library", "internal-only", "contract", "future-profile"):
+            snapshot, lock = fixture()
+            file = snapshot["repositories"][0]["files"][".egohygiene/release.json"]
+            declaration = json.loads(file["text"])
+            declaration["repository"]["release_profile"] = profile
+            snapshot["repositories"][0]["files"][".egohygiene/release.json"] = captured(json.dumps(declaration))
+            row = self.report(snapshot, lock)["repositories"][0]
+            self.assertEqual(row["profile"], profile)
+            self.assertEqual(row["conformance"]["state"], "unknown")
+
     def test_missing_unavailable_and_unknown_remain_distinct(self):
         for state in ("missing", "unavailable", "unknown"):
             snapshot, lock = fixture()

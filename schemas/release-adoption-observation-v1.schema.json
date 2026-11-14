@@ -26,7 +26,7 @@
           "repository": {"type": "string"},
           "revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
           "visibility": {"enum": ["public", "private", "internal"]},
-          "lifecycle": {"enum": ["active", "incubating", "archived", "unknown"]},
+          "lifecycle": {"enum": ["active", "incubating", "internal", "archived", "unknown"]},
           "declaration": {"type": "object"},
           "profile": {"type": "string"},
           "changelog": {"type": "object"},

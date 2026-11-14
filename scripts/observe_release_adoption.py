@@ -66,8 +66,7 @@ def observe(snapshot, lock, *, as_of, max_age_days=30, audience="public"):
                 if not isinstance(declaration, dict):
                     raise ValueError()
                 profile = declaration["repository"]["release_profile"]
-                if (profile not in {"contract", "rust-tool", "rust-crate", "python-package", "npm-package",
-                                    "container-image", "static-site", "publication", "workspace", "internal"}
+                if (not isinstance(profile, str) or not re.fullmatch(r"[a-z][a-z0-9-]{0,39}", profile)
                         or not isinstance(declaration.get("schema_version"), str)
                         or not re.fullmatch(r"[a-z][a-z0-9.-]+/v[0-9]+", declaration["schema_version"])
                         or declaration.get("repository", {}).get("id") != row["repository"]):

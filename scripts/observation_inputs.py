@@ -100,7 +100,7 @@ def load_pinned(snapshot_path, lock_path, kind, *, audience="public"):
         seen.add(name.casefold())
         revision(row["revision"])
         require(row["visibility"] in {"public", "private", "internal"})
-        require(row["lifecycle"] in {"active", "incubating", "archived", "unknown"})
+        require(row["lifecycle"] in {"active", "incubating", "internal", "archived", "unknown"})
         require(audience == "private" or row["visibility"] == "public",
                 "Restricted inventory requires an explicit private report")
         require(type(row["files"]) is dict and len(row["files"]) <= 100)
