@@ -1,0 +1,34 @@
+{
+  "kind": "release",
+  "observed_at": "2026-11-13T00:00:00Z",
+  "repositories": [
+    {
+      "files": {
+        ".egohygiene/release.json": {
+          "sha256": "1d8fa02e5eaa1e9a608436bcae96c5045219975abb4a5607a7285d07493a2e28",
+          "state": "present",
+          "text": "{\"schema_version\": \"egohygiene.repository-release/v1\", \"repository\": {\"id\": \"fictional/tool\", \"release_profile\": \"python-package\"}, \"changelog\": {\"path\": \"CHANGELOG.md\"}, \"components\": [{\"version_authority\": {\"kind\": \"pyproject-project\", \"path\": \"pyproject.toml\"}}], \"delivery\": {\"channels\": [{\"kind\": \"github-release\", \"state\": \"configured\"}]}}"
+        },
+        "CHANGELOG.md": {
+          "sha256": "e7bc95be2f79a831085b6e3c714d9b6a7c05e75465744b5e6339e9d73e37685a",
+          "state": "present",
+          "text": "# Changes\n\n## [Unreleased]\n"
+        },
+        "pyproject.toml": {
+          "sha256": "a57c5d371604c94b1dfbb58768a2d69a643e239449e95f2aba82267bf9ba426e",
+          "state": "present",
+          "text": "[project]\nversion = \"0.2.0\"\n"
+        }
+      },
+      "lifecycle": "active",
+      "repository": "fictional/tool",
+      "revision": "1111111111111111111111111111111111111111",
+      "tags": {
+        "current": null,
+        "latest": "v0.1.0"
+      },
+      "visibility": "public"
+    }
+  ],
+  "schema_version": "egohygiene.pace.observation-input/v1"
+}
