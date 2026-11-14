@@ -1,5 +1,9 @@
 # pace
 
+The [release-adoption observer](docs/release-adoption-observation.md) reads bounded,
+digest-pinned supplied source captures without scanning or modifying repositories.
+Declared channels, unknown conformance and actual publication stay separate.
+
 ⚡ Automation, CI/CD, adoption, reconciliation, and synchronization infrastructure for evolving repositories.
 
 Pace begins with a read-only, independently verifiable desired-state lock. The

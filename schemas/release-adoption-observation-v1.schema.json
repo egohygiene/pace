@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.io/schemas/pace/release-adoption-observation/v1.json",
+  "title": "Source-only release adoption observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "audience", "observed_at", "evaluated_at", "freshness", "snapshot_sha256", "target", "coverage", "qualification", "repositories"],
+  "properties": {
+    "schema_version": {"const": "egohygiene.pace.release-adoption-observation/v1"},
+    "audience": {"enum": ["public", "private"]},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "freshness": {"enum": ["stale", "within-age-budget"]},
+    "snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target": {"type": "object"},
+    "coverage": {"const": "Explicit supplied inventory only; not organization discovery"},
+    "qualification": {"const": "source-observation-only"},
+    "repositories": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["repository", "revision", "visibility", "lifecycle", "declaration", "profile", "changelog", "components", "channels", "tags", "conformance", "drift", "adoption", "migration", "publication"],
+        "properties": {
+          "repository": {"type": "string"},
+          "revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "visibility": {"enum": ["public", "private", "internal"]},
+          "lifecycle": {"enum": ["active", "incubating", "archived", "unknown"]},
+          "declaration": {"type": "object"},
+          "profile": {"type": "string"},
+          "changelog": {"type": "object"},
+          "components": {"type": "array", "items": {"type": "object"}},
+          "channels": {"type": "array", "items": {"type": "object", "required": ["kind", "declared_state", "publication"], "properties": {"publication": {"const": "not-assessed"}}}},
+          "tags": {"type": "object"},
+          "conformance": {"type": "object", "required": ["state"], "properties": {"state": {"const": "unknown"}}},
+          "drift": {"type": "object", "required": ["state"], "properties": {"state": {"enum": ["not-assessed", "schema-matches", "schema-differs"]}}},
+          "adoption": {"const": "not-assessed"},
+          "migration": {"const": "not-assessed"},
+          "publication": {"const": "not-assessed"}
+        }
+      }
+    }
+  }
+}

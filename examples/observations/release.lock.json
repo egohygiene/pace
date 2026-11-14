@@ -1,0 +1,11 @@
+{
+  "kind": "release",
+  "schema_version": "egohygiene.pace.observation-lock/v1",
+  "snapshot_sha256": "ed3f522a1eb9a2f4e0d910db1d26be2811912d9a4bc869f28faa8c18df57dd6d",
+  "target": {
+    "authority": "proposed",
+    "repository": "egohygiene/aether",
+    "revision": null,
+    "schema_version": "egohygiene.repository-release/v1"
+  }
+}
