@@ -1,0 +1,57 @@
+{
+  "kind": "commit-authoring",
+  "observed_at": "2026-11-13T00:00:00Z",
+  "repositories": [
+    {
+      "files": {
+        ".czrc": {
+          "sha256": "0c2d643dd49934e1bb61cc1f300b95298b36095ed3ce4c0d26fadf1f58932a48",
+          "state": "present",
+          "text": "{\"path\":\"cz-customizable\"}"
+        },
+        ".github/workflows/pr-title.yml": {
+          "sha256": "46fa816fa34c8481ef2cf46700e5ede8dae05b615dbeea4436b7d134af9e19e2",
+          "state": "present",
+          "text": "name: captured-not-run\n"
+        },
+        "Taskfile.yaml": {
+          "state": "missing"
+        },
+        "Taskfile.yml": {
+          "state": "missing"
+        },
+        "commitlint.config.js": {
+          "sha256": "07336e6cb295110c934d4e8333606fbb96eb602c78733558ee851e1f76f33fca",
+          "state": "present",
+          "text": "throw new Error('CONFIG_EXECUTION_CANARY');"
+        },
+        "lefthook.yml": {
+          "sha256": "55071ac016145603c3353ed3e44dc8bf6df2152873769e0477677192c6aa417b",
+          "state": "present",
+          "text": "pre-commit:\n  commands:\n    canary:\n      run: never-run\n"
+        },
+        "package.json": {
+          "sha256": "d72a56adcf8c3ed717bdfb2fe4a92de2599036b05c1991bc57d361275ba3f10b",
+          "state": "present",
+          "text": "{\"scripts\": {\"commit\": \"never execute me\", \"prepare\": \"never execute hooks\"}, \"config\": {\"commitizen\": {\"path\": \"cz-conventional-changelog\"}}}"
+        }
+      },
+      "lifecycle": "active",
+      "merge_policy": {
+        "allow_merge_commit": true,
+        "allow_rebase_merge": false,
+        "allow_squash_merge": true,
+        "source": "https://api.github.com/repos/fictional/tool",
+        "state": "observed"
+      },
+      "repository": "fictional/tool",
+      "revision": "1111111111111111111111111111111111111111",
+      "tags": {
+        "current": null,
+        "latest": "v0.1.0"
+      },
+      "visibility": "public"
+    }
+  ],
+  "schema_version": "egohygiene.pace.observation-input/v1"
+}

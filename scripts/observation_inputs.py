@@ -93,7 +93,7 @@ def load_pinned(snapshot_path, lock_path, kind, *, audience="public"):
     require(type(snapshot["repositories"]) is list and len(snapshot["repositories"]) <= 1000)
     seen = set()
     for row in snapshot["repositories"]:
-        closed(row, ("repository", "revision", "visibility", "lifecycle", "files"), ("tags",))
+        closed(row, ("repository", "revision", "visibility", "lifecycle", "files"), ("tags", "merge_policy"))
         name = row["repository"]
         require(isinstance(name, str) and re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", name))
         require(name.casefold() not in seen, "Duplicate repository identity")
@@ -118,6 +118,17 @@ def load_pinned(snapshot_path, lock_path, kind, *, audience="public"):
             require(all(value is None or (isinstance(value, str)
                         and re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+", value))
                         for value in row["tags"].values()))
+        if "merge_policy" in row:
+            policy = row["merge_policy"]
+            closed(policy, ("state",), ("allow_merge_commit", "allow_squash_merge", "allow_rebase_merge", "source"))
+            require(policy["state"] in {"observed", "unknown", "unavailable"})
+            if policy["state"] == "observed":
+                require(set(policy) == {"state", "allow_merge_commit", "allow_squash_merge", "allow_rebase_merge", "source"})
+                require(all(type(policy[key]) is bool for key in
+                            ("allow_merge_commit", "allow_squash_merge", "allow_rebase_merge")))
+                require(policy["source"] == f"https://api.github.com/repos/{name}")
+            else:
+                require(set(policy) == {"state"})
     return snapshot, lock
 
 
@@ -130,5 +141,6 @@ def output(report, path):
     if path is None:
         print(text, end="")
     else:
-        with Path(path).open("x", encoding="utf-8") as handle:
+        descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+        with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
             handle.write(text)

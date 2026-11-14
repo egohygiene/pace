@@ -1,0 +1,11 @@
+{
+  "kind": "commit-authoring",
+  "schema_version": "egohygiene.pace.observation-lock/v1",
+  "snapshot_sha256": "cac8a0ffd5fe0bdd90b4c5f76c45ad05811198fea07135c3b898bdada237f3c4",
+  "target": {
+    "authority": "proposed",
+    "repository": "egohygiene/aether",
+    "revision": null,
+    "schema_version": "egohygiene.commit-authoring/v1"
+  }
+}
