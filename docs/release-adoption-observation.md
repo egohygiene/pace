@@ -38,7 +38,8 @@ JSON, Cargo/pyproject TOML and the declared catalog selector. Unsupported or
 missing authorities do not gain a guessed version. A configured GitHub channel
 is never publication proof. Proposed/unknown target authority suppresses drift
 assessment; a supplied accepted target permits only schema-identity comparison,
-not conformance or ratification. Actual validator/release evidence remains open.
+not conformance or ratification. An accepted target without an immutable source
+revision is rejected. Actual validator/release evidence remains open.
 
 Public reports reject a snapshot containing any restricted row without revealing
 which row. Use explicit `--audience private` for private/internal inventories;

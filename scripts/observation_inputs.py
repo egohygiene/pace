@@ -82,6 +82,8 @@ def load_pinned(snapshot_path, lock_path, kind, *, audience="public"):
             and re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", lock["target"]["repository"]))
     if lock["target"]["revision"] is not None:
         revision(lock["target"]["revision"])
+    require(lock["target"]["authority"] != "accepted" or lock["target"]["revision"] is not None,
+            "Accepted target requires an immutable source revision")
     raw = read(snapshot_path)
     require(digest(raw) == lock["snapshot_sha256"], "Snapshot digest does not match reviewed lock")
     snapshot = parse(raw)

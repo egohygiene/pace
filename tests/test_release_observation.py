@@ -76,6 +76,7 @@ class ReleaseObservationTests(unittest.TestCase):
     def test_accepted_target_only_allows_schema_comparison(self):
         snapshot, lock = fixture()
         lock["target"]["authority"] = "accepted"
+        lock["target"]["revision"] = "2" * 40
         self.assertEqual(self.report(snapshot, lock)["repositories"][0]["drift"]["state"], "schema-matches")
         lock["target"]["schema_version"] = "egohygiene.repository-release/v2"
         self.assertEqual(self.report(snapshot, lock)["repositories"][0]["drift"]["state"], "schema-differs")
